@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理财指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card-border-blue { border-top: 4px solid #3b82f6; }
+            .card-border-green { border-top: 4px solid #4CAF50; }
+            .card-border-purple { border-top: 4px solid #9333ea; }
+            .card-border-orange { border-top: 4px solid #ea580c; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col m-0 p-0">
+    <!-- 导航栏 -->
+    <header class="bg-white shadow-sm sticky top-0 z-10 h-16">
+        <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between items-center h-full">
+                <div class="flex items-center">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    <span class="ml-2 text-xl font-semibold text-blue-600">在日华人理财指南</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">投资账户打理</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">券商开户指南</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">投资标的挑选</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">涉税风险规避</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 w-full">
+        <!-- 模块1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 w-full h-full gap-0" style="min-height: calc(100vh - 4rem);">
+            <div class="bg-white shadow-md px-12 py-8 card-border-blue hover:shadow-lg transition-shadow duration-300 flex items-center justify-center w-full">
+                <div class="flex items-start w-full">
+                    <div class="flex-shrink-0 h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center">
+                        <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-2xl font-bold text-gray-900">日本免税 & 养老账户全解｜NISA/iDeCo/ 年金</h3>
+                        <p class="mt-4 text-gray-600 text-lg">外国人使用规则 + 回国资产处置指南</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块2 -->
+            <div class="bg-white shadow-md px-12 py-8 card-border-green hover:shadow-lg transition-shadow duration-300 flex items-center justify-center w-full">
+                <div class="flex items-start w-full">
+                    <div class="flex-shrink-0 h-16 w-16 rounded-full bg-green-100 flex items-center justify-center">
+                        <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 0 011-1h2a1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-2xl font-bold text-gray-900">在日开户全攻略｜券商 & 华人银行卡精选</h3>
+                        <p class="mt-4 text-gray-600 text-lg">外籍开户门槛、手续费、转账及 PayPay 联动实测</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块3 -->
+            <div class="bg-white shadow-md px-12 py-8 card-border-purple hover:shadow-lg transition-shadow duration-300 flex items-center justify-center w-full">
+                <div class="flex items-start w-full">
+                    <div class="flex-shrink-0 h-16 w-16 rounded-full bg-purple-100 flex items-center justify-center">
+                        <svg class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-2xl font-bold text-gray-900">在日可投资产全盘点｜入门至进阶品类</h3>
+                        <p class="mt-4 text-gray-600 text-lg">股票、ETF、投资信托、黄金、加密货币标的解析</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块4 -->
+            <div class="bg-white shadow-md px-12 py-8 card-border-orange hover:shadow-lg transition-shadow duration-300 flex items-center justify-center w-full">
+                <div class="flex items-start w-full">
+                    <div class="flex-shrink-0 h-16 w-16 rounded-full bg-orange-100 flex items-center justify-center">
+                        <svg class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-2xl font-bold text-gray-900">日本投资税务大全｜华人避坑指南</h3>
+                        <p class="mt-4 text-gray-600 text-lg">计税规则、双重课税、海外资产申报全解读</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
