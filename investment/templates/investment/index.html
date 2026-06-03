@@ -1,10 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>Investment</title>
+<meta charset="UTF-8">
+<title>风险金字塔投资指南</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#fafafa;
+    margin:0;
+    padding:40px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:50px;
+}
+
+.pyramid{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.card{
+    text-decoration:none;
+    color:black;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:70px;
+    border-radius:12px;
+
+    font-weight:bold;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+.crypto{
+    width:180px;
+    background:#ffd6d6;
+}
+
+.stocks{
+    width:280px;
+    background:#ffe7c2;
+}
+
+.reit{
+    width:380px;
+    background:#fff2b2;
+}
+
+.etf{
+    width:480px;
+    background:#d8f5d8;
+}
+
+.cash{
+    width:580px;
+    background:#d9ecff;
+}
+
+.footer{
+    margin-top:50px;
+    text-align:center;
+    color:#777;
+}
+
+</style>
 </head>
+
 <body>
-    <h1>Investment Module</h1>
-    <p>Hello Investment Team!</p>
+
+<div class="container">
+
+<h1 class="title">
+风险金字塔投资指南
+</h1>
+
+<p class="subtitle">
+本页面仅供学习与参考，不构成任何投资建议。投资有风险，决策需结合个人情况谨慎判断。
+</p>
+
+<div class="pyramid">
+
+<a href="/investment/crypto/" class="card crypto">
+Crypto 加密货币
+</a>
+
+<a href="/investment/stocks/" class="card stocks">
+Stocks 个股投资
+</a>
+
+<a href="/investment/reit/" class="card reit">
+REIT & Gold 房地产与黄金
+</a>
+
+<a href="/investment/etf/" class="card etf">
+ETF & Fund ETF与投资信托
+</a>
+
+<a href="/investment/cash/" class="card cash">
+Cash & Deposit 现金与定期存款
+</a>
+
+</div>
+
+<div class="footer">
+
+风险越高不代表收益一定越高。<br>
+请根据自身风险承受能力进行投资。
+
+</div>
+
+</div>
+
 </body>
 </html>
