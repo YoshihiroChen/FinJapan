@@ -96,44 +96,45 @@ body{
 
 <div class="container">
 
-<h1 class="title">
-风险金字塔投资指南
-</h1>
+    <h1 class="title">
+        风险金字塔投资指南
+    </h1>
 
-<p class="subtitle">
-本页面仅供学习与参考，不构成任何投资建议。投资有风险，决策需结合个人情况谨慎判断。
-</p>
+    <p class="subtitle">
+        本页面仅供学习与参考，不构成任何投资建议。
+        投资有风险，决策需结合个人情况谨慎判断。
+    </p>
 
-<div class="pyramid">
+    <div class="pyramid">
 
-<a href="/investment/crypto/" class="card crypto">
-Crypto 加密货币
-</a>
+        <a href="{% url 'investment:crypto' %}" class="card crypto">
+            Crypto 加密货币
+        </a>
 
-<a href="/investment/stocks/" class="card stocks">
-Stocks 个股投资
-</a>
+        <a href="{% url 'investment:stocks' %}" class="card stocks">
+            Stocks 个股投资
+        </a>
 
-<a href="/investment/reit/" class="card reit">
-REIT & Gold 房地产与黄金
-</a>
+        <a href="{% url 'investment:reit' %}" class="card reit">
+            REIT & Gold 房地产与黄金
+        </a>
 
-<a href="/investment/etf/" class="card etf">
-ETF & Fund ETF与投资信托
-</a>
+        <a href="{% url 'investment:etf' %}" class="card etf">
+            ETF & Fund ETF与投资信托
+        </a>
 
-<a href="/investment/cash/" class="card cash">
-Cash & Deposit 现金与定期存款
-</a>
+        <a href="{% url 'investment:cash' %}" class="card cash">
+            Cash & Deposit 现金与定期存款
+        </a>
 
-</div>
+    </div>
 
-<div class="footer">
+    <div class="footer">
 
-风险越高不代表收益一定越高。<br>
-请根据自身风险承受能力进行投资。
+        风险越高不代表收益一定越高。<br>
+        请根据自身风险承受能力进行投资。
 
-</div>
+    </div>
 
 </div>
 
