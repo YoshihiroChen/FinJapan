@@ -1,0 +1,467 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SBI证券指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<!-- Header -->
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">
+                📈
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                SBI证券指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'securities' %}"
+           class="text-sm hover:text-stone-900">
+            返回证券专区
+        </a>
+
+    </div>
+
+</header>
+
+<!-- Main -->
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            SBI证券（SBI証券）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本用户数量最多的网络券商之一，也是外国人最推荐的证券账户。
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🌐 官方网站
+        </h2>
+
+        <a href="https://www.sbisec.co.jp/"
+           target="_blank"
+           class="text-blue-600 hover:underline break-all">
+
+            https://www.sbisec.co.jp/
+
+        </a>
+
+    </div>
+
+    <!-- 开户难度 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🛂 外国人开户难度
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-2xl mb-4">
+                ★★★☆☆
+            </div>
+
+            <div class="leading-8">
+
+                属于<strong>普通难度</strong>。
+
+                <br><br>
+
+                仅凭中国护照无法开户。
+
+                <br>
+
+                必须持有日本合法在留资格。
+
+                <br><br>
+
+                开户条件：
+
+                <br>
+
+                ✔ 在留卡有效期剩余3个月以上
+
+                <br>
+
+                ✔ 持有 My Number
+
+                <br>
+
+                ✔ 年满18岁
+
+                <br>
+
+                ✔ 拥有日本住址
+
+                <br>
+
+                ✔ 拥有日本银行账户
+
+                <br><br>
+
+                留学生、工作签证、永住签证均可申请。
+
+                <br>
+
+                一般审核时间约3～7个工作日。
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 中文支持 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🇨🇳 中文资料与客服支持
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="leading-8">
+
+                ❌ 无官方中文网站
+
+                <br>
+
+                ❌ 无官方中文APP
+
+                <br>
+
+                ❌ 无中文客服
+
+                <br><br>
+
+                ✔ 提供部分英文界面
+
+                <br>
+
+                ✔ 客服支持日语、英语
+
+                <br>
+
+                ✔ 华人用户数量极多
+
+                <br>
+
+                ✔ 网上中文教程和攻略非常丰富
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NISA -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🚀 NISA制度支持
+        </h2>
+
+        <div class="bg-[#EEF3EE] rounded-2xl p-8 shadow-sm">
+
+            <div class="text-lg font-semibold mb-4">
+
+                ★★★★★ 完全支持新NISA
+
+            </div>
+
+            <div class="leading-8">
+
+                ✔ 成长投资枠
+
+                <br>
+
+                ✔ つみたて投资枠
+
+                <br>
+
+                ✔ 日本股票
+
+                <br>
+
+                ✔ 美股
+
+                <br>
+
+                ✔ ETF
+
+                <br>
+
+                ✔ 投资信托
+
+                <br><br>
+
+                NISA账户内交易手续费免费。
+
+                <br>
+
+                投资收益免税。
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 美股 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🇺🇸 美股交易支持
+        </h2>
+
+        <div class="bg-[#F5EFEC] rounded-2xl p-8 shadow-sm">
+
+            <div class="text-lg font-semibold mb-4">
+
+                ★★★★★ 顶级水平
+
+            </div>
+
+            <div class="leading-8">
+
+                ✔ 纳斯达克
+
+                <br>
+
+                ✔ 纽交所
+
+                <br>
+
+                ✔ 数百种ETF
+
+                <br>
+
+                ✔ 美股专用交易APP
+
+                <br>
+
+                ✔ 24小时交易支持
+
+                <br>
+
+                ✔ 可使用NISA购买部分美股产品
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 手续费 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            💰 手续费体系
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            产品
+                        </th>
+
+                        <th class="p-4 text-left">
+                            手续费
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            日本股票
+                        </td>
+
+                        <td class="p-4">
+                            0日元
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            美股
+                        </td>
+
+                        <td class="p-4">
+                            0日元
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            海外ETF
+                        </td>
+
+                        <td class="p-4">
+                            0日元
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            投资信托
+                        </td>
+
+                        <td class="p-4">
+                            基本免费
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 核心优势
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏆 用户数量最多
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🚀 NISA最强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股最强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💰 手续费最低
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🏅 推荐指数
+        </h2>
+
+        <div class="text-4xl mb-4">
+            ★★★★★
+        </div>
+
+        <div class="leading-8">
+
+            SBI证券拥有目前日本最完善的NISA体系、
+            最丰富的投资产品和最强的美股交易能力。
+
+            <br><br>
+
+            对于：
+
+            <br>
+
+            ✔ 留学生
+
+            <br>
+
+            ✔ 上班族
+
+            <br>
+
+            ✔ ETF定投用户
+
+            <br>
+
+            ✔ 美股投资者
+
+            <br><br>
+
+            都是首选券商。
+
+            <br><br>
+
+            如果只准备开一个证券账户，
+            SBI证券通常是最推荐的选择。
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

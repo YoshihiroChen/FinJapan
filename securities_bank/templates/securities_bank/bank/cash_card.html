@@ -1,0 +1,233 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>现金卡指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">
+                🏧
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                现金卡指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            キャッシュカード（Cash Card）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本银行开户后最常见、最基础的一种银行卡。
+        </p>
+
+    </div>
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            什么是现金卡？
+        </h2>
+
+        <p class="leading-8">
+            现金卡（キャッシュカード）是在日本开设银行账户后通常最先获得的银行卡。
+            它主要用于 ATM 存取款、转账和余额查询。
+            与中国银行卡不同，大部分现金卡无法直接用于门店消费和网上购物。
+        </p>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ✅ 可以做什么
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏧 ATM取款
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💴 ATM存款
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🔄 银行转账
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📊 查询余额
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ❌ 不能做什么
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🛒 网上购物
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏪 门店消费
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🍎 Apple Pay
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📋 功能一览
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+                        <th class="p-4 text-left">功能</th>
+                        <th class="p-4 text-left">是否支持</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4">ATM取款</td>
+                        <td class="p-4">✅</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">ATM存款</td>
+                        <td class="p-4">✅</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">转账</td>
+                        <td class="p-4">✅</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">门店付款</td>
+                        <td class="p-4">❌</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">网上支付</td>
+                        <td class="p-4">❌</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Apple Pay</td>
+                        <td class="p-4">基本不支持</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🏦 常见现金卡银行
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                ゆうちょ银行
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                三菱UFJ银行
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                三井住友银行
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            💡 新手提醒
+        </h2>
+
+        <p class="leading-8">
+            中国很多银行卡默认同时具有取款和消费功能，
+            但日本现金卡通常只负责银行业务。
+            如果想绑定 PayPay、网上购物或者无现金支付，
+            通常还需要借记卡或信用卡。
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

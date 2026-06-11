@@ -1,0 +1,535 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PayPay银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-red-100 flex items-center justify-center">
+                📱
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                PayPay银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            PayPay銀行（PayPay Bank）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本移动支付时代最具代表性的网络银行之一。
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-red-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            📱 基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            PayPay银行前身为 Japan Net Bank（ジャパンネット銀行）。
+
+            <br><br>
+
+            是日本第一家网络银行。
+
+            <br><br>
+
+            目前已经全面融入 PayPay 生态系统。
+
+            <br><br>
+
+            如果经常使用：
+
+            <br>
+
+            ・PayPay
+
+            <br>
+
+            ・Yahoo!ショッピング
+
+            <br>
+
+            ・LYPプレミアム
+
+            <br>
+
+            那么 PayPay银行会非常方便。
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌐 官方网站
+        </h2>
+
+        <a href="https://www.paypay-bank.co.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                PayPay银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.paypay-bank.co.jp
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 开户资格 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ✅ 开户资格
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎓 留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💼 工作签证
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                👨‍👩‍👧 家族滞在
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏠 永住身份
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm mt-6">
+
+            完全线上开户。
+
+            <br><br>
+
+            不需要前往实体网点。
+
+            <br><br>
+
+            适合习惯线上办理业务的用户。
+
+        </div>
+
+    </div>
+
+    <!-- 所需材料 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📄 开户所需材料
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <ul class="leading-9">
+
+                <li>• 在留卡</li>
+
+                <li>• My Number（个人编号）</li>
+
+                <li>• 日本住址</li>
+
+                <li>• 日本手机号</li>
+
+                <li>• 邮箱地址</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- 常见被拒原因 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⚠️ 常见开户失败原因
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📷 证件照片模糊
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏠 地址信息不一致
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📱 手机号码异常
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                ⏳ 在日时间过短
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PayPay联动 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🚀 PayPay生态圈
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-center text-lg leading-10">
+
+                PayPay银行
+
+                <br>
+
+                ↓
+
+                <br>
+
+                PayPay
+
+                <br>
+
+                ↓
+
+                <br>
+
+                Yahoo!购物
+
+                <br>
+
+                ↓
+
+                <br>
+
+                SoftBank服务
+
+                <br>
+
+                ↓
+
+                <br>
+
+                PayPay积分
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📱 手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            PayPay
+                        </td>
+
+                        <td class="p-4">
+                            ◎ 最佳搭配
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            楽天 Pay
+                        </td>
+
+                        <td class="p-4">
+                            △
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Apple Pay
+                        </td>
+
+                        <td class="p-4">
+                            ○
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 跨境汇款 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌏 跨境汇款
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <p class="leading-8">
+
+                PayPay银行支持国际汇款服务。
+
+                <br><br>
+
+                优势：
+
+                <br>
+
+                ・线上办理
+
+                <br>
+
+                ・操作方便
+
+                <br>
+
+                ・到账速度快
+
+                <br><br>
+
+                不足：
+
+                <br>
+
+                ・汇率优势一般
+
+                <br>
+
+                ・部分用户会搭配 Wise 使用
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 推荐指数
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                开户难度 ⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                PayPay联动 ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                网银体验 ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                外国人推荐 ⭐⭐⭐⭐
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🎯 适合什么人？
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📱 PayPay重度用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🛒 Yahoo购物用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💻 喜欢线上办理业务
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💰 喜欢移动支付
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎓 年轻用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                👨‍💼 日本上班族
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-red-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            💡 开户后容易忽略的风险
+        </h2>
+
+        <p class="leading-8">
+
+            网络银行几乎所有业务都在线完成。
+
+            <br><br>
+
+            因此需要特别注意：
+
+            <br>
+
+            • 密码管理
+
+            <br>
+
+            • 双重认证
+
+            <br>
+
+            • 钓鱼网站
+
+            <br>
+
+            • 假客服短信
+
+            <br><br>
+
+            建议开启：
+
+            <br>
+
+            • 二步验证
+
+            <br>
+
+            • 登录通知
+
+            <br>
+
+            • 交易提醒
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

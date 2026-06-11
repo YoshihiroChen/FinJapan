@@ -1,0 +1,540 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>楽天证券指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<!-- Header -->
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">
+                📈
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                楽天证券指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'securities' %}"
+           class="text-sm hover:text-stone-900">
+            返回证券专区
+        </a>
+
+    </div>
+
+</header>
+
+<!-- Main -->
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            楽天证券（楽天証券）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本最大网络券商之一，最适合乐天生态圈用户的证券账户。
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🌐 官方网站
+        </h2>
+
+        <a href="https://www.rakuten-sec.co.jp/"
+           target="_blank"
+           class="text-blue-600 hover:underline break-all">
+
+            https://www.rakuten-sec.co.jp/
+
+        </a>
+
+    </div>
+
+    <!-- 开户难度 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🛂 外国人开户难度
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-2xl mb-4">
+                ★★★☆☆
+            </div>
+
+            <div class="leading-8">
+
+                属于<strong>普通难度</strong>。
+
+                <br><br>
+
+                外国人可以开户。
+
+                <br>
+
+                但必须满足：
+
+                <br><br>
+
+                ✔ 在留卡有效期剩余3个月以上
+
+                <br>
+
+                ✔ 持有 My Number
+
+                <br>
+
+                ✔ 年满18岁
+
+                <br>
+
+                ✔ 日本住址
+
+                <br><br>
+
+                留学生开户审核有时会稍微严格一些。
+
+                <br>
+
+                开户成功后通常会赠送乐天积分活动。
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 中文支持 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🇨🇳 中文资料与客服支持
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="leading-8">
+
+                ❌ 无官方中文网站
+
+                <br>
+
+                ❌ 无官方中文客服
+
+                <br>
+
+                ❌ 无中文APP
+
+                <br><br>
+
+                ✔ 部分页面支持英文显示
+
+                <br>
+
+                ✔ 网上中文教程非常丰富
+
+                <br>
+
+                ✔ 华人用户数量众多
+
+                <br>
+
+                ✔ 客服支持日语与英语
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NISA -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🚀 NISA制度支持
+        </h2>
+
+        <div class="bg-[#EEF3EE] rounded-2xl p-8 shadow-sm">
+
+            <div class="text-lg font-semibold mb-4">
+
+                ★★★★★ 完全支持新NISA
+
+            </div>
+
+            <div class="leading-8">
+
+                ✔ 成长投资枠
+
+                <br>
+
+                ✔ つみたて投资枠
+
+                <br>
+
+                ✔ 日本股票
+
+                <br>
+
+                ✔ 美股
+
+                <br>
+
+                ✔ ETF
+
+                <br>
+
+                ✔ 投资信托
+
+                <br><br>
+
+                所有符合条件的产品均可享受NISA免税。
+
+                <br>
+
+                定期定额投资功能对新手非常友好。
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 美股 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🇺🇸 美股交易支持
+        </h2>
+
+        <div class="bg-[#F5EFEC] rounded-2xl p-8 shadow-sm">
+
+            <div class="text-lg font-semibold mb-4">
+
+                ★★★★☆
+            </div>
+
+            <div class="leading-8">
+
+                ✔ 苹果（Apple）
+
+                <br>
+
+                ✔ 英伟达（NVIDIA）
+
+                <br>
+
+                ✔ 亚马逊（Amazon）
+
+                <br>
+
+                ✔ 特斯拉（Tesla）
+
+                <br>
+
+                ✔ 主流美股ETF
+
+                <br><br>
+
+                美股产品非常齐全。
+
+                <br>
+
+                数量略少于SBI证券。
+
+                <br>
+
+                但对于绝大多数投资者已经完全足够。
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 手续费 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            💰 手续费体系
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            产品
+                        </th>
+
+                        <th class="p-4 text-left">
+                            手续费
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            日本股票
+                        </td>
+
+                        <td class="p-4">
+                            0日元
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            美股
+                        </td>
+
+                        <td class="p-4">
+                            0日元
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            海外ETF
+                        </td>
+
+                        <td class="p-4">
+                            0日元
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            投资信托
+                        </td>
+
+                        <td class="p-4">
+                            基本免费
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            乐天信用卡定投
+                        </td>
+
+                        <td class="p-4">
+                            可获得积分返还
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 核心优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 核心优势
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎁 乐天积分投资
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💳 乐天信用卡联动
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🚀 NISA完善
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🛒 乐天生态整合
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 乐天生态 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🔗 乐天生态圈联动
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="leading-8">
+
+                楽天银行
+
+                <br>
+
+                ↓
+
+                <br>
+
+                楽天信用卡
+
+                <br>
+
+                ↓
+
+                <br>
+
+                楽天证券
+
+                <br>
+
+                ↓
+
+                <br>
+
+                NISA投资
+
+                <br>
+
+                ↓
+
+                <br>
+
+                获得楽天积分
+
+                <br>
+
+                ↓
+
+                <br>
+
+                再次用于投资
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🏅 推荐指数
+        </h2>
+
+        <div class="text-4xl mb-4">
+            ★★★★★
+        </div>
+
+        <div class="leading-8">
+
+            如果你已经在使用：
+
+            <br>
+
+            ✔ 楽天银行
+
+            <br>
+
+            ✔ 楽天Pay
+
+            <br>
+
+            ✔ 楽天信用卡
+
+            <br><br>
+
+            那么楽天证券几乎是最佳选择。
+
+            <br><br>
+
+            它拥有完善的NISA体系、
+
+            免费的交易环境、
+
+            丰富的投资产品，
+
+            同时还能通过信用卡定投获得积分回馈。
+
+            <br><br>
+
+            对于希望把消费、支付、储蓄、投资统一管理的人来说，
+
+            楽天证券是日本最值得考虑的券商之一。
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

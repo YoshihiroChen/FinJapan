@@ -1,0 +1,573 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>住信SBI银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center">
+                📈
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                住信SBI银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            住信SBIネット銀行
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本投资用户使用率最高的网络银行之一，SBI证券最佳搭档。
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-blue-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            📈 基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            住信SBI网络银行（住信SBIネット銀行）是日本最成功的网络银行之一。
+
+            <br><br>
+
+            由：
+
+            <br>
+
+            ・住友信托银行
+
+            <br>
+
+            ・SBI集团
+
+            <br>
+
+            共同设立。
+
+            <br><br>
+
+            最大优势是与 SBI证券深度联动。
+
+            <br><br>
+
+            对于投资用户来说，
+
+            基本属于必备银行之一。
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌐 官方网站
+        </h2>
+
+        <a href="https://www.netbk.co.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                住信SBI银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.netbk.co.jp
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 开户资格 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ✅ 开户资格
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎓 留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💼 工作签证
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                👨‍👩‍👧 家族滞在
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏠 永住身份
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm mt-6">
+
+            支持外国人开户。
+
+            <br><br>
+
+            全程线上办理。
+
+            <br><br>
+
+            开户难度中等。
+
+            <br><br>
+
+            如果未来准备开设 SBI证券，
+
+            建议优先考虑该银行。
+
+        </div>
+
+    </div>
+
+    <!-- 所需材料 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📄 开户所需材料
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <ul class="leading-9">
+
+                <li>• 在留卡</li>
+
+                <li>• My Number</li>
+
+                <li>• 日本手机号</li>
+
+                <li>• 日本住址</li>
+
+                <li>• 邮箱地址</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- SBI生态 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🚀 SBI投资生态圈
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-center text-lg leading-10">
+
+                住信SBI银行
+
+                <br>
+
+                ↓
+
+                <br>
+
+                SBI证券
+
+                <br>
+
+                ↓
+
+                <br>
+
+                NISA账户
+
+                <br>
+
+                ↓
+
+                <br>
+
+                投资信托
+
+                <br>
+
+                ↓
+
+                <br>
+
+                美股投资
+
+                <br>
+
+                ↓
+
+                <br>
+
+                自动资金划转
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HYPER账户 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            💰 SBIハイブリッド預金
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <p class="leading-8">
+
+                SBI证券与住信SBI银行联动后，
+
+                可以开通：
+
+                <br><br>
+
+                SBIハイブリッド預金
+
+                <br><br>
+
+                功能：
+
+                <br>
+
+                • 自动转入证券账户
+
+                <br>
+
+                • 自动资金管理
+
+                <br>
+
+                • 提升投资便利性
+
+                <br><br>
+
+                是很多投资者选择该银行的重要原因。
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 国际汇款 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌏 国际汇款能力
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <p class="leading-8">
+
+                国际汇款功能较完善。
+
+                <br><br>
+
+                优势：
+
+                <br>
+
+                • 线上办理
+
+                <br>
+
+                • 手续费较低
+
+                <br>
+
+                • 操作简单
+
+                <br><br>
+
+                对于普通留学生和上班族已经足够使用。
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 手机支付 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📱 手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4">PayPay</td>
+                        <td class="p-4">✅</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">楽天Pay</td>
+                        <td class="p-4">✅</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Apple Pay</td>
+                        <td class="p-4">◎</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Google Pay</td>
+                        <td class="p-4">◎</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 最大优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 最大优势
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📈 SBI证券联动
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💰 自动资金划转
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💴 转账优惠次数多
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏦 网络银行效率高
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📱 App体验优秀
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💹 NISA最佳搭档
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 推荐指数
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                开户难度 ⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                投资联动 ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                NISA适配 ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                外国人推荐 ⭐⭐⭐⭐⭐
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🎯 适合什么人？
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📈 SBI证券用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💹 NISA投资者
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股投资者
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎓 留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💼 日本上班族
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🚀 长期投资用户
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-blue-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            💡 新手建议
+        </h2>
+
+        <p class="leading-8">
+
+            如果未来计划：
+
+            <br>
+
+            • 开通NISA
+
+            <br>
+
+            • 投资日本股票
+
+            <br>
+
+            • 投资美国股票
+
+            <br>
+
+            • 使用SBI证券
+
+            <br><br>
+
+            那么：
+
+            <br><br>
+
+            住信SBI银行 + SBI证券
+
+            <br><br>
+
+            基本是目前日本投资用户最主流的组合之一。
+
+            <br><br>
+
+            很多日本投资达人和长期投资者都采用这一组合。
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,544 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>三菱UFJ银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-green-100 flex items-center justify-center">
+                🏦
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                三菱UFJ银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            三菱UFJ銀行（MUFG）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本三大Mega Bank之一，国际业务能力最强的银行之一。
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-green-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🏦 基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            三菱UFJ银行是日本最大的商业银行之一。
+
+            <br><br>
+
+            属于日本三大Mega Bank：
+
+            <br>
+
+            • 三菱UFJ银行
+
+            <br>
+
+            • 三井住友银行
+
+            <br>
+
+            • 瑞穗银行
+
+            <br><br>
+
+            在全球拥有大量分支机构。
+
+            <br>
+
+            国际汇款、企业业务和金融服务实力非常强。
+
+            <br><br>
+
+            对于长期在日本工作生活的人来说，
+            是非常稳定且可靠的选择。
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌐 官方网站
+        </h2>
+
+        <a href="https://www.bk.mufg.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                三菱UFJ银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.bk.mufg.jp
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 开户资格 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ✅ 开户资格
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎓 留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💼 工作签证
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                👨‍👩‍👧 家族滞在
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏠 永住身份
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm mt-6">
+
+            可以接受外国人开户。
+
+            <br><br>
+
+            但相比邮储银行和网络银行，
+
+            审核会更加严格。
+
+            <br><br>
+
+            特别关注：
+
+            <br>
+
+            • 在日居住情况
+
+            <br>
+
+            • 收入来源
+
+            <br>
+
+            • 开户用途
+
+        </div>
+
+    </div>
+
+    <!-- 所需材料 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📄 开户所需材料
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <ul class="leading-9">
+
+                <li>• 在留卡</li>
+
+                <li>• My Number</li>
+
+                <li>• 日本手机号</li>
+
+                <li>• 日本住址</li>
+
+                <li>• 学生证或工作证明（部分情况）</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- 常见失败原因 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⚠️ 常见开户失败原因
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📄 材料不完整
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏠 地址信息不一致
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                ⏳ 在日时间过短
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                ❓ 开户用途说明不明确
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 国际汇款 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌏 国际汇款能力
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <p class="leading-8">
+
+                三菱UFJ银行拥有非常成熟的国际汇款体系。
+
+                <br><br>
+
+                优势：
+
+                <br>
+
+                • 全球网点众多
+
+                <br>
+
+                • SWIFT网络完善
+
+                <br>
+
+                • 安全性高
+
+                <br>
+
+                • 企业业务经验丰富
+
+                <br><br>
+
+                缺点：
+
+                <br>
+
+                • 手续费偏高
+
+                <br>
+
+                • 办理流程较复杂
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📱 手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            PayPay
+                        </td>
+
+                        <td class="p-4">
+                            ✅
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            楽天Pay
+                        </td>
+
+                        <td class="p-4">
+                            ✅
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Apple Pay
+                        </td>
+
+                        <td class="p-4">
+                            ◎
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 主要优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 主要优势
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🌏 国际汇款能力强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏦 全国网点众多
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🔒 安全性高
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💼 企业认可度高
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📈 金融服务完善
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🌐 海外业务丰富
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 推荐指数
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                开户难度 ⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                国际汇款 ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                银行规模 ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                外国人推荐 ⭐⭐⭐⭐
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🎯 适合什么人？
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💼 长期工作者
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🌏 经常国际汇款的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏢 外资企业员工
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📈 投资用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                👨‍👩‍👧 家庭用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏦 重视稳定性的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-green-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            💡 开户后容易忽略的风险
+        </h2>
+
+        <p class="leading-8">
+
+            三菱UFJ属于传统大型银行。
+
+            <br><br>
+
+            部分服务手续费可能高于网络银行。
+
+            <br><br>
+
+            同时在：
+
+            <br>
+
+            • 更新在留卡
+
+            <br>
+
+            • 更换手机号
+
+            <br>
+
+            • 更换住址
+
+            <br><br>
+
+            后需要及时更新银行资料。
+
+            <br><br>
+
+            否则可能影响：
+
+            <br>
+
+            • 国际汇款
+
+            <br>
+
+            • 网上银行功能
+
+            <br>
+
+            • 身份验证
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>moomoo证券</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<!-- Header -->
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">
+                🐮
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                moomoo证券
+            </span>
+
+        </div>
+
+        <a href="{% url 'securities' %}"
+           class="text-sm hover:text-stone-900">
+            返回证券专区
+        </a>
+
+    </div>
+
+</header>
+
+<!-- Main -->
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            moomoo证券（ムームー証券）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            在日华人最熟悉的证券平台之一，中文支持最完善。
+        </p>
+
+    </div>
+
+    <!-- 公司简介 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🏢 公司简介
+        </h2>
+
+        <p class="leading-8">
+
+            moomoo证券（ムームー証券）
+            是富途集团（Futu Holdings）旗下的日本证券公司。
+
+            <br><br>
+
+            相较于日本传统券商，
+            moomoo最大的特点是：
+
+            <br>
+
+            ✔ 中文界面
+
+            <br>
+
+            ✔ 中文客服
+
+            <br>
+
+            ✔ 中文投资社区
+
+            <br>
+
+            ✔ 美股数据丰富
+
+            <br>
+
+            ✔ App体验优秀
+
+            <br><br>
+
+            对于刚来到日本的中国留学生、
+            新社会人以及希望使用中文投资平台的人来说，
+            moomoo是门槛最低的证券公司之一。
+
+        </p>
+
+    </div>
+
+    <!-- 基本信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📋 基本信息
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">中文名称</td>
+                        <td class="p-4">moomoo证券</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">日文名称</td>
+                        <td class="p-4">ムームー証券株式会社</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">母公司</td>
+                        <td class="p-4">富途控股（Futu Holdings）</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">证券类型</td>
+                        <td class="p-4">网络券商</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">NISA支持</td>
+                        <td class="p-4">★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">美股支持</td>
+                        <td class="p-4">★★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">中文支持</td>
+                        <td class="p-4">★★★★★</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 核心特色 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌟 核心特色
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇨🇳 中文界面
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💬 中文客服
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股行情
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📱 专业交易软件
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ✅ 优势
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇨🇳 中文支持最强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📈 行情数据丰富
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📱 APP体验优秀
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股投资友好
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 不足 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⚠️ 不足
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏦 日本本土生态较弱
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎁 积分体系不如楽天
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🚀 NISA功能不如SBI
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                👴 老一代投资者使用较少
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            👥 适合人群
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-[#EEF3EE] rounded-2xl p-6 shadow-sm">
+                🎓 留学生
+            </div>
+
+            <div class="bg-[#EEF0F6] rounded-2xl p-6 shadow-sm">
+                🇨🇳 在日华人
+            </div>
+
+            <div class="bg-[#F5EFEC] rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股投资者
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 与其他券商比较 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📊 与其他券商比较
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">项目</th>
+                        <th class="p-4 text-left">moomoo</th>
+                        <th class="p-4 text-left">SBI</th>
+                        <th class="p-4 text-left">楽天</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4">中文支持</td>
+                        <td class="p-4">★★★★★</td>
+                        <td class="p-4">★</td>
+                        <td class="p-4">★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">NISA</td>
+                        <td class="p-4">★★★★</td>
+                        <td class="p-4">★★★★★</td>
+                        <td class="p-4">★★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">美股</td>
+                        <td class="p-4">★★★★★</td>
+                        <td class="p-4">★★★★★</td>
+                        <td class="p-4">★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">新手友好</td>
+                        <td class="p-4">★★★★★</td>
+                        <td class="p-4">★★★★</td>
+                        <td class="p-4">★★★★</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 推荐指数
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-5xl font-bold text-stone-800">
+                9.2 / 10
+            </div>
+
+            <p class="mt-4 leading-8 text-stone-600">
+
+                如果你的目标是：
+
+                <br>
+
+                ✔ 中文操作
+
+                <br>
+
+                ✔ 中文客服
+
+                <br>
+
+                ✔ 投资美股
+
+                <br>
+
+                ✔ 快速了解日本证券市场
+
+                <br><br>
+
+                moomoo证券是目前最适合在日华人的证券平台之一。
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 官方链接 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+        <h2 class="text-xl font-semibold text-stone-800 mb-4">
+            🔗 官方开户入口
+        </h2>
+
+        <div class="space-y-3">
+
+            <a
+                href="https://www.moomoo.com/jp/"
+                target="_blank"
+                class="block text-blue-600 hover:underline"
+            >
+                moomoo日本官网
+            </a>
+
+            <a
+                href="https://www.moomoo.com/jp/open-account"
+                target="_blank"
+                class="block text-blue-600 hover:underline"
+            >
+                在线开户页面
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

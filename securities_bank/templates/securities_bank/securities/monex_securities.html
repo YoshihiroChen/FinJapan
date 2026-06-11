@@ -1,0 +1,397 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monex证券（マネックス証券）</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<!-- Header -->
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">
+                🇺🇸
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                Monex证券
+            </span>
+
+        </div>
+
+        <a href="{% url 'securities' %}"
+           class="text-sm hover:text-stone-900">
+            返回证券专区
+        </a>
+
+    </div>
+
+</header>
+
+<!-- Main -->
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            Monex证券（マネックス証券）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本美股投资体验最优秀的网络券商之一。
+        </p>
+
+    </div>
+
+    <!-- 公司简介 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            🏢 公司简介
+        </h2>
+
+        <p class="leading-8">
+
+            Monex证券（マネックス証券）
+            成立于1999年，
+
+            是日本五大网络券商之一。
+
+            <br><br>
+
+            与SBI证券和楽天证券相比，
+
+            Monex最大的优势在于美股投资。
+
+            <br><br>
+
+            美国股票数量丰富、
+            研究资料完善、
+            财报分析工具强大，
+
+            因此受到大量美股投资者欢迎。
+
+            <br><br>
+
+            如果你的投资目标主要是：
+
+            美国ETF、
+            苹果、
+            微软、
+            英伟达、
+            特斯拉等美国资产，
+
+            Monex是非常优秀的选择。
+
+        </p>
+
+    </div>
+
+    <!-- 基本信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            📋 基本信息
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">中文名称</td>
+                        <td class="p-4">Monex证券</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">日文名称</td>
+                        <td class="p-4">マネックス証券株式会社</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">成立时间</td>
+                        <td class="p-4">1999年</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">证券类型</td>
+                        <td class="p-4">网络券商</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">NISA支持</td>
+                        <td class="p-4">★★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">美股支持</td>
+                        <td class="p-4">★★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4 font-medium">中文支持</td>
+                        <td class="p-4">★</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 核心特色 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            🌟 核心特色
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股投资
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📊 企业财报分析
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                💹 ETF投资
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🌎 海外资产配置
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ✅ 优势
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇺🇸 日本顶级美股平台
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📈 美国股票数量丰富
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📚 研究报告质量高
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🚀 NISA支持完善
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 不足 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⚠️ 不足
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🎁 积分生态不如楽天
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🏦 银行联动不如SBI
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                🇨🇳 中文支持有限
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                📱 APP体验一般
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            👥 适合人群
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-[#EEF3EE] rounded-2xl p-6 shadow-sm">
+                🇺🇸 美股投资者
+            </div>
+
+            <div class="bg-[#EEF0F6] rounded-2xl p-6 shadow-sm">
+                📈 ETF长期投资者
+            </div>
+
+            <div class="bg-[#F5EFEC] rounded-2xl p-6 shadow-sm">
+                🌎 全球资产配置用户
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐投资标的 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            💹 推荐投资标的
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                VOO
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                VTI
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                QQQ
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                NVIDIA
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            ⭐ 推荐指数
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-5xl font-bold text-stone-800">
+                9.0 / 10
+            </div>
+
+            <p class="mt-4 leading-8 text-stone-600">
+
+                如果你的目标是：
+
+                <br>
+
+                ✔ 投资美国股票
+
+                <br>
+
+                ✔ 配置美国ETF
+
+                <br>
+
+                ✔ 长期持有科技股
+
+                <br>
+
+                ✔ 使用专业研究工具
+
+                <br><br>
+
+                Monex证券是日本市场最值得考虑的平台之一。
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 官方链接 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+        <h2 class="text-xl font-semibold text-stone-800 mb-4">
+            🔗 官方开户入口
+        </h2>
+
+        <div class="space-y-3">
+
+            <a
+                href="https://www.monex.co.jp/"
+                target="_blank"
+                class="block text-blue-600 hover:underline"
+            >
+                Monex证券官网
+            </a>
+
+            <a
+                href="https://www.monex.co.jp/OpenAccount/"
+                target="_blank"
+                class="block text-blue-600 hover:underline"
+            >
+                在线开户页面
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>
