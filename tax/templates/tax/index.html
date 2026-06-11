@@ -1,0 +1,472 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本所得税与住民税</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-stone-100 min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-9 h-9 rounded-xl bg-[#F5EFEC] flex items-center justify-center">📋</div>
+            <span class="ml-3 text-lg font-semibold text-stone-800">日本税务基础</span>
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-sm">
+            <a class="hover:text-stone-900" href="/">首页</a>
+            <a class="hover:text-stone-900" href="#tax-tabs">所得税 / 住民税</a>
+        </nav>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <section class="bg-[#F5EFEC] rounded-3xl p-8 shadow-sm mb-8">
+        <p class="text-sm text-stone-500 mb-3">Tax Guide for Chinese Residents in Japan</p>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-stone-800 mb-5">
+            日本所得税与住民税的计算流程
+        </h1>
+
+        <p class="leading-8 text-stone-600 max-w-4xl">
+            所得税和住民税的计算方式很像，都是从收入出发，扣除必要经费、所得控除，
+            再对课税所得金额计算税额。区别在于，所得税主要根据当年的收入计算，
+            而住民税通常根据前一年的收入计算。
+        </p>
+    </section>
+
+    <section id="tax-tabs" class="bg-white rounded-3xl p-8 shadow-sm border border-stone-200">
+
+        <div class="flex gap-3 mb-8">
+            <button id="incomeTaxBtn"
+                    class="px-5 py-3 rounded-xl bg-stone-800 text-white text-sm font-medium"
+                    onclick="showTaxTab('income')">
+                所得税
+            </button>
+
+            <button id="residentTaxBtn"
+                    class="px-5 py-3 rounded-xl bg-[#F5EFEC] text-stone-700 text-sm font-medium hover:bg-stone-200 transition"
+                    onclick="showTaxTab('resident')">
+                住民税
+            </button>
+        </div>
+
+        <!-- 所得税 -->
+        <div id="incomeTaxPanel">
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-800 mb-3">所得税的计算流程</h2>
+                <p class="text-sm leading-7 text-stone-600">
+                    所得税是交给国家的税，主要根据当年的收入计算。
+                    公司员工通常会通过工资里的源泉徴収先预缴，之后通过年末调整或确定申告进行最终整理。
+                </p>
+            </div>
+
+            <div class="space-y-4">
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">1. 今年年收入</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        所得税从“今年的收入”开始计算。公司员工主要看給与收入，
+                        个体经营者主要看事业收入，也可能包括副业收入、年金收入、投资收入等。
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">2. 合计所得金额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-4 text-stone-700">
+                            合计所得金额 = 今年年收入 − 必要经费（或收入相关控除）
+                        </div>
+
+                        <p class="mb-4">
+                            对会社员来说，最常见的收入相关控除是給与所得控除。
+                            它可以理解为“工资收入者为了工作而发生的概算成本”。
+                            即使没有逐项记录交通费、服装费、学习费等，税法也会先给工资收入者扣除一定金额。
+                        </p>
+
+                        <div class="bg-white rounded-2xl p-5 border border-stone-200">
+                            <h4 class="font-semibold text-stone-800 mb-3">令和7年分以后：給与所得控除额</h4>
+
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm border-collapse">
+                                    <thead>
+                                        <tr class="bg-stone-100 text-stone-700">
+                                            <th class="border border-stone-200 px-4 py-3 text-left">給与等の収入金額</th>
+                                            <th class="border border-stone-200 px-4 py-3 text-left">給与所得控除額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border border-stone-200 px-4 py-3">1,900,000円まで</td><td class="border border-stone-200 px-4 py-3">650,000円</td></tr>
+                                        <tr><td class="border border-stone-200 px-4 py-3">1,900,001円から 3,600,000円まで</td><td class="border border-stone-200 px-4 py-3">収入金額 × 30％ + 80,000円</td></tr>
+                                        <tr><td class="border border-stone-200 px-4 py-3">3,600,001円から 6,600,000円まで</td><td class="border border-stone-200 px-4 py-3">収入金額 × 20％ + 440,000円</td></tr>
+                                        <tr><td class="border border-stone-200 px-4 py-3">6,600,001円から 8,500,000円まで</td><td class="border border-stone-200 px-4 py-3">収入金額 × 10％ + 1,100,000円</td></tr>
+                                        <tr><td class="border border-stone-200 px-4 py-3">8,500,001円以上</td><td class="border border-stone-200 px-4 py-3">1,950,000円</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">3. 总所得金额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            总所得金额 = 合计所得金额 − 损失的结转控除
+                        </div>
+
+                        <p>
+                            损失的结转控除，是指过去年度产生的某些亏损，在满足条件时可以带到之后年度继续扣除。
+                            例如买了上场股票或投信基金，卖出时产生亏损，并且进行了必要的确定申告，
+                            之后年度如果有同类股票、投信基金收益，就可能用过去的亏损抵消部分收益。
+                            但并不是所有亏损都能自动扣除，要看亏损种类和申告条件。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">4. 课税所得金额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            课税所得金额 = 总所得金额 − 所得控除
+                        </div>
+
+                        <p>
+                            课税所得金额就是最终你需要交税的那部分钱。由总所得金额减去所得控除来获得。
+                        </p>
+
+                        <p class="mb-3">
+                            所得控除有许多种类，比较重要的两个是“抚养控除”和“iDeCO控除”。
+                        </p>
+
+                        <p>
+                            扶养控除是指，如果你在经济上扶养符合条件的亲属（把钱寄回家里），例如收入较低的父母、子女等，
+                            这一部分钱日本政府就不会收税。
+                        </p>
+
+                        <p>
+                            iDeCo 是一种养老金制度。
+                            简单来说，你把钱放进 iDeCo 这种养老金账户的话，
+                            这部分钱日本政府也不会收税。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                  <summary class="cursor-pointer font-semibold text-stone-800">
+                      5. 算出税额
+                  </summary>
+              
+                  <div class="mt-4 text-sm leading-7 text-stone-600">
+              
+                      <div class="bg-white rounded-xl p-4 mb-4 text-stone-700">
+                          算出税额 = 课税所得金额 × 所得税税率 − 速算控除
+                      </div>
+              
+                      <p class="mb-4">
+                          所得税采用累进税率。课税所得越高，适用的边际税率越高。
+                          为了方便计算，日本税法提供了「所得税速算表」。
+                          只要找到自己课税所得金额所在的区间，就可以直接使用：
+                      </p>
+              
+                      <div class="bg-white rounded-2xl p-5 border border-stone-200 mb-4">
+              
+                          <h4 class="font-semibold text-stone-800 mb-3">
+                              所得税速算表
+                          </h4>
+              
+                          <div class="overflow-x-auto">
+              
+                              <table class="w-full text-sm border-collapse">
+              
+                                  <thead>
+                                      <tr class="bg-stone-100 text-stone-700">
+                                          <th class="border border-stone-200 px-4 py-3 text-left">
+                                              課税所得金額
+                                          </th>
+                                          <th class="border border-stone-200 px-4 py-3 text-left">
+                                              税率
+                                          </th>
+                                          <th class="border border-stone-200 px-4 py-3 text-left">
+                                              控除額
+                                          </th>
+                                      </tr>
+                                  </thead>
+              
+                                  <tbody>
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              1,000円 ～ 1,949,000円
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">5%</td>
+                                          <td class="border border-stone-200 px-4 py-3">0円</td>
+                                      </tr>
+              
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              1,950,000円 ～ 3,299,000円
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">10%</td>
+                                          <td class="border border-stone-200 px-4 py-3">97,500円</td>
+                                      </tr>
+              
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              3,300,000円 ～ 6,949,000円
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">20%</td>
+                                          <td class="border border-stone-200 px-4 py-3">427,500円</td>
+                                      </tr>
+              
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              6,950,000円 ～ 8,999,000円
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">23%</td>
+                                          <td class="border border-stone-200 px-4 py-3">636,000円</td>
+                                      </tr>
+              
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              9,000,000円 ～ 17,999,000円
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">33%</td>
+                                          <td class="border border-stone-200 px-4 py-3">1,536,000円</td>
+                                      </tr>
+              
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              18,000,000円 ～ 39,999,000円
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">40%</td>
+                                          <td class="border border-stone-200 px-4 py-3">2,796,000円</td>
+                                      </tr>
+              
+                                      <tr>
+                                          <td class="border border-stone-200 px-4 py-3">
+                                              40,000,000円以上
+                                          </td>
+                                          <td class="border border-stone-200 px-4 py-3">45%</td>
+                                          <td class="border border-stone-200 px-4 py-3">4,796,000円</td>
+                                      </tr>
+                                  </tbody>
+              
+                              </table>
+              
+                          </div>
+              
+                      </div>
+              
+                      <p class="mb-3">
+                          这里的「税率」是适用于该区间的边际税率。
+                          「控除額」则是为了让累进税率能够通过一个简单公式直接计算而设置的调整额。
+                      </p>
+              
+                      <div class="bg-white rounded-xl p-4 text-stone-700">
+                          例如课税所得金额为 2,104,000円：<br>
+                          属于「1,950,000円 ～ 3,299,000円」区间。<br><br>
+              
+                          税率：10%<br>
+                          控除額：97,500円<br><br>
+              
+                          算出税额 = 2,104,000円 × 10% − 97,500円<br>
+                          = 210,400円 − 97,500円<br>
+                          = 112,900円
+                      </div>
+              
+                  </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">6. 纳付税额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            纳付税额 = 算出税额 − 税额控除 − 已预缴税额
+                        </div>
+
+                        <p>
+                            税额控除是直接从税额中扣除，例如住宅贷款控除、外国税额控除等。
+                            已预缴税额主要指会社员工资中已经被源泉徴収的金额。
+                            所以最终可能是补缴，也可能是退税。
+                        </p>
+                    </div>
+                </details>
+
+            </div>
+
+            <div class="mt-8 bg-[#F5EFEC] rounded-2xl p-6">
+                <h3 class="text-lg font-semibold text-stone-800 mb-4">所得税计算例子</h3>
+
+                <div class="space-y-3 text-sm leading-7 text-stone-600">
+                    <p>1. 今年年收入：4,000,000円</p>
+                    <p>2. 給与所得控除：4,000,000円 × 20％ + 440,000円 = 1,240,000円</p>
+                    <p>3. 合计所得金额：4,000,000円 − 1,240,000円 = 2,760,000円</p>
+                    <p>4. 假设损失结转控除为 0円，总所得金额：2,760,000円</p>
+                    <p>5. 假设 iDeCo 276,000円，扶养控除 380,000円，所得控除合计：656,000円</p>
+                    <p>6. 课税所得金额：2,760,000円 − 656,000円 = 2,104,000円</p>
+                    <p>7. 算出税额：2,104,000円 × 10％ − 97,500円 = 112,900円</p>
+                    <p>8. 假设税额控除 0円、源泉徴収済 100,000円，则纳付税额：12,900円</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 住民税 -->
+        <div id="residentTaxPanel" class="hidden">
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-800 mb-3">住民税的计算流程</h2>
+                <p class="text-sm leading-7 text-stone-600">
+                    住民税是交给地方自治体的税，通常根据前一年的收入计算。
+                    所以刚来日本第一年可能没有住民税，但第二年开始会根据上一年的收入产生住民税。
+                </p>
+            </div>
+
+            <div class="space-y-4">
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">1. 前年年收入</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        住民税从“前一年收入”开始计算。比如 2026 年缴纳的住民税，
+                        通常是根据 2025 年的收入计算出来的。
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">2. 合计所得金额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-4 text-stone-700">
+                            合计所得金额 = 前年年收入 − 必要经费 / 收入相关控除
+                        </div>
+
+                        <p>
+                            对会社员来说，主要扣除的是給与所得控除。
+                            这个控除可以看作是工资收入者为了工作所产生的成本。
+                            因为上班也需要交通、服装、学习、通信等成本，所以税法不会把工资总额全部直接拿来课税。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">3. 总所得金额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            总所得金额 = 合计所得金额 − 损失的结转控除
+                        </div>
+
+                        <p>
+                            如果有投资、副业或事业相关的亏损，并且满足结转条件，就可能影响住民税侧的所得计算。
+                            对普通会社员来说，如果只有工资收入，这一步通常不会有太大变化。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">4. 课税所得金额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            课税所得金额 = 总所得金额 − 所得控除
+                        </div>
+
+                        <p class="mb-3">
+                            住民税也有所得控除，但控除金额有些和所得税不同。
+                            因此同一个人，所得税和住民税的课税所得金额可能不完全一样。
+                        </p>
+
+                        <p class="mb-3">
+                            扶养控除是指，如果你扶养符合条件的亲属，就可以从所得中扣除一定金额。
+                            住民税侧的扶养控除金额通常和所得税侧不同。
+                        </p>
+
+                        <p>
+                            iDeCo 的挂金也会通过小規模企業共済等掛金控除影响住民税。
+                            所以 iDeCo 不只是影响所得税，也通常会影响住民税的课税所得。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">5. 算出税额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            算出税额 = 课税所得金额 × 住民税所得割税率
+                        </div>
+
+                        <p>
+                            住民税中的所得割通常按 10% 左右计算。
+                            另外住民税还可能包含均等割，也就是不完全按照收入比例计算的固定金额部分。
+                            所以住民税不只是简单的“收入乘以 10%”。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-[#F5EFEC] rounded-2xl p-5">
+                    <summary class="cursor-pointer font-semibold text-stone-800">6. 纳付税额</summary>
+                    <div class="mt-4 text-sm leading-7 text-stone-600">
+                        <div class="bg-white rounded-xl p-4 mb-3 text-stone-700">
+                            纳付税额 = 算出税额 − 税额控除 + 均等割等
+                        </div>
+
+                        <p>
+                            税额控除包括调整控除、外国税额控除等。
+                            均等割是居民按固定金额负担的部分，不是按照所得比例计算。
+                            最终确定的住民税，一般会在下一年度通过工资扣除，也就是特别徴収的方式缴纳。
+                        </p>
+                    </div>
+                </details>
+
+            </div>
+
+            <div class="mt-8 bg-[#F5EFEC] rounded-2xl p-6">
+                <h3 class="text-lg font-semibold text-stone-800 mb-4">住民税计算例子</h3>
+
+                <div class="space-y-3 text-sm leading-7 text-stone-600">
+                    <p>1. 前年年收入：4,000,000円</p>
+                    <p>2. 給与所得控除：4,000,000円 × 20％ + 440,000円 = 1,240,000円</p>
+                    <p>3. 合计所得金额：4,000,000円 − 1,240,000円 = 2,760,000円</p>
+                    <p>4. 假设损失结转控除为 0円，总所得金额：2,760,000円</p>
+                    <p>5. 假设 iDeCo 276,000円，扶养控除按住民税侧 330,000円，所得控除合计：606,000円</p>
+                    <p>6. 课税所得金额：2,760,000円 − 606,000円 = 2,154,000円</p>
+                    <p>7. 所得割：2,154,000円 × 10％ = 215,400円</p>
+                    <p>8. 假设税额控除 0円、均等割等 5,000円，则纳付税额：220,400円</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+    function showTaxTab(type) {
+        const incomePanel = document.getElementById("incomeTaxPanel");
+        const residentPanel = document.getElementById("residentTaxPanel");
+        const incomeBtn = document.getElementById("incomeTaxBtn");
+        const residentBtn = document.getElementById("residentTaxBtn");
+
+        if (type === "income") {
+            incomePanel.classList.remove("hidden");
+            residentPanel.classList.add("hidden");
+
+            incomeBtn.className = "px-5 py-3 rounded-xl bg-stone-800 text-white text-sm font-medium";
+            residentBtn.className = "px-5 py-3 rounded-xl bg-[#F5EFEC] text-stone-700 text-sm font-medium hover:bg-stone-200 transition";
+        } else {
+            incomePanel.classList.add("hidden");
+            residentPanel.classList.remove("hidden");
+
+            residentBtn.className = "px-5 py-3 rounded-xl bg-stone-800 text-white text-sm font-medium";
+            incomeBtn.className = "px-5 py-3 rounded-xl bg-[#F5EFEC] text-stone-700 text-sm font-medium hover:bg-stone-200 transition";
+        }
+    }
+</script>
+
+</body>
+</html>
