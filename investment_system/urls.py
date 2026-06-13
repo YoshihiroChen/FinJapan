@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import investment_accounts
+from . import views
 
 urlpatterns = [
-    path("", investment_accounts, name="investment_accounts"),
+    path("", views.guide, name="investment_system"),
+    path("nisa/", views.nisa, name="investment_nisa"),
+    path("ideco/", views.ideco, name="investment_ideco"),
+    path("pension/", views.pension, name="investment_pension"),
 ]
