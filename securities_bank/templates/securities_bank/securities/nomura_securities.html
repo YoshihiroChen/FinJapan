@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>野村证券（NOMURA）</title>
+    <title>野村证券指南</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,11 +19,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
-
-<!-- Header -->
 
 <header class="bg-stone-50 border-b border-stone-200">
 
@@ -31,12 +39,16 @@
 
         <div class="flex items-center">
 
-            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">
-                🏛️
+            <div class="w-11 h-11 rounded-xl bg-[#EEF0F6] overflow-hidden flex items-center justify-center">
+
+                <img src="{% static 'securities_bank/img/securities/nomura_logo.png' %}"
+                     alt="Nomura Securities Logo"
+                     class="w-full h-full object-contain">
+
             </div>
 
             <span class="ml-3 text-lg font-semibold text-stone-800">
-                野村证券
+                野村证券指南
             </span>
 
         </div>
@@ -50,11 +62,7 @@
 
 </header>
 
-<!-- Main -->
-
 <main class="max-w-7xl mx-auto px-6 py-10">
-
-    <!-- 标题 -->
 
     <div class="mb-8">
 
@@ -63,357 +71,1435 @@
         </h1>
 
         <p class="mt-2 text-stone-500">
-            日本规模最大的综合证券公司，日本证券行业代表企业。
+            日本代表性的传统综合证券公司，适合需要线下顾问、全球资产配置和财富管理服务的人
         </p>
 
     </div>
 
-    <!-- 公司简介 -->
+    <!-- 官网 -->
 
     <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
 
         <h2 class="text-xl font-semibold mb-4">
-            🏢 公司简介
+            官方网站
         </h2>
 
-        <p class="leading-8">
+        <a href="https://www.nomura.co.jp/"
+           target="_blank"
+           class="text-blue-600 hover:underline break-all">
 
-            野村证券（Nomura Securities）成立于1925年，
-            是日本最大的证券公司之一，
-            隶属于野村控股集团（Nomura Holdings）。
+            https://www.nomura.co.jp/
 
-            <br><br>
-
-            与SBI证券、楽天证券等互联网券商不同，
-            野村证券属于传统大型综合证券机构，
-            提供股票、基金、债券、外汇、养老金、
-            财富管理以及企业金融服务。
-
-            <br><br>
-
-            在日本投资行业中，
-            野村证券具有极高知名度，
-            被视为日本证券行业的代表企业。
-
-        </p>
+        </a>
 
     </div>
 
-    <!-- 基本信息 -->
+    <!-- 基本特点 -->
 
-    <div class="mb-10">
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
 
-        <h2 class="text-xl font-semibold mb-5">
-            📋 基本信息
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
         </h2>
 
-        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <div class="leading-8">
 
-            <table class="w-full text-sm">
+            野村证券成立于1925年，是日本传统综合证券公司的代表
 
-                <tbody>
+            <br><br>
 
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">中文名称</td>
-                        <td class="p-4">野村证券</td>
-                    </tr>
+            和SBI证券、楽天证券这类网络券商不同，野村证券更重视线下门店、面对面咨询、财富管理和综合金融服务
 
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">日文名称</td>
-                        <td class="p-4">野村證券株式会社</td>
-                    </tr>
+            <br><br>
 
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">成立时间</td>
-                        <td class="p-4">1925年</td>
-                    </tr>
+            它适合资产规模较大、想做全球资产配置、债券投资、遗产赠与规划，或者希望有人面对面说明投资方案的人
 
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">证券类型</td>
-                        <td class="p-4">传统综合证券公司</td>
-                    </tr>
+            <br><br>
 
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">营业网点</td>
-                        <td class="p-4">日本全国</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">NISA支持</td>
-                        <td class="p-4">★★★★★</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">美股支持</td>
-                        <td class="p-4">★★★★</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4 font-medium">中文支持</td>
-                        <td class="p-4">★</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
+            但对留学生和小额NISA定投用户来说，野村证券的开户流程更麻烦，手续费也通常高于网络券商
 
         </div>
 
     </div>
 
-    <!-- 核心业务 -->
+    <!-- 核心优势 -->
 
     <div class="mb-10">
 
         <h2 class="text-xl font-semibold mb-5">
-            💼 核心业务
+            核心优势
         </h2>
 
         <div class="grid md:grid-cols-4 gap-6">
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                📈 股票投资
+                日本最大级证券公司
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                📦 投资信托
+                全国线下门店多
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                💵 债券投资
+                一对一顾问服务
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                🌎 海外资产配置
+                全球资产配置能力强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                债券产品丰富
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                财富管理服务完整
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                税务报表完整
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                资产安全制度完善
             </div>
 
         </div>
 
     </div>
 
-    <!-- 优势 -->
+    <!-- 开户定位与适合人群 -->
 
     <div class="mb-10">
 
         <h2 class="text-xl font-semibold mb-5">
-            ✅ 优势
+            开户定位与适合人群
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                🏛️ 日本最大级证券公司
+
+                <div class="font-semibold text-lg mb-3">
+                    开户难度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    偏高
+                    <br>
+                    外国人无法纯线上完成
+                    <br>
+                    需要邮寄纸质材料
+                </div>
+
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                👨‍💼 专属投资顾问服务
+
+                <div class="font-semibold text-lg mb-3">
+                    适合人群
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    高收入上班族
+                    <br>
+                    需要顾问服务的人
+                    <br>
+                    全球资产配置用户
+                    <br>
+                    债券投资用户
+                </div>
+
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                🌏 全球资产配置能力强
+
+                <div class="font-semibold text-lg mb-3">
+                    投资方向
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    日本股票
+                    <br>
+                    公募基金
+                    <br>
+                    债券
+                    <br>
+                    海外股票
+                    <br>
+                    结构化理财
+                </div>
+
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-sm">
-                📊 产品种类非常丰富
+
+                <div class="font-semibold text-lg mb-3">
+                    平台特点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    传统大机构
+                    <br>
+                    产品很全
+                    <br>
+                    顾问服务强
+                    <br>
+                    线上体验一般
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    主要短板
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    手续费较高
+                    <br>
+                    外籍开户流程繁琐
+                    <br>
+                    无中文客服
+                    <br>
+                    不适合纯小额定投
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    推荐程度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    适合重视顾问服务的人
+                    <br>
+                    不太适合作为新手第一个证券账户
+                </div>
+
             </div>
 
         </div>
 
     </div>
 
-    <!-- 不足 -->
+    <!-- 详细信息 -->
 
     <div class="mb-10">
 
         <h2 class="text-xl font-semibold mb-5">
-            ⚠️ 不足
+            详细信息
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-4">
 
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-                💰 手续费高于网络券商
+            <!-- 外国人开户条件 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>外国人开户条件和准备材料</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">开户方式：</span>
+
+                    <br>
+
+                    日本国籍客户可以手机线上快速开户
+
+                    <br>
+
+                    外籍华人和外国人无法纯线上完成开户
+
+                    <br>
+
+                    必须邮寄纸质材料办理
+
+                    <br>
+
+                    不支持全程eKYC线上办结
+
+                    <br><br>
+
+                    <span class="font-semibold">可开户人群：</span>
+
+                    <br>
+
+                    留学
+
+                    <br>
+
+                    技术・人文知识・国际业务
+
+                    <br>
+
+                    特定技能
+
+                    <br>
+
+                    永住
+
+                    <br>
+
+                    特别永住
+
+                    <br>
+
+                    其他长期在留资格
+
+                    <br><br>
+
+                    <span class="font-semibold">不能开户的情况：</span>
+
+                    <br>
+
+                    短期旅游签证
+
+                    <br>
+
+                    短期商务签证
+
+                    <br>
+
+                    探亲签证
+
+                    <br>
+
+                    不属于日本税务居住者的人
+
+                    <br><br>
+
+                    <span class="font-semibold">在留卡要求：</span>
+
+                    <br>
+
+                    在留卡剩余有效期必须满2个月以上
+
+                    <br>
+
+                    剩余有效期不足时无法受理
+
+                    <br><br>
+
+                    <span class="font-semibold">身份前提：</span>
+
+                    <br>
+
+                    法律上属于日本税务居住者
+
+                    <br>
+
+                    已完成住民票登记
+
+                    <br>
+
+                    通常在日本连续居住满1年会更稳
+
+                    <br>
+
+                    未满1年时审核很容易被驳回
+
+                    <br><br>
+
+                    <span class="font-semibold">必备材料：</span>
+
+                    <br>
+
+                    在留卡正反面复印件
+
+                    <br>
+
+                    3个月内发行的住民票
+
+                    <br>
+
+                    My Number个人编号证明
+
+                    <br>
+
+                    个人编号卡或通知纸二选一
+
+                    <br>
+
+                    本人名下日本银行账户
+
+                    <br>
+
+                    日本手机号
+
+                    <br>
+
+                    有效电子邮箱
+
+                    <br><br>
+
+                    <span class="font-semibold">邮寄要求：</span>
+
+                    <br>
+
+                    外籍客户需要邮寄纸质文件
+
+                    <br>
+
+                    文件需要手写签名
+
+                    <br>
+
+                    通常还需要加盖印章
+
+                    <br><br>
+
+                    <span class="font-semibold">美国籍客户：</span>
+
+                    <br>
+
+                    美国籍客户受FATCA严格限制
+
+                    <br>
+
+                    大量海外投资品类无法开通
+
+                    <br><br>
+
+                    <span class="font-semibold">开户时效：</span>
+
+                    <br>
+
+                    外籍邮寄开户通常需要7至14天
+
+                    <br>
+
+                    材料缺失时可能延长至2周以上
+
+                    <br>
+
+                    同步申请NISA时，税务局还需要额外1至2周审核
+
+                </div>
+
+            </details>
+
+            <!-- 入金出金 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>入金出金规则</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">支持银行：</span>
+
+                    <br>
+
+                    三菱UFJ
+
+                    <br>
+
+                    三井住友
+
+                    <br>
+
+                    瑞穗
+
+                    <br>
+
+                    乐天银行
+
+                    <br>
+
+                    PayPay银行
+
+                    <br>
+
+                    日本主流银行基本都支持
+
+                    <br><br>
+
+                    <span class="font-semibold">野村信托银行联动：</span>
+
+                    <br>
+
+                    可以使用あんしんスイープ自动划转
+
+                    <br>
+
+                    转账免费
+
+                    <br>
+
+                    闲置资金也可以更方便管理
+
+                    <br><br>
+
+                    <span class="font-semibold">第三方支付：</span>
+
+                    <br>
+
+                    不支持乐天Pay余额直接转入证券账户
+
+                    <br>
+
+                    不支持PayPay余额直接转入证券账户
+
+                    <br>
+
+                    仅支持银行转账和部分指定信用卡定投
+
+                    <br><br>
+
+                    <span class="font-semibold">跨境汇款入金：</span>
+
+                    <br>
+
+                    可接收海外日元或外币汇入
+
+                    <br>
+
+                    汇出手续费由转出银行承担
+
+                    <br>
+
+                    野村证券不额外收费
+
+                    <br>
+
+                    外币资金需要兑换为日元后才能交易
+
+                    <br><br>
+
+                    <span class="font-semibold">出金时效：</span>
+
+                    <br>
+
+                    工作日15点前申请，当日到账
+
+                    <br>
+
+                    15点后申请，顺延至下一营业日
+
+                    <br>
+
+                    日元出金无手续费
+
+                </div>
+
+            </details>
+            <!-- 手续费体系 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>手续费与交易成本</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">日本股票：</span>
+
+                    <br>
+
+                    没有永久免手续费政策
+
+                    <br>
+
+                    按成交金额阶梯收取手续费
+
+                    <br>
+
+                    小额交易也有最低收费标准
+
+                    <br>
+
+                    没有单日免佣额度
+
+                    <br><br>
+
+                    <span class="font-semibold">美股和海外股票：</span>
+
+                    <br>
+
+                    按成交比例计费
+
+                    <br>
+
+                    设有最低手续费和最高手续费上限
+
+                    <br>
+
+                    NISA账户内海外ETF和美股通常没有网络券商那种免手续费优势
+
+                    <br><br>
+
+                    <span class="font-semibold">投资信托：</span>
+
+                    <br>
+
+                    つみたてNISA指定定投基金申购费为0日元
+
+                    <br>
+
+                    普通场外基金可能存在申购手续费
+
+                    <br>
+
+                    收录eMAXIS Slim等低费率宽基基金
+
+                    <br>
+
+                    同时也有野村自有公募产品
+
+                    <br>
+
+                    不同产品费率差距较大，需要自己筛选低成本标的
+
+                    <br><br>
+
+                    <span class="font-semibold">账户管理费：</span>
+
+                    <br>
+
+                    综合证券账户永久免费
+
+                    <br>
+
+                    一般NISA永久免费
+
+                    <br>
+
+                    积立NISA永久免费
+
+                    <br>
+
+                    闲置账户不收取休眠管理费
+
+                    <br><br>
+
+                    <span class="font-semibold">分红和股息：</span>
+
+                    <br>
+
+                    股息入账免费
+
+                    <br>
+
+                    分红再投资免费
+
+                    <br>
+
+                    无额外代扣手续费
+
+                    <br><br>
+
+                    <span class="font-semibold">外币汇兑：</span>
+
+                    <br>
+
+                    美元、欧元等外币使用实时浮动点差
+
+                    <br>
+
+                    无单独固定汇兑手续费
+
+                    <br>
+
+                    实际成本主要体现在汇率差价中
+
+                    <br>
+
+                    没有长期优惠换汇通道
+
+                </div>
+
+            </details>
+
+            <!-- NISA -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>NISA制度支持</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">支持完整度：</span>
+
+                    <br>
+
+                    可同步开通一般NISA和つみたてNISA
+
+                    <br>
+
+                    新NISA年度360万日元免税额度对外籍居民全额开放
+
+                    <br>
+
+                    外籍居民没有额度削减
+
+                    <br><br>
+
+                    <span class="font-semibold">可投资产品：</span>
+
+                    <br>
+
+                    日股
+
+                    <br>
+
+                    J-REIT
+
+                    <br>
+
+                    公募基金
+
+                    <br>
+
+                    海外ETF
+
+                    <br>
+
+                    IPO新股
+
+                    <br>
+
+                    积立枠主要限定低风险指数基金定投
+
+                    <br><br>
+
+                    <span class="font-semibold">申请方式：</span>
+
+                    <br>
+
+                    邮寄开户时可以一并提交NISA申请表
+
+                    <br>
+
+                    已开好普通账户后，也可以追加申请NISA
+
+                    <br>
+
+                    税务局确认通常需要1至2周
+
+                    <br><br>
+
+                    <span class="font-semibold">离境政策：</span>
+
+                    <br>
+
+                    公司长期海外外派，并且持有海外勤务证明的人，可以申请NISA延续使用5年
+
+                    <br>
+
+                    需要提交非課税口座継続適用届出書
+
+                    <br>
+
+                    单纯留学结束、短期出境、旅游出国通常无法申请延续
+
+                    <br>
+
+                    出境后NISA账户会冻结新增买入和定投扣款
+
+                    <br>
+
+                    通常只能卖出已有持仓
+
+                    <br><br>
+
+                    <span class="font-semibold">办理流程：</span>
+
+                    <br>
+
+                    出国前1个月前往线下门店或邮寄纸质申请
+
+                    <br>
+
+                    需要提交海外任职证明和住民票注销凭证
+
+                    <br>
+
+                    审核周期约2周
+
+                    <br><br>
+
+                    <span class="font-semibold">税务文件：</span>
+
+                    <br>
+
+                    年末自动生成电子版源泉徴収票
+
+                    <br>
+
+                    特定口座可自动代扣分红和资本利得税
+
+                    <br>
+
+                    年度收益和分红明细可以区分NISA免税资产与课税资产
+
+                    <br>
+
+                    支持按年度导出CSV报表
+
+                    <br><br>
+
+                    <span class="font-semibold">海外资产申报：</span>
+
+                    <br>
+
+                    可提供年度交易报告书
+
+                    <br>
+
+                    可提供年末持仓明细PDF和电子表格
+
+                    <br>
+
+                    账目分类清晰，方便整理海外资产年度申报
+
+                </div>
+
+            </details>
+
+            <!-- 投资产品 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>可投资产品</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">日本市场：</span>
+
+                    <br>
+
+                    日股全市场覆盖
+
+                    <br>
+
+                    IPO新股
+
+                    <br>
+
+                    TOB收购标的
+
+                    <br>
+
+                    株主优待筛选
+
+                    <br>
+
+                    高股息个股检索
+
+                    <br>
+
+                    信用交易
+
+                    <br>
+
+                    PTS盘后交易
+
+                    <br><br>
+
+                    <span class="font-semibold">基金和债券：</span>
+
+                    <br>
+
+                    J-REIT
+
+                    <br>
+
+                    个人国债
+
+                    <br>
+
+                    短期MMF
+
+                    <br>
+
+                    两千余支公募基金
+
+                    <br>
+
+                    低费率积立NISA定投标的
+
+                    <br>
+
+                    企业员工专属职场定投服务
+
+                    <br><br>
+
+                    <span class="font-semibold">海外资产：</span>
+
+                    <br>
+
+                    美股
+
+                    <br>
+
+                    港股
+
+                    <br>
+
+                    欧洲个股
+
+                    <br>
+
+                    全球ETF
+
+                    <br>
+
+                    海外指数产品
+
+                    <br>
+
+                    杠杆产品
+
+                    <br>
+
+                    美股定期定投
+
+                    <br>
+
+                    海外新股IPO申购
+
+                    <br><br>
+
+                    <span class="font-semibold">特殊产品：</span>
+
+                    <br>
+
+                    外汇FX
+
+                    <br>
+
+                    贵金属
+
+                    <br>
+
+                    企业债券
+
+                    <br>
+
+                    期货期权
+
+                    <br>
+
+                    结构化理财
+
+                    <br><br>
+
+                    <span class="font-semibold">顾问服务：</span>
+
+                    <br>
+
+                    可预约线下一对一资产规划服务
+
+                    <br>
+
+                    适合希望有人说明投资方案的人
+
+                    <br>
+
+                    对复杂资产配置、遗产赠与、退休规划会更有帮助
+
+                </div>
+
+            </details>
+
+            <!-- APP和客服 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>APP、软件和客服支持</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">语言支持：</span>
+
+                    <br>
+
+                    NOMURA官方APP仅日语
+
+                    <br>
+
+                    官网网页仅日语
+
+                    <br>
+
+                    PC交易端仅日语
+
+                    <br>
+
+                    没有简体中文和英文界面切换功能
+
+                    <br>
+
+                    开户表单、账单、税务单据、邮寄文件全部为日文
+
+                    <br><br>
+
+                    <span class="font-semibold">客服渠道：</span>
+
+                    <br>
+
+                    全国线下门店
+
+                    <br>
+
+                    固定电话
+
+                    <br>
+
+                    官网线上咨询
+
+                    <br>
+
+                    基础AI文字问答
+
+                    <br><br>
+
+                    <span class="font-semibold">客服语言：</span>
+
+                    <br>
+
+                    没有专职中文客服
+
+                    <br>
+
+                    没有外籍专属业务专员
+
+                    <br>
+
+                    复杂NISA、离境手续需要自行用日语沟通
+
+                    <br><br>
+
+                    <span class="font-semibold">人工客服时间：</span>
+
+                    <br>
+
+                    工作日8:40至17:10
+
+                    <br>
+
+                    周末9:00至17:00
+
+                    <br>
+
+                    节假日休息
+
+                    <br><br>
+
+                    <span class="font-semibold">线下咨询：</span>
+
+                    <br>
+
+                    线下门店可预约面对面咨询
+
+                    <br>
+
+                    有专业理财师
+
+                    <br>
+
+                    但全程日语沟通
+
+                    <br><br>
+
+                    <span class="font-semibold">操作体验：</span>
+
+                    <br>
+
+                    银行自动划转
+
+                    <br>
+
+                    按月定投
+
+                    <br>
+
+                    分红再投资
+
+                    <br>
+
+                    止盈止损
+
+                    <br>
+
+                    资产总览图表
+
+                    <br>
+
+                    个股完整财报
+
+                    <br>
+
+                    股息历史
+
+                    <br>
+
+                    株主优待排名
+
+                    <br>
+
+                    市场每日解读
+
+                    <br>
+
+                    个股研报资源
+
+                    <br><br>
+
+                    <span class="font-semibold">客户端：</span>
+
+                    <br>
+
+                    单一NOMURA手机综合APP
+
+                    <br>
+
+                    网页交易系统
+
+                    <br>
+
+                    没有独立PC专业行情软件
+
+                    <br><br>
+
+                    <span class="font-semibold">通知方式：</span>
+
+                    <br>
+
+                    账户变动通过邮件通知
+
+                    <br>
+
+                    分红和税务通知通过邮件推送
+
+                    <br>
+
+                    不支持LINE绑定
+
+                    <br>
+
+                    所有账单和税务明细仅日文PDF下载
+
+                </div>
+
+            </details>
+
+           <!-- 推荐指数 -->
+
+            <div class="mb-10">
+
+                <h2 class="text-xl font-semibold mb-5">
+                    推荐指数
+                </h2>
+
+                <div class="grid md:grid-cols-4 gap-6">
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                        <div class="font-semibold">
+                            外国人开户
+                        </div>
+
+                        <div class="mt-2 text-stone-600">
+                            普通 ★★★☆☆
+                        </div>
+
+                        <div class="mt-2 text-sm text-stone-500">
+                            可开户但审核较严格
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                        <div class="font-semibold">
+                            NISA支持
+                        </div>
+
+                        <div class="mt-2 text-stone-600">
+                            非常推荐 ★★★★★
+                        </div>
+
+                        <div class="mt-2 text-sm text-stone-500">
+                            全面支持新NISA
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                        <div class="font-semibold">
+                            产品丰富度
+                        </div>
+
+                        <div class="mt-2 text-stone-600">
+                            顶级 ★★★★★
+                        </div>
+
+                        <div class="mt-2 text-sm text-stone-500">
+                            日本顶级综合证券公司
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                        <div class="font-semibold">
+                            华人推荐度
+                        </div>
+
+                        <div class="mt-2 text-stone-600">
+                            推荐 ★★★★☆
+                        </div>
+
+                        <div class="mt-2 text-sm text-stone-500">
+                            更适合高净值投资者
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-                📱 App体验不如SBI和楽天
+            <!-- 适合人群 -->
+
+            <div class="mb-10">
+
+                <h2 class="text-xl font-semibold mb-5">
+                    适合什么人
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <div class="bg-[#EEF0F6] rounded-2xl p-6">
+                        <div class="font-semibold">
+                            高资产投资者
+                        </div>
+
+                        <div class="text-sm text-stone-500 mt-2">
+                            重视资产配置与顾问服务
+                        </div>
+                    </div>
+
+                    <div class="bg-[#EEF3EE] rounded-2xl p-6">
+                        <div class="font-semibold">
+                            NISA长期投资者
+                        </div>
+
+                        <div class="text-sm text-stone-500 mt-2">
+                            计划长期持有基金和股票
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F5EFEC] rounded-2xl p-6">
+                        <div class="font-semibold">
+                            企业管理层
+                        </div>
+
+                        <div class="text-sm text-stone-500 mt-2">
+                            需要全球资产配置方案
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F4F1EA] rounded-2xl p-6">
+                        <div class="font-semibold">
+                            退休规划人群
+                        </div>
+
+                        <div class="text-sm text-stone-500 mt-2">
+                            希望获得专业投资建议
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-                🇨🇳 中文服务有限
+            <!-- 不太推荐 -->
+
+            <div class="mb-10">
+
+                <h2 class="text-xl font-semibold mb-5">
+                    不太推荐的人群
+                </h2>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+
+                        <div>
+                            <span class="font-semibold">
+                                ETF定投新手
+                            </span>
+
+                            <br>
+
+                            SBI证券和楽天证券成本更低
+                        </div>
+
+                        <div>
+                            <span class="font-semibold">
+                                美股为主投资者
+                            </span>
+
+                            <br>
+
+                            Monex和SBI选择更多
+                        </div>
+
+                        <div>
+                            <span class="font-semibold">
+                                希望中文服务的人
+                            </span>
+
+                            <br>
+
+                            野村几乎没有中文支持
+                        </div>
+
+                        <div>
+                            <span class="font-semibold">
+                                追求极低手续费的人
+                            </span>
+
+                            <br>
+
+                            网络券商更有优势
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-                🚀 不适合纯ETF定投用户
+            <!-- 总结 -->
+
+            <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-10">
+
+                <h2 class="text-xl font-semibold mb-4">
+                    一句话评价
+                </h2>
+
+                <div class="leading-8">
+
+                    野村证券最大的优势不是手续费
+
+                    <br>
+
+                    也不是开户速度
+
+                    <br><br>
+
+                    而是日本顶级证券公司的品牌实力
+
+                    <br>
+
+                    完整的资产配置能力
+
+                    <br>
+
+                    全国线下营业网点
+
+                    <br>
+
+                    专业投资顾问服务
+
+                    <br><br>
+
+                    如果你只想简单买ETF
+
+                    <br>
+
+                    SBI证券和楽天证券通常更划算
+
+                    <br><br>
+
+                    如果你未来资产规模较大
+
+                    <br>
+
+                    或者希望有人帮助规划投资
+
+                    <br>
+
+                    野村证券仍然是值得考虑的传统大型券商
+                </div>
+
             </div>
+
+          
+
+            
+            
 
         </div>
 
-    </div>
-
-    <!-- 适合人群 -->
-
-    <div class="mb-10">
-
-        <h2 class="text-xl font-semibold mb-5">
-            👥 适合人群
-        </h2>
-
-        <div class="grid md:grid-cols-3 gap-6">
-
-            <div class="bg-[#EEF3EE] rounded-2xl p-6 shadow-sm">
-                💼 高收入上班族
-            </div>
-
-            <div class="bg-[#EEF0F6] rounded-2xl p-6 shadow-sm">
-                👨‍💼 需要顾问服务的投资者
-            </div>
-
-            <div class="bg-[#F5EFEC] rounded-2xl p-6 shadow-sm">
-                🌏 全球资产配置需求者
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- 与网络券商对比 -->
-
-    <div class="mb-10">
-
-        <h2 class="text-xl font-semibold mb-5">
-            📊 与网络券商对比
-        </h2>
-
-        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-
-            <table class="w-full text-sm">
-
-                <thead class="bg-stone-100">
-
-                    <tr>
-                        <th class="p-4 text-left">项目</th>
-                        <th class="p-4 text-left">野村证券</th>
-                        <th class="p-4 text-left">SBI证券</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr class="border-t">
-                        <td class="p-4">手续费</td>
-                        <td class="p-4">较高</td>
-                        <td class="p-4">较低</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4">顾问服务</td>
-                        <td class="p-4">★★★★★</td>
-                        <td class="p-4">★★</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4">产品丰富度</td>
-                        <td class="p-4">★★★★★</td>
-                        <td class="p-4">★★★★★</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4">ETF定投</td>
-                        <td class="p-4">★★★★</td>
-                        <td class="p-4">★★★★★</td>
-                    </tr>
-
-                    <tr class="border-t">
-                        <td class="p-4">新手友好度</td>
-                        <td class="p-4">★★★</td>
-                        <td class="p-4">★★★★★</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </div>
-
-    <!-- 推荐指数 -->
-
-    <div class="mb-10">
-
-        <h2 class="text-xl font-semibold mb-5">
-            ⭐ 推荐指数
-        </h2>
-
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-
-            <div class="text-5xl font-bold text-stone-800">
-                8.0 / 10
-            </div>
-
-            <p class="mt-4 leading-8 text-stone-600">
-
-                如果你的目标是：
-
-                <br>
-
-                ✔ 获得专业投资建议
-
-                <br>
-
-                ✔ 进行全球资产配置
-
-                <br>
-
-                ✔ 投资债券、基金等多元产品
-
-                <br>
-
-                ✔ 使用日本传统大型金融机构
-
-                <br><br>
-
-                那么野村证券值得考虑。
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- 官方链接 -->
-
-    <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
-
-        <h2 class="text-xl font-semibold text-stone-800 mb-4">
-            🔗 官方开户入口
-        </h2>
-
-        <div class="space-y-3">
-
-            <a
-                href="https://www.nomura.co.jp/"
-                target="_blank"
-                class="block text-blue-600 hover:underline"
-            >
-                野村证券官网
-            </a>
-
-            <a
-                href="https://www.nomura.co.jp/openaccount/"
-                target="_blank"
-                class="block text-blue-600 hover:underline"
-            >
-                在线开户页面
-            </a>
-
-        </div>
-
-    </div>
-
-</main>
+    </main>
 
 </body>
 

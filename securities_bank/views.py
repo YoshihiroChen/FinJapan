@@ -48,42 +48,56 @@ def credit_card(request):
 def jp_bank(request):
     return render(
         request,
-        "securities_bank/bank/jp_bank.html"
+        "securities_bank/bank/jp/jp_bank.html"
     )
 
 # ===== 乐天银行 =====
 def rakuten_bank(request):
     return render(
         request,
-        "securities_bank/bank/rakuten_bank.html"
+        "securities_bank/bank/rakuten/rakuten_bank.html"
     )
 
 # ===== paypay银行 =====
 def paypay_bank(request):
     return render(
         request,
-        "securities_bank/bank/paypay_bank.html"
+        "securities_bank/bank/paypay/paypay_bank.html"
     )
 
 # ===== 三菱UFJ银行 =====
 def mufg_bank(request):
     return render(
         request,
-        "securities_bank/bank/mufg_bank.html"
+        "securities_bank/bank/mufg/mufg_bank.html"
     )
 
 # ===== 三井住友银行 =====
 def smbc_bank(request):
     return render(
         request,
-        "securities_bank/bank/smbc_bank.html"
+        "securities_bank/bank/smbc/smbc_bank.html"
     )
 
 # ===== 住信SBI银行 =====
 def sbi_bank(request):
     return render(
         request,
-        "securities_bank/bank/sbi_bank.html"
+        "securities_bank/bank/sbi/sbi_bank.html"
+    )
+
+#  ===== mizuho银行 =====
+def mizuho_bank(request):
+    return render(
+        request,
+        "securities_bank/bank/mizuho/mizuho_bank.html"
+    )
+
+#  ===== りそな银行 =====
+def resona_bank(request):
+    return render(
+        request,
+        "securities_bank/bank/resona/resona_bank.html"
     )
 
 

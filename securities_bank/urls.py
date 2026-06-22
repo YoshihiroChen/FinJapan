@@ -80,6 +80,19 @@ urlpatterns = [
         name="sbi_bank"
     ),
 
+    #  ===== mizuho银行 =====
+    path(
+    "bank/mizuho/",
+    views.mizuho_bank,
+    name="mizuho_bank"
+    ),
+    #  ===== りそな银行 =====
+    path(
+    "bank/resona/",
+    views.resona_bank,
+    name="resona_bank"
+    ),
+
     # =====================
     # 券商
     # =====================
