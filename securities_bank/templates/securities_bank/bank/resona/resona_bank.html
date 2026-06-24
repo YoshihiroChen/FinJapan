@@ -1,0 +1,1692 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>りそな银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center overflow-hidden">
+
+                <img src="{% static 'securities_bank/img/bank/resona/resona_logo.png' %}"
+                     alt="Resona Logo"
+                     class="w-8 h-8 object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                りそな银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            りそな銀行
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本四大都市银行之一，开户难度中等，手机银行体验较好，整体服务比较均衡。
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-blue-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            りそな银行是日本四大都市银行之一
+
+            <br><br>
+
+            在关东地区，尤其是东京和大阪一带，
+            网点和 ATM 覆盖比较多
+
+            <br><br>
+
+            相比三菱UFJ和三井住友，
+            りそな的开户难度相对中等，
+            对外国人开户比较友好
+
+            <br><br>
+
+            手机 APP 和网上银行体验较好，
+            也支持 Visa Debit 借记卡，
+            留学生和工作签证持有人都比较常用
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            官方网站
+        </h2>
+
+        <a href="https://www.resonabank.co.jp/"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                りそな银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.resonabank.co.jp/
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 银行定位与开户特点 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            银行定位与开户特点
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    银行定位
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    日本四大都市银行之一
+                    <br>
+                    关东地区网点较多
+                    <br>
+                    服务比较均衡
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    开户难度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    难度中等
+                    <br>
+                    比邮储稍严格
+                    <br>
+                    比大型都市银行更友好
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    适合人群
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    留学生
+                    <br>
+                    工作签证持有人
+                    <br>
+                    东京大阪生活的人
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    主要优势
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    APP体验较好
+                    <br>
+                    支持 Visa Debit
+                    <br>
+                    手机支付兼容性强
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    相比邮储
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    数字化体验更好
+                    <br>
+                    借记卡功能更实用
+                    <br>
+                    线上办理更方便
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    注意点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    刚入境不一定稳
+                    <br>
+                    材料不齐容易被拒
+                    <br>
+                    国际汇款手续费不低
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 详细信息 -->
+<!-- 详细信息 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        详细信息
+    </h2>
+
+    <div class="space-y-4">
+
+        <!-- 外国人开户资格和材料 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>外国人开户资格和材料</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">开户硬性资格：</span>
+
+                <br>
+
+                年龄需要满 15 周岁以上，中学生除外
+
+                <br><br>
+
+                <span class="font-semibold">在留要求：</span>
+
+                <br>
+
+                需要持有长期在留卡
+
+                <br>
+
+                常见可申请身份包括技能实习、留学、技术・人文知识・国际业务、特定技能等
+
+                <br>
+
+                短期观光签证和短期商务签证无法开户
+
+                <br>
+
+                在留卡剩余有效期建议不少于 6 个月
+
+                <br>
+
+                在留卡背面需要登记日本有效住址
+
+                <br>
+
+                需要已经完成区役所住民登记
+
+                <br>
+
+                入境未满 6 个月基本容易被拒绝
+
+                <br>
+
+                只有在能提供完整长期就学或工作证明时，才有可能酌情受理
+
+                <br><br>
+
+                <span class="font-semibold">居住要求：</span>
+
+                <br>
+
+                现居地址需要与在留卡登记地址一致
+
+                <br>
+
+                如果能提供水电费、话费等居住佐证材料，会更有利于审核
+
+                <br><br>
+
+                <span class="font-semibold">渠道区分：</span>
+
+                <br>
+
+                线上开户 APP 支持外国人使用在留卡开设无存折、无印章账户
+
+                <br>
+
+                线下网点可以开设带存折账户
+
+                <br>
+
+                线下网点支持签名备案，不强制要求印章
+
+                <br><br>
+
+                <span class="font-semibold">业务前置：</span>
+
+                <br>
+
+                后续办理跨境汇款和理财业务时，必须登记 My Number
+
+                <br><br>
+
+                <span class="font-semibold">核心本人确认证件：</span>
+
+                <br>
+
+                在留卡原件。
+
+                <br>
+
+                在留卡需要有照片、有效住址，并且剩余期限建议不少于 6 个月
+
+                <br><br>
+
+                <span class="font-semibold">配套佐证材料：</span>
+
+                <br>
+
+                留学生通常需要准备学生证。
+
+                <br>
+
+                上班族通常需要准备社员证或在职证明
+
+                <br><br>
+
+                <span class="font-semibold">My Number 相关材料：</span>
+
+                <br>
+
+                开户阶段可选。
+
+                <br>
+
+                办理海外送金和理财时强制需要
+
+                <br>
+
+                可以准备个人编号卡或 My Number 通知票
+
+                <br><br>
+
+                <span class="font-semibold">线下网点额外可选材料：</span>
+
+                <br>
+
+                备案印章
+
+                <br>
+
+                不使用印章时，也可以全程签名办理
+
+                <br><br>
+
+                <span class="font-semibold">辅助备用证件：</span>
+
+                <br>
+
+                护照
+
+                <br>
+
+                住民票
+
+                <br>
+
+                近 3 个月水电账单
+
+                <br>
+
+                这些材料可能在银行抽查时被要求提交
+
+                <br><br>
+
+                <span class="font-semibold">常见开户被拒理由：</span>
+
+                <br>
+
+                在留剩余有效期不足 6 个月
+
+                <br>
+
+                在留卡地址未更新
+
+                <br>
+
+                未完成住民登记
+
+                <br>
+
+                持短期签证
+
+                <br>
+
+                无稳定就学或工作证明
+
+                <br>
+
+                无法出示学生证或在职证明来佐证在留目的
+
+                <br>
+
+                住址刚变更，缺少居住缴费记录
+
+                <br><br>
+
+                <span class="font-semibold">开户总页面：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/hiraku/"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/hiraku/
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">开户所需材料明细：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/syorui.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/syorui.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">开户 FAQ：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/hiraku/faq/faq_hiraku_0028.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/hiraku/faq/faq_hiraku_0028.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">线上开户 APP 介绍：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/hiraku/landing/2024_spring/landing.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/hiraku/landing/2024_spring/landing.html
+                </a>
+
+            </div>
+
+        </details>
+
+        <!-- 推荐产品 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>推荐产品：りそなデビット一体卡</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <div class="mb-6 flex justify-center">
+
+                    <img src="{% static 'securities_bank/img/bank/resona/resona_card.png' %}"
+                         alt="Resona Debit Card"
+                         class="w-[320px] rounded-xl shadow-sm border border-stone-200">
+
+                </div>
+
+                <span class="font-semibold">产品定位：</span>
+
+                <br>
+
+                りそなデビット一体卡是 Cash Card + Debit Card 二合一产品
+
+                <br>
+
+                储蓄卡与 Visa 消费功能合为一体
+
+                <br>
+
+                消费时实时从账户余额扣款
+
+                <br>
+
+                不支持透支
+
+                <br>
+
+                满 15 岁以上即可申请
+
+                <br><br>
+
+                <span class="font-semibold">官方专区：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/visa_debit/"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/visa_debit/
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">标准卡：</span>
+
+                <br>
+
+                永久免年费
+
+                <br>
+
+                每消费 1000 日元可积 5 点
+
+                <br>
+
+                支持碰一碰支付
+
+                <br>
+
+                支持手机 Pay
+
+                <br>
+
+                支持海外消费和海外 ATM 取现
+
+                <br><br>
+
+                <span class="font-semibold">JAL 里程卡：</span>
+
+                <br>
+
+                25 岁以下终身免年费
+
+                <br>
+
+                消费可积累日航里程
+
+                <br><br>
+
+                <span class="font-semibold">Premium：</span>
+
+                <br>
+
+                月费 700 日元
+
+                <br>
+
+                积分回馈更高
+
+                <br>
+
+                每月积分设有上限
+
+                <br><br>
+
+                <span class="font-semibold">主要功能：</span>
+
+                <br>
+
+                ATM 存取款
+
+                <br>
+
+                日本国内刷卡消费
+
+                <br>
+
+                海外刷卡消费
+
+                <br>
+
+                海淘购物
+
+                <br>
+
+                Apple Pay
+
+                <br>
+
+                Google Pay
+
+                <br>
+
+                丢卡盗刷时有赔付机制
+
+                <br><br>
+
+                <span class="font-semibold">申请方式：</span>
+
+                <br>
+
+                网点申请可当场发卡
+
+                <br>
+
+                APP 或网银线上申请后，通过邮寄收卡
+
+                <br>
+
+                邮寄通常需要 2 至 3 周
+
+                <br><br>
+
+                <span class="font-semibold">海外费用：</span>
+
+                <br>
+
+                海外消费收取 4.4% 手续费
+
+                <br>
+
+                海外 ATM 取现另加 220 日元一笔
+
+                <br>
+
+                出国前建议在 APP 中解锁境外使用权限
+
+                <br><br>
+
+                <span class="font-semibold">小提醒：</span>
+
+                <br>
+
+                没有附属卡
+
+                <br>
+
+                不开会员时不累计积分
+
+                <br>
+
+                短期签证无法办理
+
+            </div>
+
+        </details>
+
+        <!-- 日本国内转账 + ATM 取款手续费 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>日本国内转账 + ATM 取款手续费</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">统一手续费总页：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/kinri_kawase/tesuryo/"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/kinri_kawase/tesuryo/
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">转账业务专题：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/tetsuduki/furikomi.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/tetsuduki/furikomi.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">网银手续费专区：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/direct/service/tesuryo.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/direct/service/tesuryo.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">APP / 网页网银：</span>
+
+                <br>
+
+                マイゲート是最划算的转账渠道
+
+                <br>
+
+                りそな集团内转账免费
+
+                <br>
+
+                集团内包括本行、埼玉りそな、関西みらい、みなと
+
+                <br>
+
+                跨行转给其他银行为 165 日元一笔
+
+                <br>
+
+                单日转账上限为 500 万日元
+
+                <br><br>
+
+                <span class="font-semibold">ATM 储蓄卡转账：</span>
+
+                <br>
+
+                集团内同行转账，平日 8:45 至 18:00 免费
+
+                <br>
+
+                其他时段为 110 日元
+
+                <br>
+
+                跨行转给他行为 440 日元一笔
+
+                <br>
+
+                ATM 现金转账更贵，最低 550 日元起
+
+                <br><br>
+
+                <span class="font-semibold">柜台窗口：</span>
+
+                <br>
+
+                集团内转账为 880 日元
+
+                <br>
+
+                跨行转账为 990 日元
+
+                <br>
+
+                柜台通常是最贵渠道
+
+                <br><br>
+
+                <span class="font-semibold">りそな集团自有 ATM：</span>
+
+                <br>
+
+                平日 8:45 至 18:00 取款免费
+
+                <br>
+
+                早间、夜间、周末和节假日为 110 日元一次
+
+                <br>
+
+                25 岁以下加入りそなクラブ后，集团 ATM 全天免手续费
+
+                <br><br>
+
+                <span class="font-semibold">便利店 / 其他银行 ATM：</span>
+
+                <br>
+
+                711、罗森、e-net 等通常统一为 220 日元一次
+
+                <br>
+
+                多数便利店 ATM 仅支持取款，无法存款
+
+                <br><br>
+
+                <span class="font-semibold">りそなクラブ：</span>
+
+                <br>
+
+                入会无年费
+
+                <br>
+
+                按月度资产和交易情况划分档位
+
+                <br>
+
+                每月赠送手续费减免次数
+
+                <br>
+
+                常规福利包括每月数次便利店 ATM 和跨行转账免费额度
+
+                <br>
+
+                学生和 25 岁以下用户可自动享受最高基础优惠
+
+                <br>
+
+                工资指定本行入账可提升会员档位，减免次数更多
+
+                <br><br>
+
+                <span class="font-semibold">关键提醒：</span>
+
+                <br>
+
+                每月固定系统维护时段，网银和 ATM 转账功能会临时关闭
+
+                <br>
+
+                大额或频繁转账容易触发风控
+
+                <br>
+
+                银行可能要求说明资金用途
+
+                <br>
+
+                在留卡更新或搬家变更住址后，需要同步更新银行地址
+
+                <br>
+
+                否则转账和跨境功能可能受限
+
+            </div>
+
+        </details>
+
+        <!-- 跨境汇款 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>跨境汇款</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">专属官方页面：</span>
+
+                <br>
+
+                <a href="https://www.resonabank.co.jp/kojin/kaigai/soukin"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.resonabank.co.jp/kojin/kaigai/soukin
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">业务特点：</span>
+
+                <br>
+
+                りそな是关西本土银行
+
+                <br>
+
+                个人线上 APP 跨境汇款已暂停
+
+                <br>
+
+                目前仅支持网页事前预约加线下柜台办理
+
+                <br>
+
+                中小企业跨境结算配套较完善
+
+                <br>
+
+                个人汇款手续费偏高
+
+                <br>
+
+                反洗钱和外汇审查严格
+
+                <br>
+
+                大额或频繁汇款会要求补充资金证明
+
+                <br>
+
+                支持日元、美元、欧元、港币等多币种汇出
+
+                <br><br>
+
+                <span class="font-semibold">汇出手续费：</span>
+
+                <br>
+
+                线下柜台标准手续费为 7500 日元一笔
+
+                <br>
+
+                没有手机网银直接汇出渠道
+
+                <br>
+
+                只能网页预填表单后到店办理
+
+                <br>
+
+                因此没有线上优惠价
+
+                <br><br>
+
+                <span class="font-semibold">换汇手续费：</span>
+
+                <br>
+
+                换汇手续费为汇款金额 0.05%
+
+                <br>
+
+                最低 2500 日元
+
+                <br>
+
+                持有对应外币存款直接汇出时，可以免除该费用
+
+                <br><br>
+
+                <span class="font-semibold">中间行扣费：</span>
+
+                <br>
+
+                默认 SHA 模式，由收款人承担中转费
+
+                <br>
+
+                扣费约 2000 日元至 8000 日元不等，无法提前准确预估。
+
+                <br>
+
+                可选择 OUR 模式，由汇款人全包
+
+                <br>
+
+                OUR 模式额外加收 3000 日元
+
+                <br>
+
+                收款人可以全额到账，无中转扣除
+
+                <br><br>
+
+                <span class="font-semibold">境外汇入手续费：</span>
+
+                <br>
+
+                海外汇至りそな时，统一基础接收手续费为 1500 日元一笔
+
+                <br>
+
+                外币换日元入账或外币原币留存时，会额外收取 0.05% 手续费
+
+                <br>
+
+                该费用最低 2500 日元
+
+                <br>
+
+                中转行扣费会直接从到账金额中扣除
+
+                <br><br>
+
+                <span class="font-semibold">汇款限额：</span>
+
+                <br>
+
+                线上预填并不等于线上直接汇出
+
+                <br>
+
+                柜台没有硬性单笔或月度上限
+
+                <br>
+
+                单笔超过 100 万日元等值时，必须提交资金用途证明
+
+                <br>
+
+                常见证明包括学费单、工资明细和亲属关系证明
+
+                <br>
+
+                月度频繁大额汇出会触发风控限制
+
+                <br>
+
+                境外汇入没有总额上限
+
+                <br>
+
+                大额入账时银行会电话核实资金来源
+
+                <br><br>
+
+                <span class="font-semibold">线下柜台必备材料：</span>
+
+                <br>
+
+                有效期内在留卡原件
+
+                <br>
+
+                在留卡剩余有效期建议不少于 6 个月
+
+                <br>
+
+                在留卡住址需要与银行预留地址一致
+
+                <br>
+
+                账户届出印
+
+                <br>
+
+                无印章账户可凭储蓄卡办理
+
+                <br>
+
+                My Number 卡或通知票
+
+                <br>
+
+                未登记 My Number 时，完全无法办理跨境业务
+
+                <br>
+
+                银行可能额外要求护照、健康保险证、学生证或在职证明
+
+                <br>
+
+                大额汇款时建议携带学费通知书、工资流水、亲属关系证明等佐证材料
+
+                <br><br>
+
+                <span class="font-semibold">网页事前登记材料：</span>
+
+                <br>
+
+                线上预约时需要上传在留卡照片
+
+                <br>
+
+                线上预约时需要上传 My Number 照片完成预核验
+
+                <br>
+
+                到店时仍然需要出示原件
+
+                <br><br>
+
+                <span class="font-semibold">海外汇入りそな收款信息：</span>
+
+                <br>
+
+                银行名：RESONA BANK, LTD.
+
+                <br>
+
+                SWIFT 代码：DIWAJPJT
+
+                <br>
+
+                完整 11 位代码：DIWAJPJTXXX
+
+                <br>
+
+                需要完整填写支行 3 位代码和 7 位账号
+
+                <br>
+
+                开户英文姓名和登记英文地址不可简写
+
+                <br><br>
+
+                <span class="font-semibold">りそな汇往海外所需信息：</span>
+
+                <br>
+
+                收款人完整英文姓名
+
+                <br>
+
+                收款人英文居住地址
+
+                <br>
+
+                收款银行英文名称
+
+                <br>
+
+                收款银行 SWIFT BIC 代码
+
+                <br>
+
+                欧洲地区必须填写 IBAN 号码
+
+                <br>
+
+                其他国家需要提供完整账号
+
+                <br>
+
+                姓名或账号拼写错误会导致原路退回
+
+                <br>
+
+                手续费通常不予退还
+
+                <br><br>
+
+                <span class="font-semibold">到账时效：</span>
+
+                <br>
+
+                柜台受理后，银行内部审核通常需要 1 至 3 个工作日
+
+                <br>
+
+                东南亚通常在审核完成后 1 至 3 个工作日到账
+
+                <br>
+
+                欧美通常在审核完成后 3 至 5 个工作日到账
+
+                <br>
+
+                日本节假日、海外公休和系统维护会导致顺延
+
+                <br><br>
+
+                <span class="font-semibold">退款规则：</span>
+
+                <br>
+
+                收款人信息错误、账户注销、制裁地区汇款可能原路退回
+
+                <br>
+
+                7500 日元柜台基础手续费不予返还
+
+                <br>
+
+                中转扣费也不退还
+
+                <br>
+
+                退款时可能另收退款处理费
+
+                <br>
+
+                退款整体周期通常为 3 至 10 个工作日
+
+                <br><br>
+
+                <span class="font-semibold">大额税务申报：</span>
+
+                <br>
+
+                单笔超过 100 万日元海外汇出时，强制提交资金证明
+
+                <br>
+
+                年度无偿向海外亲属汇款超过 110 万日元时，可能需要年末确定申告申报赠与税
+
+                <br>
+
+                年度海外收款金额较大时，银行会留存记录
+
+                <br>
+
+                税务核查时需要配合说明
+
+                <br><br>
+
+                <span class="font-semibold">换汇汇率规则：</span>
+
+                <br>
+
+                购汇使用银行 TTS 卖出价
+
+                <br>
+
+                银行 TTS 通常低于实时市场汇率
+
+                <br>
+
+                换汇附加 0.05% 手续费
+
+                <br>
+
+                最低 2500 日元
+
+                <br>
+
+                外币存款直接汇出时可以免兑换手续费
+
+                <br><br>
+
+                <span class="font-semibold">线上跨境汇款限制：</span>
+
+                <br>
+
+                りそなグループ APP 线上跨境汇款长期停止
+
+                <br>
+
+                没有 APP 直接汇出功能
+
+                <br>
+
+                仅可在マイゲート网页做事前预约
+
+                <br>
+
+                无法线上完成扣款汇出
+
+                <br>
+
+                开通前提是持有综合账户、注册マイゲート，并且账户已登记 My Number 与在留卡信息
+
+                <br>
+
+                短期观光签证、短期商务签证、无固定日本住址的人无法办理任何跨境汇款
+
+                <br>
+
+                只有长期在留资格才可受理
+
+                <br>
+
+                每月固定系统维护时段，网页预约功能会临时关闭
+
+                <br>
+
+                常见维护时段包括第 1 和第 3 个周一凌晨，以及周日夜间
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+
+    <!-- APP 和网上银行 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            APP 和网上银行
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+            りそな银行的手机 APP 和网上银行体验整体较好，
+            比传统大型银行更轻便，也比邮储银行更适合日常线上操作
+
+            <br><br>
+
+            <span class="font-semibold">主要支持：</span>
+
+            <br>
+
+            账户查询
+
+            <br>
+
+            转账汇款
+
+            <br>
+
+            借记卡管理
+
+            <br>
+
+            手机支付绑定
+
+            <br>
+
+            线上支付确认
+
+            <br><br>
+
+            <span class="font-semibold">使用特点：</span>
+
+            <br>
+
+            线上操作体验不错
+
+            <br>
+
+            适合喜欢手机银行办理业务的人
+
+            <br>
+
+            日常消费、转账和 Debit 卡管理都比较方便
+
+        </div>
+
+    </div>
+
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            PayPay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            楽天Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Apple Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Google Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8 mt-6">
+
+            <span class="font-semibold">使用特点：</span>
+
+            <br>
+
+            与主流手机支付兼容性较好。
+
+            <br>
+
+            可以绑定 Visa Debit。
+
+            <br>
+
+            线上支付体验不错。
+
+        </div>
+
+    </div>
+
+       <!-- 推荐指数 -->
+
+        <div class="mb-10">
+
+            <h2 class="text-xl font-semibold mb-5">
+                推荐指数
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        开户难度
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        容易 ★★★★☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        生活便利性
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        优秀 ★★★★☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        国际汇款
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        良好 ★★★☆☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        外国人推荐
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        推荐 ★★★★☆
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    <!-- 不太适合什么人 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            不太适合什么人
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                刚入境且材料不齐全的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                需要频繁国际汇款的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                特别在意国际汇款手续费的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                只想要最低门槛开户的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                住在地方城市且附近无网点的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                完全不使用手机银行的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 综合评价 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            综合评价
+        </h2>
+
+        <div class="bg-blue-50 rounded-2xl p-8 shadow-sm leading-8">
+
+            <span class="font-semibold">一句话总结：</span>
+
+            <br>
+
+            りそな银行是比邮储更先进、比三菱 UFJ 更容易、比网络银行更稳妥的选择
+
+            <br><br>
+
+            <span class="font-semibold">推荐路径：</span>
+
+            <br>
+
+            对中国留学生来说，可以考虑先用邮储银行解决刚入境开户问题
+
+            <br>
+
+            居住满 6 个月、材料更稳定后，再申请りそな银行
+
+            <br>
+
+            后续如果要投资，可以继续连接 SBI 证券或楽天证券
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-red-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            开户后容易忽略的风险
+        </h2>
+
+        <div class="leading-8">
+
+            <span class="font-semibold">在留卡更新风险：</span>
+
+            <br>
+
+            外国客户需要特别注意在留资格更新
+
+            <br>
+
+            在留卡更新后，最好及时更新银行信息
+
+            <br>
+
+            否则可能影响汇款业务和网上银行部分功能
+
+            <br><br>
+
+            <span class="font-semibold">长期不用账户：</span>
+
+            <br>
+
+            长期没有交易记录时，可能会触发银行审核
+
+            <br>
+
+            银行可能要求重新确认身份
+
+            <br>
+
+            也可能要求重新确认账户用途
+
+            <br><br>
+
+            <span class="font-semibold">大额资金风险：</span>
+
+            <br>
+
+            频繁收发大额资金容易触发反洗钱审查
+
+            <br>
+
+            短期大量海外汇款也可能被重点确认
+
+            <br>
+
+            不符合学生身份的大额资金流动，银行可能要求说明资金来源
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,820 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monex证券指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-[#EEF0F6] overflow-hidden flex items-center justify-center">
+
+                <img src="{% static 'securities_bank/img/securities/monex_logo.png' %}"
+                     alt="Monex Securities Logo"
+                     class="w-full h-full object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                Monex证券指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'securities' %}"
+           class="text-sm hover:text-stone-900">
+            返回证券专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            Monex证券（マネックス証券）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本美股投资体验很强的网络券商，适合美股ETF、NISA定投和自主研究型投资者
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            官方网站
+        </h2>
+
+        <a href="https://www.monex.co.jp/"
+           target="_blank"
+           class="text-blue-600 hover:underline break-all">
+
+            https://www.monex.co.jp/
+
+        </a>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
+        </h2>
+
+        <div class="leading-8">
+
+            Monex证券成立于1999年，是日本主要网络券商之一
+
+            <br><br>
+
+            和SBI证券、楽天证券相比，Monex最突出的优势是美股、海外ETF和个股分析工具
+
+            <br><br>
+
+            它的「銘柄スカウター」可以看日美股票的财务、估值、股息历史和业绩变化
+
+            <br><br>
+
+            如果你想长期买美股ETF、研究美国科技股，或者用NISA配置海外资产，Monex会很适合
+
+            <br><br>
+
+            不过外籍用户开户需要邮寄纸质材料，没有中文客服，日语能力不够的话办理流程会比较吃力
+
+        </div>
+
+    </div>
+
+    <!-- 核心优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            核心优势
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                美股标的丰富
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                NISA海外资产免佣
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                銘柄スカウター强大
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                100日元即可定投
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                日元购美股汇兑免费
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                信用卡定投积分高
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                税务报表完整
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                资产安全制度完善
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 开户定位与适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            开户定位与适合人群
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    开户难度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    偏高
+                    <br>
+                    外籍用户不能线上eKYC
+                    <br>
+                    需要邮寄纸质材料
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    适合人群
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    美股投资者
+                    <br>
+                    ETF长期投资者
+                    <br>
+                    高分红爱好者
+                    <br>
+                    自主研究型投资者
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    投资方向
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    美股
+                    <br>
+                    港股
+                    <br>
+                    海外ETF
+                    <br>
+                    日股
+                    <br>
+                    投资信托
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    平台特点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    数据工具强
+                    <br>
+                    美股体验好
+                    <br>
+                    适合认真研究
+                    <br>
+                    不太适合只想最简单开户的人
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    主要短板
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    无中文界面
+                    <br>
+                    无中文客服
+                    <br>
+                    外籍开户周期较长
+                    <br>
+                    没有PC桌面行情软件
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    推荐程度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    如果主投美股和海外ETF
+                    <br>
+                    Monex非常值得考虑
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 详细信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            详细信息
+        </h2>
+
+        <div class="space-y-4">
+
+            <!-- 外国人开户条件 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>外国人开户条件和准备材料</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">开户方式：</span>
+
+                    <br>
+
+                    日本本土居民可以线上办理
+
+                    <br>
+
+                    外国籍用户无法线上eKYC开户
+
+                    <br>
+
+                    需要邮寄纸质材料申请
+
+                    <br><br>
+
+                    <span class="font-semibold">可开户人群：</span>
+
+                    <br>
+
+                    留学
+
+                    <br>
+
+                    技术・人文知识・国际业务
+
+                    <br>
+
+                    特定技能
+
+                    <br>
+
+                    永住
+
+                    <br>
+
+                    特别永住
+
+                    <br>
+
+                    其他长期在留资格
+
+                    <br><br>
+
+                    <span class="font-semibold">不能开户的情况：</span>
+
+                    <br>
+
+                    短期旅游签证
+
+                    <br>
+
+                    短期商务签证
+
+                    <br>
+
+                    探亲签证
+
+                    <br>
+
+                    不属于日本税务居住者的人
+
+                    <br><br>
+
+                    <span class="font-semibold">在留卡要求：</span>
+
+                    <br>
+
+                    官网没有固定月数红线
+
+                    <br>
+
+                    但审核要求证件有效期充足
+
+                    <br>
+
+                    实操上建议在留卡剩余6个月以上
+
+                    <br><br>
+
+                    <span class="font-semibold">居住要求：</span>
+
+                    <br>
+
+                    必须是日本税务居住者
+
+                    <br>
+
+                    已完成住民票登记
+
+                    <br>
+
+                    通常在日本连续居住满1年会更稳
+
+                    <br>
+
+                    未满1年时审核通过率会明显降低
+
+                    <br><br>
+
+                    <span class="font-semibold">必备材料：</span>
+
+                    <br>
+
+                    在留卡正反面复印件
+
+                    <br>
+
+                    3个月内开具的住民票
+
+                    <br>
+
+                    My Number个人编号证明
+
+                    <br>
+
+                    个人编号卡或通知卡二选一
+
+                    <br>
+
+                    本人名下日本银行账户
+
+                    <br>
+
+                    日本手机号
+
+                    <br>
+
+                    有效电子邮箱
+
+                    <br><br>
+
+                    <span class="font-semibold">邮寄要求：</span>
+
+                    <br>
+
+                    邮寄文件需要手写签名
+
+                    <br>
+
+                    留学生、就职华人、永住者提交资料标准基本一致
+
+                    <br><br>
+
+                    <span class="font-semibold">美国税务义务人：</span>
+
+                    <br>
+
+                    US Person受FATCA监管
+
+                    <br>
+
+                    海外股票和部分衍生品交易存在严格限制
+
+                    <br>
+
+                    可能需要额外审查资料
+
+                    <br><br>
+
+                    <span class="font-semibold">开户时效：</span>
+
+                    <br>
+
+                    先邮寄纸质申请套件给客户
+
+                    <br>
+
+                    客户填写后寄回再进入审核
+
+                    <br>
+
+                    整体周期通常7至14天
+
+                    <br>
+
+                    资料不全或证件缺失时可能延长至2周以上
+
+                    <br>
+
+                    同步申请NISA时，税务局还需要额外1至2周审核
+
+                </div>
+
+            </details>
+
+            <!-- 入金出金 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>入金出金规则</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">支持渠道：</span>
+
+                    <br>
+
+                    日本主流银行储蓄卡转账
+
+                    <br>
+
+                    PayPay银行
+
+                    <br>
+
+                    乐天银行
+
+                    <br>
+
+                    住信SBI网络银行
+
+                    <br>
+
+                    其他主流银行也基本支持
+
+                    <br><br>
+
+                    <span class="font-semibold">入金手续费：</span>
+
+                    <br>
+
+                    银行即时入金免手续费
+
+                    <br>
+
+                    适合定投和日常资金划转
+
+                    <br><br>
+
+                    <span class="font-semibold">第三方支付限制：</span>
+
+                    <br>
+
+                    PayPay钱包余额不能直接转入证券账户
+
+                    <br>
+
+                    乐天Pay余额不能直接转入证券账户
+
+                    <br>
+
+                    只能通过银行卡转账
+
+                    <br><br>
+
+                    <span class="font-semibold">跨境汇款入金：</span>
+
+                    <br>
+
+                    可接收海外日元或外币跨境汇入
+
+                    <br>
+
+                    汇出手续费由转出银行收取
+
+                    <br>
+
+                    Monex不额外加收
+
+                    <br>
+
+                    外币资金需要兑换为日元后才能交易
+
+                    <br><br>
+
+                    <span class="font-semibold">出金时效：</span>
+
+                    <br>
+
+                    工作日15:00前申请，当日到账
+
+                    <br>
+
+                    15:00后申请，顺延至下一营业日
+
+                    <br>
+
+                    日元出金无手续费
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+   <!-- 推荐指数 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        推荐指数
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+            <div class="font-semibold">
+                开户难度
+            </div>
+
+            <div class="mt-2 text-stone-600">
+                普通 ★★★☆☆
+            </div>
+
+            <div class="mt-2 text-sm text-stone-500">
+                纸质开户流程较繁琐
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+            <div class="font-semibold">
+                美股能力
+            </div>
+
+            <div class="mt-2 text-stone-600">
+                非常推荐 ★★★★★
+            </div>
+
+            <div class="mt-2 text-sm text-stone-500">
+                日本券商第一梯队
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+            <div class="font-semibold">
+                NISA支持
+            </div>
+
+            <div class="mt-2 text-stone-600">
+                非常推荐 ★★★★★
+            </div>
+
+            <div class="mt-2 text-sm text-stone-500">
+                海外ETF免佣金
+            </div>
+
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+            <div class="font-semibold">
+                华人推荐
+            </div>
+
+            <div class="mt-2 text-stone-600">
+                推荐 ★★★★☆
+            </div>
+
+            <div class="mt-2 text-sm text-stone-500">
+                适合有一定日语基础用户
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- 适合什么人 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-2xl font-bold text-stone-800 mb-6">
+            适合什么人
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+            <span class="font-semibold">留学生：</span>
+
+            <br>
+
+            100日元即可开始定投
+
+            <br>
+
+            低费率基金选择丰富
+
+            <br>
+
+            NISA内日股、美股交易免手续费
+
+            <br><br>
+
+            <span class="font-semibold">长期在日华人：</span>
+
+            <br>
+
+            美股数量行业领先
+
+            <br>
+
+            日元购美元无汇兑手续费
+
+            <br>
+
+            NISA海外资产免佣金
+
+            <br>
+
+            税务报表整理完善
+
+            <br><br>
+
+            <span class="font-semibold">高股息投资者：</span>
+
+            <br>
+
+            銘柄スカウター可查看十年分红记录
+
+            <br>
+
+            高股息股票筛选功能非常强
+
+            <br>
+
+            股息自动再投资免费
+
+            <br>
+
+            NISA内日股交易免手续费
+
+            <br><br>
+
+            <span class="font-semibold">自主研究型投资者：</span>
+
+            <br>
+
+            财务数据丰富
+
+            <br>
+
+            企业分析工具优秀
+
+            <br>
+
+            适合自己选股研究
+
+        </div>
+
+    </div>
+
+    <!-- 我的评价 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-2xl font-bold text-stone-800 mb-6">
+            一句话评价
+        </h2>
+
+        <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm leading-8">
+
+            如果你主要投资日本股票、ETF，SBI和楽天会更均衡
+
+            <br><br>
+
+            如果你的核心目标是美股、海外ETF、高股息投资和长期资产配置
+
+            <br><br>
+
+            Monex证券往往是更专业的选择
+
+            <br><br>
+
+            它最大的价值不在开户速度
+
+            <br>
+
+            而在于后续长期投资过程中强大的研究工具和海外资产能力
+
+        </div>
+
+    </div>
+
+    
+
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,1372 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ゆうちょ银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-emerald-100 flex items-center justify-center overflow-hidden">
+
+                <img src="{% static 'securities_bank/img/bank/jp/jp_logo.jpeg' %}"
+                     alt="JP Bank Logo"
+                     class="w-8 h-8 object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                ゆうちょ银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            ゆうちょ銀行
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            外国用户很多，留学生和刚来日本的新手首选，全国范围内使用方便
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-emerald-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            ゆうちょ银行是日本邮政集团旗下的银行
+
+            <br><br>
+
+            全国邮局和 ATM 覆盖范围广，
+            地方城市也比较容易找到网点
+
+            <br><br>
+
+            对刚来日本的留学生、新社会人和没有日本信用记录的人来说，
+            ゆうちょ通常是最容易作为第一张银行卡的选择
+
+            <br><br>
+
+            相比大型都市银行，
+            ゆうちょ的开户门槛更低，
+            使用逻辑也比较适合金融新手
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            官方网站
+        </h2>
+
+        <a href="https://www.jp-bank.japanpost.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                ゆうちょ银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.jp-bank.japanpost.jp
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 银行定位与开户特点 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            银行定位与开户特点
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    银行定位
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    日本邮政系银行
+                    <br>
+                    全国网点覆盖广
+                    <br>
+                    外国用户很多
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    适合人群
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    留学生
+                    <br>
+                    刚来日本的新手
+                    <br>
+                    住在地方城市的人
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    开户优势
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    门槛相对低
+                    <br>
+                    支持线上 APP 开户
+                    <br>
+                    也可邮局柜台办理
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    账户类型
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    线上可开无存折电子账户
+                    <br>
+                    柜台可办传统带存折账户
+                    <br>
+                    Yucho Direct+ 可线上管理
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    使用特点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    邮局内本行 ATM 免费
+                    <br>
+                    同行互转手续费低
+                    <br>
+                    便利店 ATM 费用偏高
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    注意点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    线上开户可能识别失败
+                    <br>
+                    国际汇款必须登记 My Number
+                    <br>
+                    长期不用可能被限制
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 详细信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            详细信息
+        </h2>
+
+        <div class="space-y-4">
+
+            <!-- 外国人开户资格和材料 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>外国人开户资格和材料</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">官网依据：</span>
+
+                    <br>
+
+                    <a href="https://www.jp-bank.japanpost.jp/kaisetu/kat_gaikokujin.html"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.jp-bank.japanpost.jp/kaisetu/kat_gaikokujin.html
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">渠道说明：</span>
+
+                    <br>
+
+                    外国人支持使用 ゆうちょ手続きアプリ 全程线上开户
+
+                    <br>
+
+                    也可以前往邮局柜台线下办理
+
+                    <br>
+
+                    线上仅能开通无存折电子账户 Yucho Direct+
+
+                    <br>
+
+                    柜台可以办理带纸质存折的传统账户
+
+                    <br><br>
+
+                    <span class="font-semibold">开户硬性资格：</span>
+
+                    <br>
+
+                    年满 16 周岁
+
+                    <br>
+
+                    持有有效在留卡或特别永住者证明书
+
+                    <br>
+
+                    卡片剩余有效期需要不少于 3 个月
+
+                    <br>
+
+                    在留卡背面需要印有已完成市区役所登记的日本现住址
+
+                    <br>
+
+                    没有 6 个月强制门槛
+
+                    <br>
+
+                    短期旅游签证无法开户
+
+                    <br>
+
+                    线上开户需要手机地区设置为日本
+
+                    <br>
+
+                    线上开户需要本人名下可接收 SMS 的日本手机号
+
+                    <br>
+
+                    美国税务居民和外国公职人员审核流程可能更长
+
+                    <br><br>
+
+                    <span class="font-semibold">线上 APP 开户强制必备材料：</span>
+
+                    <br>
+
+                    在留卡或特别永住者证明书
+
+                    <br>
+
+                    手机拍照上传证件
+
+                    <br>
+
+                    使用 NFC 读取会更顺畅
+
+                    <br>
+
+                    本人可接收短信的日本手机号
+
+                    <br>
+
+                    电子邮箱
+
+                    <br>
+
+                    线上电子账户不需要印章
+
+                    <br>
+
+                    线上开户阶段通常不需要上传 My Number 原件
+
+                    <br>
+
+                    后续开通跨境汇款时才需要 My Number
+
+                    <br><br>
+
+                    <span class="font-semibold">线下柜台开户强制必备材料：</span>
+
+                    <br>
+
+                    在留卡或特别永住者证明书原件。
+
+                    <br>
+
+                    备案印章，也就是届出印
+
+                    <br>
+
+                    有 My Number 时，需要出示编号卡或通知卡原件
+
+                    <br><br>
+
+                    <span class="font-semibold">银行可能追加确认材料：</span>
+
+                    <br>
+
+                    护照
+
+                    <br>
+
+                    日本健康保险证
+
+                    <br>
+
+                    留学生可能需要学生证、入学许可或学费缴纳凭证
+
+                    <br>
+
+                    上班族可能需要在职证明或社员证
+
+                    <br>
+
+                    刚变更住址时，可能需要住民票或近 3 个月水电燃气账单
+
+                    <br><br>
+
+                    <span class="font-semibold">线上开户额外限制：</span>
+
+                    <br>
+
+                    线上只能办理无存折电子账户
+
+                    <br>
+
+                    线上无法申领纸质存折
+
+                    <br>
+
+                    姓名含罗马数字时无法线上申请，只能柜台办理
+
+                    <br>
+
+                    系统维护时段无法提交线上开户申请
+
+                    <br><br>
+
+                    <span class="font-semibold">常见开户被拒原因：</span>
+
+                    <br>
+
+                    在留剩余有效期不足 3 个月
+
+                    <br>
+
+                    在留卡没有登记有效日本居住地址
+
+                    <br>
+
+                    未完成住民登记
+
+                    <br>
+
+                    来日未满 3 个月
+
+                    <br>
+
+                    持短期旅游签证
+
+                    <br>
+
+                    无稳定就学或工作状态
+
+                    <br>
+
+                    无法说明资金来源
+
+                    <br>
+
+                    线上上传证件模糊
+
+                    <br>
+
+                    手机号不是本人名义
+
+                    <br>
+
+                    不同邮局网点的线下审核标准可能存在差异
+
+                </div>
+
+            </details>
+            <!-- 日本国内转账 + 取款手续费 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>日本国内转账 + 取款手续费</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">ATM 手续费：</span>
+
+                    <br>
+
+                    <a href="https://www.jp-bank.japanpost.jp/ryokin/rkn_atm.html"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.jp-bank.japanpost.jp/ryokin/rkn_atm.html
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">转账手续费：</span>
+
+                    <br>
+
+                    <a href="https://www.jp-bank.japanpost.jp/ryokin/rkn_sokin.html"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.jp-bank.japanpost.jp/ryokin/rkn_sokin.html
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">邮局内本行 ATM：</span>
+
+                    <br>
+
+                    本人储蓄卡全天所有时段存款、取款全部免费
+
+                    <br>
+
+                    夜间、周末也没有额外加价
+
+                    <br><br>
+
+                    <span class="font-semibold">店外独立邮储 ATM：</span>
+
+                    <br>
+
+                    平日 8:45 至 18:00 免费
+
+                    <br>
+
+                    其他时段、周末和节假日为 110 日元一次
+
+                    <br><br>
+
+                    <span class="font-semibold">便利店和其他银行 ATM：</span>
+
+                    <br>
+
+                    平日白天为 220 日元一次
+
+                    <br>
+
+                    夜间、周末和节假日为 330 日元一次
+
+                    <br><br>
+
+                    <span class="font-semibold">邮储账户互转：</span>
+
+                    <br>
+
+                    電信振替所有渠道统一为 100 日元一笔
+
+                    <br><br>
+
+                    <span class="font-semibold">邮储转其他银行：</span>
+
+                    <br>
+
+                    手机 APP 或邮储 ATM 办理时，5 万日元以下为 220 日元
+
+                    <br>
+
+                    手机 APP 或邮储 ATM 办理时，5 万日元以上为 440 日元
+
+                    <br>
+
+                    邮局窗口人工办理时，5 万日元以下为 660 日元
+
+                    <br>
+
+                    邮局窗口人工办理时，5 万日元以上为 880 日元
+
+                    <br><br>
+
+                    <span class="font-semibold">公共缴费类普通払込：</span>
+
+                    <br>
+
+                    ATM 或手机 APP 办理时，5 万日元未满为 152 日元
+
+                    <br>
+
+                    ATM 或手机 APP 办理时，5 万日元以上为 366 日元
+
+                    <br>
+
+                    柜台窗口办理时，5 万日元未满为 203 日元
+
+                    <br>
+
+                    柜台窗口办理时，5 万日元以上为 417 日元
+
+                    <br><br>
+
+                    <span class="font-semibold">补充提示：</span>
+
+                    <br>
+
+                    工资指定邮储入账账户时，每月可能赠送数次跨行转账减免额度
+
+                    <br>
+
+                    线上无存折电子账户 Yucho Direct+ 的手续费标准与传统存折账户一致
+
+                    <br>
+
+                    外币账户国内转账不适用上述日元手续费规则
+
+                </div>
+
+            </details>
+
+            <!-- 跨境汇款 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>跨境汇款</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">官方页面：</span>
+
+                    <br>
+
+                    <a href="https://www.jp-bank.japanpost.jp/kojin/sokin/kokusou/kj_sk_ks_websvik.html"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.jp-bank.japanpost.jp/kojin/sokin/kokusou/kj_sk_ks_websvik.html
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">服务名称：</span>
+
+                    <br>
+
+                    ゆうちょの国際送金
+
+                    <br><br>
+
+                    <span class="font-semibold">使用渠道：</span>
+
+                    <br>
+
+                    仅支持电脑或手机网页线上办理
+
+                    <br>
+
+                    邮局柜台和旧网银已经停办跨境汇出
+
+                    <br><br>
+
+                    <span class="font-semibold">适用账户：</span>
+
+                    <br>
+
+                    仅限个人名义综合账户或振替账户
+
+                    <br>
+
+                    法人和社团账户不可使用
+
+                    <br><br>
+
+                    <span class="font-semibold">服务优势：</span>
+
+                    <br>
+
+                    全程线上提交
+
+                    <br>
+
+                    材料可网页上传，无需邮寄纸质文件
+
+                    <br>
+
+                    除每日 23:55 至 00:05 系统短维护外，全年 24 小时可申请
+
+                    <br>
+
+                    收款人信息可以一次登记，后续重复汇款可一键操作
+
+                    <br>
+
+                    配套认证 APP 保障安全，可随时查询汇款处理进度
+
+                    <br><br>
+
+                    <span class="font-semibold">开通前置条件：</span>
+
+                    <br>
+
+                    账户需要完成取引時確認实名核验
+
+                    <br>
+
+                    账户需要已登记 My Number
+
+                    <br>
+
+                    未登记 My Number 无法开通国际汇款
+
+                    <br>
+
+                    需要安装ゆうちょ認証アプリ并完成证件和人脸核验
+
+                    <br>
+
+                    账户姓名和住址需要是最新有效信息
+
+                    <br>
+
+                    地址需要与在留卡一致
+
+                    <br>
+
+                    需要持有长期在留资格
+
+                    <br>
+
+                    短期旅游签证不可使用
+
+                    <br><br>
+
+                    <span class="font-semibold">手续费规则：</span>
+
+                    <br>
+
+                    基础汇款手续费为 3000 日元一笔
+
+                    <br>
+
+                    该费用无消费税
+
+                    <br>
+
+                    中间行扣费仅支持 SHA 模式，由收款人承担
+
+                    <br>
+
+                    中转行或收款行可能会从汇款本金中扣除费用，金额不固定
+
+                    <br>
+
+                    汇率按照提交申请当日银行公示外汇牌价结算
+
+                    <br>
+
+                    日元换外币时存在汇率差价
+
+                    <br><br>
+
+                    <span class="font-semibold">汇款限额：</span>
+
+                    <br>
+
+                    单笔上限为 100 万日元以内
+
+                    <br>
+
+                    单日累计上限为 200 万日元以内
+
+                    <br>
+
+                    单月累计上限为 500 万日元以内
+
+                    <br><br>
+
+                    <span class="font-semibold">使用时间：</span>
+
+                    <br>
+
+                    全年 24 小时可用
+
+                    <br>
+
+                    每日 23:55 至次日 00:05 系统维护，无法操作
+
+                    <br>
+
+                    定期系统检修时也可能临时暂停服务
+
+                    <br><br>
+
+                    <span class="font-semibold">办理流程：</span>
+
+                    <br>
+
+                    进入官网专用页面注册或登录服务
+
+                    <br>
+
+                    完成本人认证 APP 校验
+
+                    <br>
+
+                    填写收款人完整英文信息，包括姓名、开户行 SWIFT、账号和地址
+
+                    <br>
+
+                    大额或可疑交易可能需要上传资金证明
+
+                    <br>
+
+                    提交后，手续费和汇款本金会直接从账户扣款
+
+                    <br><br>
+
+                    <span class="font-semibold">材料与审核：</span>
+
+                    <br>
+
+                    银行可能要求上传资金来源证明
+
+                    <br>
+
+                    常见证明包括学费单、在职证明和资产凭证
+
+                    <br>
+
+                    审核可能延长处理时间
+
+                    <br>
+
+                    审核不通过时，银行可以拒绝汇款
+
+                    <br><br>
+
+                    <span class="font-semibold">汇款延误或失败原因：</span>
+
+                    <br>
+
+                    收款人信息不完整
+
+                    <br>
+
+                    收款人信息填写错误
+
+                    <br>
+
+                    海外中转行核查
+
+                    <br>
+
+                    目标国家存在资金管制
+
+                    <br>
+
+                    这些情况可能导致延迟，甚至无法汇出
+
+                    <br><br>
+
+                    <span class="font-semibold">禁止汇款场景：</span>
+
+                    <br>
+
+                    疑似婚恋诈骗相关汇款
+
+                    <br>
+
+                    无资质海外经商相关汇款
+
+                    <br>
+
+                    洗钱或涉恐相关汇款
+
+                    <br>
+
+                    银行会直接拒单
+
+                    <br><br>
+
+                    <span class="font-semibold">操作限制：</span>
+
+                    <br>
+
+                    办理过程中不要点击浏览器前进或后退
+
+                    <br>
+
+                    这样可能触发操作报错
+
+                    <br>
+
+                    账户余额不足时无法提交申请
+
+                    <br><br>
+
+                    <span class="font-semibold">进度查询：</span>
+
+                    <br>
+
+                    网页内可以实时查看交易状态
+
+                    <br>
+
+                    但海外银行不会同步更新进度
+
+                    <br>
+
+                    部分订单长期无状态属于正常情况
+
+                    <br><br>
+
+                    <span class="font-semibold">咨询渠道：</span>
+
+                    <br>
+
+                    客服免费电话：0120-109-420
+
+                    <br>
+
+                    来电需要开启号码显示
+
+                    <br>
+
+                    IP 电话可能无法接通
+
+                    <br>
+
+                    官网可下载图文操作 PDF 指南
+
+                    <br>
+
+                    邮局窗口也可以领取纸质手册
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+    <!-- APP 和网上银行 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            APP 和网上银行
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+            <span class="font-semibold">ゆうちょ手続きアプリ：</span>
+
+            <br>
+
+            线上开无存折账户专用
+
+            <br>
+
+            主要用于开户，不能查余额或转账
+
+            <br>
+
+            新版在留卡有时容易识别失败，很多外国人最后仍然需要线下开户
+
+            <br><br>
+
+            <span class="font-semibold">ゆうちょ通帳アプリ：</span>
+
+            <br>
+
+            日常主力 APP
+
+            <br>
+
+            支持查余额、收支流水、同行转账、水电缴费和 ATM 无卡取款
+
+            <br>
+
+            但无法办理国际汇款
+
+            <br><br>
+
+            <span class="font-semibold">ゆうちょ認証アプリ：</span>
+
+            <br>
+
+            安全验证工具
+
+            <br>
+
+            开户、大额转账和跨境汇款时需要人脸核验
+
+            <br>
+
+            单独打开没有业务功能
+
+            <br><br>
+
+            <span class="font-semibold">ゆうちょダイレクト：</span>
+
+            <br>
+
+            网页网银是唯一支持跨境汇款的渠道
+
+            <br>
+
+            手机和电脑浏览器均可登录
+
+            <br>
+
+            开通国际汇款需要账户登记 My Number
+
+            <br><br>
+
+            <span class="font-semibold">日常使用总结：</span>
+
+            <br>
+
+            查钱缴费主要使用通帳 APP
+
+            <br>
+
+            线上新开账户使用手続き APP
+
+            <br>
+
+            汇海外生活费使用网页网银
+
+            <br>
+
+            所有线上业务通常都需要认证 APP 校验
+
+            <br>
+
+            每日 23:55 至 00:05 系统维护，全部线上渠道暂停使用
+
+        </div>
+
+    </div>
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            PayPay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            楽天Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Apple Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Google Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+     <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            推荐指数
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-stone-800">
+                    开户难度
+                </div>
+
+                <div class="mt-3 text-stone-600">
+                    最容易 ★★★★★
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-stone-800">
+                    国际汇款
+                </div>
+
+                <div class="mt-3 text-stone-600">
+                    一般 ★★★☆☆
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-stone-800">
+                    银行规模
+                </div>
+
+                <div class="mt-3 text-stone-600">
+                    顶级 ★★★★★
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-stone-800">
+                    外国人推荐
+                </div>
+
+                <div class="mt-3 text-stone-600">
+                    非常推荐 ★★★★★
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 适合什么人 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            适合什么人
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                日本留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                刚来日本的新居民
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                家族滞在签证持有人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                需要工资账户的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                经常使用邮局的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                重视开户成功率的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 不适合什么人 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            不太适合什么人
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                高频投资用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                频繁国际汇款用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                追求高返现信用卡体系的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                希望中文服务的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                重度网银用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                希望证券联动投资的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-red-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            开户后容易忽略的风险
+        </h2>
+
+        <div class="leading-8">
+
+            <span class="font-semibold">
+                地址变更风险：
+            </span>
+
+            <br>
+
+            搬家后未及时更新住址可能导致银行卡冻结
+
+            <br><br>
+
+            <span class="font-semibold">
+                在留卡更新风险：
+            </span>
+
+            <br>
+
+            在留期限更新后需要同步更新银行资料
+
+            <br><br>
+
+            <span class="font-semibold">
+                My Number 风险：
+            </span>
+
+            <br>
+
+            国际汇款业务高度依赖 My Number 登记
+
+            <br>
+
+            未完成登记可能无法使用跨境汇款功能
+
+            <br><br>
+
+            <span class="font-semibold">
+                长期不用风险：
+            </span>
+
+            <br>
+
+            长时间无交易可能触发银行风控审核
+
+            <br><br>
+
+            <span class="font-semibold">
+                国际汇款风险：
+            </span>
+
+            <br>
+
+            收款信息填写错误可能被退汇
+
+            <br>
+
+            手续费不会退还
+
+            <br><br>
+
+            <span class="font-semibold">
+                留学生特别注意：
+            </span>
+
+            <br>
+
+            毕业、更换签证或离开日本时，
+
+            请及时处理账户信息和绑定业务
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

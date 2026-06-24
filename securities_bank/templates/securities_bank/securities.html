@@ -1,0 +1,839 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>证券专区</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">
+                📊
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                在日华人理财指南
+            </span>
+
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-sm">
+
+            <a href="{% url 'index' %}"
+               class="hover:text-stone-900">
+                首页
+            </a>
+
+            <a href="{% url 'guide' %}"
+               class="hover:text-stone-900">
+                开户攻略
+            </a>
+
+            <a href="{% url 'bank' %}"
+               class="hover:text-stone-900">
+                银行专区
+            </a>
+
+            <a href="{% url 'securities' %}"
+               class="font-semibold text-stone-800">
+                证券专区
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 pt-28 pb-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            日本证券投资指南
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            从证券开户到NISA投资，全面了解日本个人投资体系。
+        </p>
+
+    </div>
+
+    <!-- 证券账户是什么 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            什么是证券账户？
+        </h2>
+
+        <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+            <p class="leading-8">
+
+                银行账户负责存钱、转账和日常消费。
+
+                <br><br>
+
+                证券账户负责购买股票、ETF、投资信托、REIT、美股等金融产品。
+
+                <br><br>
+
+                想投资日本股市、美国股市，或者开通NISA免税投资账户，一般都需要先开设证券账户。
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 银行 vs 证券 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            银行账户 VS 证券账户
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-[#EEF3EE] rounded-2xl p-7 shadow-sm">
+
+                <div class="mt-4 text-lg font-semibold">
+                    银行账户
+                </div>
+
+                <div class="mt-4 leading-8">
+
+                    存钱
+
+                    <br>
+
+                    工资入账
+
+                    <br>
+
+                    ATM取现
+
+                    <br>
+
+                    PayPay绑定
+
+                    <br>
+
+                    日常消费
+
+                </div>
+
+            </div>
+
+            <div class="bg-[#EEF0F6] rounded-2xl p-7 shadow-sm">
+
+                <div class="mt-4 text-lg font-semibold">
+                    证券账户
+                </div>
+
+                <div class="mt-4 leading-8">
+
+                    买股票
+
+                    <br>
+
+                    买ETF
+
+                    <br>
+
+                    买基金
+
+                    <br>
+
+                    买REIT
+
+                    <br>
+
+                    NISA投资
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 可以投资什么 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            可以投资什么？
+        </h2>
+
+        <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+            <div class="bg-[#EEF0F6] rounded-2xl p-6 shadow-sm">
+                <div class="mt-4 font-semibold">日股</div>
+            </div>
+
+            <div class="bg-[#EEF3EE] rounded-2xl p-6 shadow-sm">
+                <div class="mt-4 font-semibold">美股</div>
+            </div>
+
+            <div class="bg-[#F5EFEC] rounded-2xl p-6 shadow-sm">
+                <div class="mt-4 font-semibold">ETF</div>
+            </div>
+
+            <div class="bg-[#F1F0EC] rounded-2xl p-6 shadow-sm">
+                <div class="mt-4 font-semibold">投资信托</div>
+            </div>
+
+            <div class="bg-[#EEF0F6] rounded-2xl p-6 shadow-sm">
+                <div class="mt-4 font-semibold">REIT</div>
+            </div>
+
+            <div class="bg-[#EEF3EE] rounded-2xl p-6 shadow-sm">
+                <div class="mt-4 font-semibold">债券</div>
+            </div>
+
+        </div>
+
+    </div>
+
+     <!-- 主流券商 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            主流券商
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <a href="{% url 'sbi_securities' %}"
+               class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition block">
+
+                <div class="font-semibold text-stone-800">
+                    SBI证券
+                </div>
+
+                <div class="text-sm text-stone-500 mt-2">
+                    NISA用户最多
+                </div>
+
+            </a>
+
+            <a href="{% url 'rakuten_securities' %}"
+               class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition block">
+
+                <div class="font-semibold text-stone-800">
+                    楽天证券
+                </div>
+
+                <div class="text-sm text-stone-500 mt-2">
+                    楽天积分生态
+                </div>
+
+            </a>
+
+            <a href="{% url 'matsui_securities' %}"
+               class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition block">
+
+                <div class="font-semibold text-stone-800">
+                    松井证券
+                </div>
+
+                <div class="text-sm text-stone-500 mt-2">
+                    投资新手友好
+                </div>
+
+            </a>
+
+            <a href="{% url 'nomura_securities' %}"
+               class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition block">
+
+                <div class="font-semibold text-stone-800">
+                    野村证券
+                </div>
+
+                <div class="text-sm text-stone-500 mt-2">
+                    日本最大传统券商
+                </div>
+
+            </a>
+
+            <a href="{% url 'monex_securities' %}"
+               class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition block">
+
+                <div class="font-semibold text-stone-800">
+                    Monex证券
+                </div>
+
+                <div class="text-sm text-stone-500 mt-2">
+                    美股投资强项
+                </div>
+
+            </a>
+
+            <a href="{% url 'moomoo_securities' %}"
+               class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition block">
+
+                <div class="font-semibold text-stone-800">
+                    moomoo证券
+                </div>
+
+                <div class="text-sm text-stone-500 mt-2">
+                    中文支持最好
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- 证券快速对比 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            券商快速对比
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <div class="overflow-x-auto">
+
+                <table class="w-full text-sm">
+
+                    <thead class="bg-stone-100 text-stone-800">
+
+                        <tr>
+
+                            <th class="p-4 text-left whitespace-nowrap">券商</th>
+                            <th class="p-4 text-left whitespace-nowrap">最适合谁</th>
+                            <th class="p-4 text-left whitespace-nowrap">开户难度</th>
+                            <th class="p-4 text-left whitespace-nowrap">核心优势</th>
+                            <th class="p-4 text-left whitespace-nowrap">注意点</th>
+                            <th class="p-4 text-left whitespace-nowrap">推荐度</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                SBI证券
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                只想开一个账户的人
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                普通 ★★★☆☆
+                            </td>
+
+                            <td class="p-4">
+                                NISA、美股、ETF、投资信托都很强，综合实力最均衡
+                            </td>
+
+                            <td class="p-4">
+                                没有中文客服，页面主要是日语
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                楽天证券
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                乐天银行和乐天卡用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                普通 ★★★☆☆
+                            </td>
+
+                            <td class="p-4">
+                                楽天积分、楽天卡定投、楽天银行联动很方便
+                            </td>
+
+                            <td class="p-4">
+                                美股能力略弱于SBI和Monex
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                松井证券
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                投资新手和NISA定投用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                普通 ★★★☆☆
+                            </td>
+
+                            <td class="p-4">
+                                操作简单，NISA完整，适合从小额定投开始
+                            </td>
+
+                            <td class="p-4">
+                                中文支持弱，美股和生态联动不如头部券商
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                推荐 ★★★★☆
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                野村证券
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                高资产用户和顾问服务需求者
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                较难 ★★☆☆☆
+                            </td>
+
+                            <td class="p-4">
+                                日本传统大型券商，线下顾问、债券和财富管理强
+                            </td>
+
+                            <td class="p-4">
+                                手续费较高，外籍开户流程更传统
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                一般推荐 ★★★☆☆
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                Monex证券
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                美股和海外ETF投资者
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                普通 ★★★☆☆
+                            </td>
+
+                            <td class="p-4">
+                                美股体验强，研究工具优秀，适合自主分析
+                            </td>
+
+                            <td class="p-4">
+                                外籍开户可能需要邮寄材料，日语门槛较高
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                推荐 ★★★★☆
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                moomoo证券
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                重视中文体验的在日华人
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                容易 ★★★★☆
+                            </td>
+
+                            <td class="p-4">
+                                中文界面、中文客服、美股工具和行情体验很强
+                            </td>
+
+                            <td class="p-4">
+                                不支持iDeCo，信用卡定投和本土基金生态较弱
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 一句话选券商 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            一句话选券商
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">只想开一个账户</div>
+                <div class="mt-2 text-sm text-stone-600">优先看SBI证券</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">乐天生态用户</div>
+                <div class="mt-2 text-sm text-stone-600">优先看楽天证券</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">投资新手</div>
+                <div class="mt-2 text-sm text-stone-600">优先看松井证券</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">需要顾问服务</div>
+                <div class="mt-2 text-sm text-stone-600">优先看野村证券</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">主投美股ETF</div>
+                <div class="mt-2 text-sm text-stone-600">优先看Monex证券</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">想要中文客服</div>
+                <div class="mt-2 text-sm text-stone-600">优先看moomoo证券</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">NISA长期定投</div>
+                <div class="mt-2 text-sm text-stone-600">SBI、楽天、松井都适合</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">想看盘和研究</div>
+                <div class="mt-2 text-sm text-stone-600">Monex或moomoo更适合</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 证券开户完整指南 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            证券开户完整指南
+        </h2>
+
+        <div class="space-y-4">
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>开设日本证券账户有什么优势？</span>
+                    <span class="text-stone-400 text-2xl group-open:hidden">+</span>
+                    <span class="text-stone-400 text-2xl hidden group-open:block">−</span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    日本股市拥有大量高分红优质上市企业
+
+                    <br><br>
+
+                    日本金融市场发展成熟，监管完善，信息披露相对透明公开
+
+                    <br><br>
+
+                    开设日本证券账户后，可以配置日本股票、美股、ETF、投资信托和REIT，实现资产多元化
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>外国人开证券账户需要满足什么条件？</span>
+                    <span class="text-stone-400 text-2xl group-open:hidden">+</span>
+                    <span class="text-stone-400 text-2xl hidden group-open:block">−</span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">身份资质：</span>
+
+                    <br>
+
+                    需要属于日本税务居住者
+
+                    <br>
+
+                    需要在日本拥有固定住所
+
+                    <br>
+
+                    需要完成住民票登记
+
+                    <br>
+
+                    需要持有有效长期在留资格
+
+                    <br><br>
+
+                    <span class="font-semibold">证件要求：</span>
+
+                    <br>
+
+                    在留卡、My Number、本人名下日本银行账户通常都是必备条件
+
+                    <br><br>
+
+                    <span class="font-semibold">注意点：</span>
+
+                    <br>
+
+                    短期在留者、旅游签证、没有日本住址的人大概率无法开户
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>开户前需要准备哪些材料？</span>
+                    <span class="text-stone-400 text-2xl group-open:hidden">+</span>
+                    <span class="text-stone-400 text-2xl hidden group-open:block">−</span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    在留卡正反面复印件或照片
+
+                    <br><br>
+
+                    3个月内开具的住民票
+
+                    <br><br>
+
+                    My Number个人编号确认文件
+
+                    <br><br>
+
+                    本人名下日本银行账户信息
+
+                    <br><br>
+
+                    日本手机号和有效电子邮箱
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>NISA账户怎么申请？</span>
+                    <span class="text-stone-400 text-2xl group-open:hidden">+</span>
+                    <span class="text-stone-400 text-2xl hidden group-open:block">−</span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    开通普通证券账户时，可以同步勾选NISA账户
+
+                    <br><br>
+
+                    如果已经开好普通证券账户，也可以后续追加申请NISA
+
+                    <br><br>
+
+                    提交后需要等待税务局确认
+
+                    <br><br>
+
+                    审核时间一般为1到2周
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+    <!-- NISA -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            NISA制度
+        </h2>
+
+        <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+            <div class="text-lg font-semibold mb-4">
+                日本最重要的投资免税制度
+            </div>
+
+            <div class="leading-8">
+
+                投资收益免税
+
+                <br>
+
+                股息免税
+
+                <br>
+
+                外国人可申请
+
+                <br>
+
+                新NISA永久化
+
+                <br>
+
+                长期投资首选
+
+                <br>
+
+                每年最高免税额度360万日元
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 外国人开户 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            外国人可以开户吗？
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="leading-8">
+
+                持有在留卡
+
+                <br>
+
+                持有My Number
+
+                <br>
+
+                有日本住址
+
+                <br>
+
+                完成住民票登记
+
+                <br>
+
+                有本人名下日本银行账户
+
+                <br>
+
+                原则上属于日本税务居住者
+
+                <br><br>
+
+                留学生、工作签证、永住者均可申请证券账户
+
+                <br>
+
+                短期在留者大概率无法开户
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+</body>
+
+</html>
