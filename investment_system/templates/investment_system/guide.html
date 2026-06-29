@@ -53,18 +53,14 @@
         <div class="bg-[#F7F3EA] rounded-[2rem] p-8 md:p-10 shadow-sm min-h-[390px] flex flex-col justify-between">
 
             <div>
-                <div class="inline-flex items-center rounded-full bg-white/80 border border-stone-200 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-stone-500">
-                    SCENE 01
-                </div>
-
-                <h1 class="mt-7 text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight text-stone-900">
+                <h1 class="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight text-stone-900">
                     你好，<br>
                     打工人！
                 </h1>
 
                 <p class="mt-7 text-2xl md:text-3xl font-bold leading-snug text-stone-800 max-w-2xl">
-                    辛辛苦苦当牛马，<br class="hidden md:block">
-                    挣到的钱钱好宝贵。
+                    一分一厘来得不易，<br class="hidden md:block">
+                    一投一算更要清醒。
                 </p>
 
                 <p class="mt-5 text-base md:text-lg leading-8 text-stone-600 max-w-2xl">
@@ -99,14 +95,10 @@
 
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
-                <p class="text-xs font-semibold tracking-[0.25em] text-stone-400">NEXT SCENE</p>
-                <h2 class="mt-2 text-2xl md:text-3xl font-bold text-stone-900">
+                <h2 class="text-2xl md:text-3xl font-bold text-stone-900">
                     工资到手后，怎么安排自己的金融资产？
                 </h2>
             </div>
-            <p class="text-sm leading-7 text-stone-500 max-w-xl">
-                先从“钱从哪里来”出发，再分成三个问题：怎么少交税、怎么投资让钱变多、怎么给老了的自己攒一份钱。
-            </p>
         </div>
 
         <div class="mt-10">
@@ -123,8 +115,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="text-xs font-bold tracking-[0.2em] text-stone-400">MAIN STORY</p>
-                        <h3 class="mt-2 text-2xl font-bold text-stone-900">拿命换来这么点</h3>
+                        <h3 class="text-2xl font-bold text-stone-900">拿命换来这么点</h3>
                         <p class="mt-2 text-sm leading-7 text-stone-600">
                             工资不是终点，是开始分配的起点。下一步要决定：省税、投资、养老，先从哪条路进去。
                         </p>
@@ -142,12 +133,7 @@
             <div class="grid lg:grid-cols-3 gap-5 lg:-mt-1">
 
                 <div class="rounded-3xl bg-[#EEF0F6] p-6 min-h-[380px] flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold tracking-[0.2em] text-stone-400">BRANCH 01</span>
-                        <span class="rounded-full bg-white/80 px-3 py-1 text-xs text-stone-500">省税</span>
-                    </div>
-
-                    <div class="mt-5 h-36 rounded-3xl bg-white/70 flex items-center justify-center">
+                    <div class="h-36 rounded-3xl bg-white/70 flex items-center justify-center">
                         <img src="{% static 'investment_system/img/５.png' %}"
                              alt="税金负担"
                              class="max-h-32 object-contain"
@@ -162,25 +148,15 @@
                         不是逃税，而是用日本本来就给个人准备的制度。NISA 是投资收益免税，iDeCo 是挂金所得控除，逻辑不一样。
                     </p>
 
-                    <div class="mt-auto pt-5 flex flex-wrap gap-2">
-                        <a href="{% url 'investment_nisa' %}#nisa-tax"
-                           class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition">
-                            看 NISA 免税 →
-                        </a>
-                        <a href="{% url 'investment_ideco' %}#ideco-tax"
-                           class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition">
-                            看 iDeCo 控除 →
-                        </a>
+                    <div class="mt-auto pt-5">
+                        <div class="rounded-xl bg-white/80 px-4 py-3 text-sm leading-7 text-stone-600">
+                            相关制度：NISA 的投资收益免税、iDeCo 的挂金所得控除。
+                        </div>
                     </div>
                 </div>
 
                 <div class="rounded-3xl bg-[#EEF3EE] p-6 min-h-[380px] flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold tracking-[0.2em] text-stone-400">BRANCH 02</span>
-                        <span class="rounded-full bg-white/80 px-3 py-1 text-xs text-stone-500">投资</span>
-                    </div>
-
-                    <div class="mt-5 h-36 rounded-3xl bg-white/70 flex items-center justify-center overflow-hidden">
+                    <div class="h-36 rounded-3xl bg-white/70 flex items-center justify-center overflow-hidden">
                         <img src="{% static 'investment_system/img/User attachment.png' %}"
                              alt="投资增长趋势"
                              class="w-full max-h-36 object-contain"
@@ -192,22 +168,18 @@
                         怎么投资让钱变多？
                     </h3>
                     <p class="mt-3 text-sm leading-7 text-stone-600">
-                        先理解投资账户，再决定买什么。NISA 更适合做第一入口：投信、ETF、股票都可能用到，但风险要自己承担。
+                        先理解账户规则，再决定买什么。NISA 更灵活，适合做投资第一入口；iDeCo 也会把存起来的钱拿去资产运用，只是更偏退休准备。
                     </p>
 
-                    <a href="{% url 'investment_nisa' %}"
-                       class="mt-auto pt-5 text-sm font-semibold text-stone-800 hover:translate-x-1 transition">
-                        从 NISA 开始看 →
-                    </a>
+                    <div class="mt-auto pt-5">
+                        <div class="rounded-xl bg-white/80 px-4 py-3 text-sm leading-7 text-stone-600">
+                            相关制度：NISA 更灵活，iDeCo 更偏退休资产运用。
+                        </div>
+                    </div>
                 </div>
 
                 <div class="rounded-3xl bg-[#F1F0EC] p-6 min-h-[380px] flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold tracking-[0.2em] text-stone-400">BRANCH 03</span>
-                        <span class="rounded-full bg-white/80 px-3 py-1 text-xs text-stone-500">养老</span>
-                    </div>
-
-                    <div class="mt-5 h-36 rounded-3xl bg-white/70 flex items-center justify-center">
+                    <div class="h-36 rounded-3xl bg-white/70 flex items-center justify-center">
                         <img src="{% static 'investment_system/img/6.png' %}"
                              alt="老后年金准备"
                              class="max-h-32 object-contain"
@@ -222,15 +194,10 @@
                         这部分更像长期保险：iDeCo、国民年金、厚生年金、企业 DC 都和退休后的现金流有关，不能只看眼前。
                     </p>
 
-                    <div class="mt-auto pt-5 flex flex-wrap gap-2">
-                        <a href="{% url 'investment_ideco' %}"
-                           class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition">
-                            看 iDeCo →
-                        </a>
-                        <a href="{% url 'investment_pension' %}"
-                           class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition">
-                            看年金体系 →
-                        </a>
+                    <div class="mt-auto pt-5">
+                        <div class="rounded-xl bg-white/80 px-4 py-3 text-sm leading-7 text-stone-600">
+                            相关制度：iDeCo、国民年金、厚生年金和企业 DC。
+                        </div>
                     </div>
                 </div>
 
