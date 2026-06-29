@@ -1,0 +1,1523 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>楽天银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-red-50 flex items-center justify-center overflow-hidden">
+
+                <img src="{% static 'securities_bank/img/bank/rakuten/rakuten_logo.png' %}"
+                     alt="Rakuten Bank Logo"
+                     class="w-8 h-8 object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                楽天银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            楽天銀行
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本头部纯线上网络银行，适合习惯 APP 操作、乐天生态用户和低成本跨境汇款用户
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-red-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            楽天银行是日本头部纯线上网络银行
+
+            <br><br>
+
+            它没有线下实体门店，
+            所有业务主要通过 APP 和网页办理
+
+            <br><br>
+
+            依托乐天市场、乐天 Pay、乐天证券等生态，
+            转账、消费、积分、外汇、理财等功能联动较强
+
+            <br><br>
+
+            对于习惯线上操作、
+            经常使用乐天服务的人来说，
+            楽天银行是非常方便的选择
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            官方网站
+        </h2>
+
+        <a href="https://www.rakuten-bank.co.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                楽天银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.rakuten-bank.co.jp
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 银行定位与开户特点 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            银行定位与开户特点
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    银行定位
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    纯线上网络银行
+                    <br>
+                    无线下实体门店
+                    <br>
+                    乐天生态联动强
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    开户优势
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    全程线上办理
+                    <br>
+                    不需要银行届出印
+                    <br>
+                    不用跑线下网点
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    乐天生态
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    乐天市场
+                    <br>
+                    乐天 Pay
+                    <br>
+                    乐天证券
+                    <br>
+                    乐天积分互通
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    主要优点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    同行转账免费
+                    <br>
+                    跨境基础手续费低
+                    <br>
+                    积分体系完善
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    主要缺点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    无自有 ATM
+                    <br>
+                    无人工柜台
+                    <br>
+                    复杂业务处理较慢
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    注意点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    必须有日本手机号
+                    <br>
+                    证件更新只能线上提交
+                    <br>
+                    PayPay 仅可查询不能充值
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 详细信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            详细信息
+        </h2>
+
+        <div class="space-y-4">
+
+            <!-- 外国人开户资格和材料 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>外国人开户资格和材料</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">开户硬性资格：</span>
+
+                    <br>
+
+                    年龄需要满 13 周岁以上
+
+                    <br><br>
+
+                    <span class="font-semibold">在留要求：</span>
+
+                    <br>
+
+                    需要持有长期在留资格
+
+                    <br>
+
+                    常见身份包括留学、技术・人文知识・国际业务、特定技能等
+
+                    <br>
+
+                    短期观光签证和短期商务签证不可开户
+
+                    <br>
+
+                    在留卡背面需要登记有效日本住址
+
+                    <br>
+
+                    需要已经完成区役所住民登记
+
+                    <br>
+
+                    在留剩余期限建议不少于 3 个月
+
+                    <br>
+
+                    入境未满 6 个月时，需要额外提交完整在校证明或在职证明
+
+                    <br><br>
+
+                    <span class="font-semibold">居住要求：</span>
+
+                    <br>
+
+                    现住址需要与在留卡完全一致
+
+                    <br>
+
+                    水电费或话费账单可以作为居住佐证
+
+                    <br><br>
+
+                    <span class="font-semibold">开户渠道：</span>
+
+                    <br>
+
+                    楽天银行仅支持线上 APP 开户
+
+                    <br>
+
+                    没有线下网点开户渠道
+
+                    <br><br>
+
+                    <span class="font-semibold">业务前置：</span>
+
+                    <br>
+
+                    理财和海外汇款业务必须登记 My Number
+
+                    <br><br>
+
+                    <span class="font-semibold">开户必备材料：</span>
+
+                    <br>
+
+                    在留卡
+
+                    <br>
+
+                    需要线上拍照上传，信息必须清晰有效
+
+                    <br>
+
+                    日本实名手机号
+
+                    <br>
+
+                    需要能接收短信验证码
+
+                    <br>
+
+                    My Number 卡或通知票
+
+                    <br>
+
+                    开户阶段可以后补，但跨境汇款时强制需要
+
+                    <br><br>
+
+                    <span class="font-semibold">银行可能抽查材料：</span>
+
+                    <br>
+
+                    留学生可能需要学生证
+
+                    <br>
+
+                    上班族可能需要在职证明
+
+                    <br>
+
+                    银行也可能要求健康保险证
+
+                    <br>
+
+                    住民票和近 3 个月水电账单可以作为辅助材料
+
+                    <br><br>
+
+                    <span class="font-semibold">常见开户被拒理由：</span>
+
+                    <br>
+
+                    在留卡签发未满 6 个月，且没有稳定就学或工作证明
+
+                    <br>
+
+                    只有海外手机号，没有日本本地号码
+
+                    <br>
+
+                    在留住址与实际居住地址不一致
+
+                    <br>
+
+                    未更新住民票
+
+                    <br>
+
+                    持短期签证
+
+                    <br>
+
+                    无稳定身份
+
+                    <br>
+
+                    证件拍摄模糊，导致 AI 识别失败
+
+                    <br><br>
+
+                    <span class="font-semibold">外国人开户指南：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/open/foreign/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/open/foreign/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">开户证件说明：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/open/doc/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/open/doc/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">线上开户流程：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/open/app/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/open/app/
+                    </a>
+
+                </div>
+
+            </details>
+
+            <!-- 推荐产品 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>推荐产品：楽天 Visa デビット一体卡</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <div class="mb-6 flex justify-center">
+
+                        <img src="{% static 'securities_bank/img/bank/rakuten/rakuten_card.png' %}"
+                             alt="Rakuten Debit Card"
+                             class="w-[320px] rounded-xl shadow-sm border border-stone-200">
+
+                    </div>
+
+                    <span class="font-semibold">产品定位：</span>
+
+                    <br>
+
+                    楽天 Visa デビット一体卡是 Cash Card + Debit Card 二合一产品
+
+                    <br>
+
+                    储蓄卡与 Visa 借记卡功能合为一体
+
+                    <br>
+
+                    消费时实时从账户余额扣款
+
+                    <br>
+
+                    不支持透支
+
+                    <br>
+
+                    13 岁以上可以办理
+
+                    <br>
+
+                    仅有标准版，没有 Premium 或 JAL 联名卡
+
+                    <br><br>
+
+                    <span class="font-semibold">官方专区：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/card/debit/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/card/debit/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">主要权益：</span>
+
+                    <br>
+
+                    永久免年费
+
+                    <br>
+
+                    没有持卡费用
+
+                    <br>
+
+                    每消费 100 日元可累积乐天积分
+
+                    <br>
+
+                    积分可以在乐天购物中抵扣
+
+                    <br><br>
+
+                    <span class="font-semibold">支付支持：</span>
+
+                    <br>
+
+                    支持 Visa 触碰支付
+
+                    <br>
+
+                    支持 Apple Pay
+
+                    <br>
+
+                    支持乐天 Pay
+
+                    <br>
+
+                    不支持 Google Pay
+
+                    <br><br>
+
+                    <span class="font-semibold">使用范围：</span>
+
+                    <br>
+
+                    日本线下消费
+
+                    <br>
+
+                    海淘购物
+
+                    <br>
+
+                    全球 ATM 使用
+
+                    <br><br>
+
+                    <span class="font-semibold">申请方式：</span>
+
+                    <br>
+
+                    可通过 APP 或网页线上申请
+
+                    <br>
+
+                    审核通过后邮寄到家
+
+                    <br>
+
+                    全程无需到店
+
+                    <br><br>
+
+                    <span class="font-semibold">海外使用费用：</span>
+
+                    <br>
+
+                    海外消费统一收取 1.63% 外币转换手续费
+
+                    <br>
+
+                    海外 ATM 取现另收手续费
+
+                    <br>
+
+                    出境前建议在 APP 中解锁境外权限
+
+                    <br><br>
+
+                    <span class="font-semibold">小提醒：</span>
+
+                    <br>
+
+                    没有附属副卡
+
+                    <br>
+
+                    短期签证无法办理
+
+                    <br>
+
+                    卡片丢失时，可以通过 APP 一键挂失或临时锁卡
+
+                </div>
+
+            </details>
+            <!-- 日本国内转账 + ATM 取款手续费 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>日本国内转账 + ATM 取款手续费</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">转账手续费：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/fee/transfer/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/fee/transfer/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">ATM 手续费：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/fee/atm/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/fee/atm/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">会员优惠：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/happyprogram/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/happyprogram/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">线上转账：</span>
+
+                    <br>
+
+                    楽天银行没有柜台转账和 ATM 转账
+
+                    <br>
+
+                    转账主要通过 APP 或网页网银办理
+
+                    <br>
+
+                    楽天银行同行转账永久免费，不限次数
+
+                    <br>
+
+                    跨行转给其他银行，基础费用为 145 日元一笔
+
+                    <br><br>
+
+                    <span class="font-semibold">会员免费规则：</span>
+
+                    <br>
+
+                    ハッピープログラム普通档位每月最多 3 笔跨行免费
+
+                    <br>
+
+                    工资或年金指定楽天银行入账后，次月最多可增加到 5 笔免费
+
+                    <br>
+
+                    单日转账上限为 500 万日元
+
+                    <br>
+
+                    用户也可以手动下调额度
+
+                    <br><br>
+
+                    <span class="font-semibold">ATM 取款：</span>
+
+                    <br>
+
+                    楽天银行没有自有银行 ATM
+
+                    <br>
+
+                    主要依赖便利店和合作银行 ATM
+
+                    <br>
+
+                    711 和イオン ATM 为 220 日元一次
+
+                    <br>
+
+                    罗森、e-net、三菱 UFJ、邮储 ATM 为 275 日元一次
+
+                    <br><br>
+
+                    <span class="font-semibold">ATM 免费次数：</span>
+
+                    <br>
+
+                    最高档位 Super VIP 每月最多 7 次免费
+
+                    <br>
+
+                    新开户前 2 个月通常每月 3 次免费
+
+                    <br>
+
+                    未加入会员优惠时，ATM 费用会全额扣除
+
+                    <br><br>
+
+                    <span class="font-semibold">ATM 存款：</span>
+
+                    <br>
+
+                    存款金额达到 3 万日元以上时免费
+
+                    <br>
+
+                    3 万日元以下时，收取与取款相同档位的手续费
+
+                    <br><br>
+
+                    <span class="font-semibold">ハッピープログラム：</span>
+
+                    <br>
+
+                    入会免费
+
+                    <br>
+
+                    自动绑定楽天 ID
+
+                    <br>
+
+                    按月度资产和交易情况分为 5 个档位
+
+                    <br>
+
+                    档位从ベーシック到スーパー VIP
+
+                    <br>
+
+                    福利包括每月免费 ATM 次数、免费跨行转账次数和乐天积分倍率提升
+
+                    <br>
+
+                    学生通常可以享受基础档位优惠
+
+                    <br><br>
+
+                    <span class="font-semibold">关键提醒：</span>
+
+                    <br>
+
+                    每月周一凌晨系统维护时，转账和汇款功能会暂停
+
+                    <br>
+
+                    频繁大额转账容易触发风控
+
+                    <br>
+
+                    银行可能要求提交资金证明
+
+                    <br>
+
+                    搬家后需要在线上及时更新住址
+
+                    <br>
+
+                    否则跨境汇款和转账功能可能受限
+
+                </div>
+
+            </details>
+
+            <!-- 跨境汇款 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>跨境汇款</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">专属页面：</span>
+
+                    <br>
+
+                    <a href="https://www.rakuten-bank.co.jp/geo/remittance/service/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.rakuten-bank.co.jp/geo/remittance/service/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">业务特点：</span>
+
+                    <br>
+
+                    全程通过 APP 或网页线上操作
+
+                    <br>
+
+                    没有线下柜台渠道
+
+                    <br>
+
+                    24 小时可以提交申请
+
+                    <br>
+
+                    小额生活费汇款审核相对宽松
+
+                    <br>
+
+                    大额或频繁汇出时，需要上传资金证明
+
+                    <br>
+
+                    支持多币种换汇汇出
+
+                    <br>
+
+                    外币存款不能直接转出
+
+                    <br><br>
+
+                    <span class="font-semibold">汇出手续费：</span>
+
+                    <br>
+
+                    基础送金手续费为 750 日元一笔
+
+                    <br>
+
+                    日元单独汇出时，额外加收リフティングチャージ 3000 日元一笔
+
+                    <br>
+
+                    外币汇出没有该费用
+
+                    <br><br>
+
+                    <span class="font-semibold">中间行扣费：</span>
+
+                    <br>
+
+                    默认 SHA 模式，由收款人承担中间行扣费
+
+                    <br>
+
+                    中间行扣费约为 2000 日元至 8000 日元浮动
+
+                    <br>
+
+                    可选择 OUR 模式，由汇款人承担全部中间行费用
+
+                    <br>
+
+                    OUR 模式额外加收 1000 日元
+
+                    <br>
+
+                    收款人可以足额到账
+
+                    <br><br>
+
+                    <span class="font-semibold">境外汇入手续费：</span>
+
+                    <br>
+
+                    境外资金打入楽天账户时，统一收取 2450 日元一笔
+
+                    <br>
+
+                    费用会直接从到账金额中扣除
+
+                    <br><br>
+
+                    <span class="font-semibold">汇款限额：</span>
+
+                    <br>
+
+                    线上单笔上限为 300 万日元等值
+
+                    <br>
+
+                    线上单日上限为 300 万日元等值
+
+                    <br>
+
+                    月度累计上限为 500 万日元等值
+
+                    <br>
+
+                    没有线下大额通道
+
+                    <br>
+
+                    超过额度时只能分多笔，并上传学费、工资或亲属关系证明
+
+                    <br>
+
+                    境外汇入没有总额上限
+
+                    <br>
+
+                    大额入账时，银行可能电话核实资金来源
+
+                    <br><br>
+
+                    <span class="font-semibold">外籍客户证件要求：</span>
+
+                    <br>
+
+                    未登记 My Number 时，完全无法开通海外汇款
+
+                    <br>
+
+                    开户时已上传在留卡和 My Number 影像的情况下，线上汇款通常无需重复提交原件
+
+                    <br>
+
+                    大额汇款时，需要在线上传佐证材料
+
+                    <br><br>
+
+                    <span class="font-semibold">海外汇入楽天银行信息：</span>
+
+                    <br>
+
+                    银行名：RAKUTEN BANK, LTD.
+
+                    <br>
+
+                    SWIFT：RAKTJPJT
+
+                    <br>
+
+                    需要填写支行代码、完整账号、开户英文姓名和地址
+
+                    <br>
+
+                    信息不可简写
+
+                    <br><br>
+
+                    <span class="font-semibold">楽天汇往海外所需资料：</span>
+
+                    <br>
+
+                    收款人完整英文姓名
+
+                    <br>
+
+                    收款人英文居住地址
+
+                    <br>
+
+                    对方银行英文名
+
+                    <br>
+
+                    对方银行 SWIFT 码
+
+                    <br>
+
+                    欧洲地区必须填写 IBAN
+
+                    <br>
+
+                    其他国家需要填写完整账号
+
+                    <br>
+
+                    姓名或账号拼写错误会直接原路退回
+
+                    <br>
+
+                    手续费通常不予返还
+
+                    <br><br>
+
+                    <span class="font-semibold">到账时效：</span>
+
+                    <br>
+
+                    工作日 17 点前提交，东南亚通常 1 至 2 个工作日到账
+
+                    <br>
+
+                    工作日 17 点前提交，欧美通常 1 至 3 个工作日到账
+
+                    <br>
+
+                    17 点后、周末和节假日提交时，会顺延至下一工作日处理
+
+                    <br><br>
+
+                    <span class="font-semibold">退款规则：</span>
+
+                    <br>
+
+                    信息错误或账户异常时，汇款会原路退回
+
+                    <br>
+
+                    750 日元基础手续费不退
+
+                    <br>
+
+                    查询手续费另收 3000 日元
+
+                    <br>
+
+                    退款周期通常为 3 至 10 个工作日
+
+                    <br><br>
+
+                    <span class="font-semibold">大额税务申报：</span>
+
+                    <br>
+
+                    单笔超过 1000 万日元时，强制提交学费、工资或亲属关系证明
+
+                    <br>
+
+                    年度无偿向海外亲属汇款超过 110 万日元时，可能需要年末确定申告申报赠与税
+
+                    <br><br>
+
+                    <span class="font-semibold">换汇规则：</span>
+
+                    <br>
+
+                    没有单独 0.05% 换汇手续费
+
+                    <br>
+
+                    汇兑成本主要体现在银行 TTS 卖出价差中
+
+                    <br>
+
+                    汇率每日实时变动
+
+                    <br><br>
+
+                    <span class="font-semibold">开通海外汇款条件：</span>
+
+                    <br>
+
+                    持有楽天日元普通账户
+
+                    <br>
+
+                    已注册 APP 或网页网银
+
+                    <br>
+
+                    已完成在留卡和 My Number 影像登记
+
+                    <br>
+
+                    已绑定日本本地手机号短信验证
+
+                    <br>
+
+                    可以线上一键开通，无需邮寄纸质单据审核
+
+                    <br>
+
+                    短期签证或没有固定日本住址时，无法开通
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+    <!-- APP 和网上银行 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            APP 和网上银行
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+            <span class="font-semibold">服务名称：</span>
+
+            <br>
+
+            楽天銀行アプリ / 网页网银
+
+            <br><br>
+
+            <span class="font-semibold">主要功能：</span>
+
+            <br>
+
+            余额流水查询
+
+            <br>
+
+            定时国内转账
+
+            <br>
+
+            水电费代扣
+
+            <br>
+
+            多币种外币存款
+
+            <br>
+
+            线上跨境汇款
+
+            <br>
+
+            理财操作
+
+            <br>
+
+            积分管理
+
+            <br><br>
+
+            <span class="font-semibold">语言支持：</span>
+
+            <br>
+
+            支持日文和英文
+
+            <br>
+
+            不支持中文界面
+
+            <br><br>
+
+            <span class="font-semibold">系统维护：</span>
+
+            <br>
+
+            每月固定周一 1:00 至 7:00，全渠道暂停转账和海外送金
+
+            <br><br>
+
+            <span class="font-semibold">特色功能：</span>
+
+            <br>
+
+            可以在线一键开立美元、欧元、澳元、纽元外币存款账户
+
+        </div>
+
+    </div>
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4">楽天 Pay</td>
+                        <td class="p-4">★★★★★</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Apple Pay</td>
+                        <td class="p-4">★★★★☆</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Google Pay</td>
+                        <td class="p-4">★★☆☆☆</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">PayPay</td>
+                        <td class="p-4">★★★☆☆</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 最大优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            最大优势
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                全程线上开户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天生态联动强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                同行转账永久免费
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                海外汇款手续费低
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                积分体系完善
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                外币账户管理方便
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            推荐指数
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    开户难度
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    非常容易 ★★★★★
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    线上体验
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    非常推荐 ★★★★★
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    乐天生态
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    非常推荐 ★★★★★
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    外国人推荐
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    推荐 ★★★★☆
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 适合什么人 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            适合什么人
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                经常海淘的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                线上银行用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                海外汇款用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                投资理财用户
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            开户后的隐藏风险
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+            <span class="font-semibold">没有实体网点：</span>
+
+            <br>
+
+            出现账户冻结、身份认证失败等情况时，
+            只能通过线上客服处理
+
+            <br><br>
+
+            <span class="font-semibold">手机号要求严格：</span>
+
+            <br>
+
+            日本手机号失效后，
+            很多验证功能会受到影响
+
+            <br><br>
+
+            <span class="font-semibold">跨境汇款风控较严格：</span>
+
+            <br>
+
+            大额资金往来时，
+            银行可能要求补充材料
+
+            <br><br>
+
+            <span class="font-semibold">乐天账号绑定：</span>
+
+            <br>
+
+            乐天 ID 出现异常时，
+            积分和部分服务可能受到影响
+
+        </div>
+
+    </div>
+
+    <!-- 新手建议 -->
+
+    <div class="bg-red-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            新手建议
+        </h2>
+
+        <p class="leading-8">
+
+            如果你属于：
+
+            <br>
+
+            留学生
+
+            <br>
+
+            刚来日本的新居民
+
+            <br>
+
+            喜欢线上办理业务
+
+            <br>
+
+            经常使用乐天市场
+
+            <br>
+
+            使用乐天证券投资
+
+            <br><br>
+
+            那么：
+
+            <br><br>
+
+            楽天银行 + 楽天证券 + 楽天 Pay
+
+            <br><br>
+
+            是目前日本最成熟、最适合华人使用的互联网金融组合之一
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>
