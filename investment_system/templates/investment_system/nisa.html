@@ -1,0 +1,217 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NISA｜在日华人理财指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-9 h-9 rounded-xl bg-[#EEF0F6] flex items-center justify-center">📊</div>
+            <span class="ml-3 text-lg font-semibold text-stone-800">在日华人理财指南</span>
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-sm">
+            <a href="/" class="hover:text-stone-900">首页</a>
+            <a href="{% url 'investment_system' %}" class="font-semibold text-stone-800">投资制度</a>
+            <a href="/securities-bank/guide/" class="hover:text-stone-900">开户攻略</a>
+            <a href="/securities-bank/securities/" class="hover:text-stone-900">证券专区</a>
+        </nav>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <a href="{% url 'investment_system' %}" class="text-sm text-stone-500 hover:text-stone-900">← 返回投资制度</a>
+
+    <section class="mt-5 bg-[#EEF0F6] rounded-3xl p-8 md:p-10 shadow-sm mb-8">
+        <p class="text-sm text-stone-500 mb-3">Nippon Individual Savings Account</p>
+
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
+            <div>
+                <h1 class="text-3xl md:text-5xl font-bold text-stone-800 leading-tight mb-5">
+                    NISA：日本的免税投资账户
+                </h1>
+
+                <p class="leading-8 text-stone-600 max-w-3xl">
+                    NISA 不是某一个金融产品，而是一种“免税账户制度”。你在 NISA 账户里购买制度允许的投资信托、ETF 或股票后，
+                    未来产生的卖出收益、分红或分配金，在制度范围内可以不用缴纳日本投资税。
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-3 text-sm">
+                    <a href="#nisa-basic" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">先看是什么</a>
+                    <a href="#nisa-tax" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">免税机制</a>
+                    <a href="#nisa-limit" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">两种投资枠</a>
+                    <a href="#nisa-foreigner" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">外国人 / 回国</a>
+                    <a href="#nisa-open" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">怎么开户</a>
+                </div>
+            </div>
+
+            <div class="bg-white/70 rounded-3xl p-6 flex items-center justify-center">
+                <img src="https://www.fsa.go.jp/policy/nisa2/book/images/img_2.png"
+                     alt="日本金融厅 NISA 指南"
+                     class="max-h-[420px] rounded-2xl shadow-sm">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-stone-200">
+
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-stone-800 mb-3">从上往下看懂 NISA</h2>
+            <p class="text-sm leading-7 text-stone-600">
+                先理解它是什么，再看免税在哪里、额度怎么分，最后确认自己能不能用，以及离开日本前要怎么处理。
+            </p>
+        </div>
+
+        <div class="space-y-4">
+
+            <details id="nisa-basic" class="bg-[#F5F6FA] rounded-2xl p-5 scroll-mt-24" open>
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    1. 新 NISA 是什么？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        新 NISA 是日本政府为个人投资者提供的投资免税账户制度。普通证券账户里，投资获利和收到分红时通常需要缴税；
+                        但通过 NISA 账户购买符合条件的产品后，这部分收益可以在制度范围内免税。
+                    </p>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        重点记一句：NISA 本身不是产品，而是一个“免税装投资产品的账户”。账户里买什么，才决定你的收益和风险。
+                    </div>
+                </div>
+            </details>
+
+            <details id="nisa-tax" class="bg-[#F5F6FA] rounded-2xl p-5 scroll-mt-24" open>
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    2. 免税机制怎么理解？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        普通证券账户中，股票和投资信托的卖出收益、配当和分配金通常需要缴纳约 20% 的税。
+                        NISA 内符合条件的收益可以免税，但亏损不能与课税账户里的盈利相抵。
+                    </p>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        例子：普通账户赚了 10 万日元，可能要交约 2 万日元税；NISA 内符合条件的收益，则可以把这部分税省下来。
+                    </div>
+
+                    <img src="https://www.bk.mufg.jp/tameru/toushin/nisa/imgs/about01.png"
+                         alt="MUFG NISA 免税机制说明图"
+                         class="mt-6 w-full rounded-2xl shadow-sm">
+                </div>
+            </details>
+
+            <details id="nisa-limit" class="bg-[#F5F6FA] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    3. 两种投资枠：积立投资枠和成长投资枠
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        新 NISA 有两条额度：积立投资枠和成长投资枠。积立投资枠不能随便买所有基金，只能购买金融厅公布的「つみたて投資枠対象商品」名单内的商品；
+                        成长投资枠可以买上场股票、ETF 和部分投资信托。
+                        两种额度可以同时使用，总的非课税保有限度额为 1,800 万日元，其中成长投资枠最多 1,200 万日元。
+                    </p>
+
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">积立投资枠</h3>
+                            <p>只能买金融厅指定范围内的对象商品，主要是适合长期、积立、分散投资的投资信托等。适合刚开始投资、想用固定节奏积累资产的人。</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">成长投资枠</h3>
+                            <p>可选择范围更广，可以买股票、ETF 和部分投信。自由度更高，也更需要自己判断风险。</p>
+                        </div>
+                    </div>
+
+                    <img src="https://www.fsa.go.jp/policy/nisa2/know/images/know_img_3.png"
+                         alt="新 NISA 投资额度对照表"
+                         class="mt-6 w-full rounded-2xl shadow-sm">
+                </div>
+            </details>
+
+            <details id="nisa-foreigner" class="bg-[#F5F6FA] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    4. 外国人能用吗？回国前怎么办？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        可以。NISA 的重点不是国籍，而是是否满足日本国内居住等开户条件。实际开户时，券商或银行会确认住址、
+                        My Number、本人资料和在留相关信息。
+                    </p>
+
+                    <p class="mt-4">
+                        如果永久回国，或之后不再属于日本居住者，通常需要在出国前向开户机构提交相关届出。
+                        NISA 账户可能关闭，持有商品可能转入课税账户。重点是提前联系券商，不要拖到离日后才处理。
+                    </p>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        判断顺序：先确认自己是否仍是日本居住者，再问券商账户能否继续保留、已有资产如何处理、需要提交什么文件。
+                    </div>
+                </div>
+            </details>
+
+            <details id="nisa-open" class="bg-[#F5F6FA] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    5. 怎么开设 NISA 账户？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        NISA 账户不能单独开，一般是在证券公司或银行开设综合证券账户后，再申请开通 NISA 账户。
+                        每个人同一时间只能在一家金融机构使用 NISA，如果之后想换机构，需要按年度办理变更。
+                    </p>
+
+                    <div class="mt-4 grid md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">1. 选择金融机构</h3>
+                            <p>先比较证券公司或银行的商品数量、手续费、NISA 支持情况和中文资料情况。</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">2. 准备本人资料</h3>
+                            <p>通常会用到在留卡、My Number、本人确认资料、银行账户等。不同机构要求可能不同。</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">3. 申请 NISA 账户</h3>
+                            <p>提交申请后，金融机构会进行确认。开通完成后，再决定使用积立投资枠还是成长投资枠。</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 bg-white rounded-xl p-4 text-stone-700">
+                        <p class="font-semibold text-stone-800 mb-2">之后可以连接到证券公司专区</p>
+                        <p class="mb-4">
+                            这里以后可以跳到队友的证券专区，用来比较 SBI、楽天等证券公司的开户难度、NISA 支持和手续费。
+                        </p>
+                        <button type="button"
+                                class="rounded-xl bg-stone-200 px-5 py-3 text-sm font-semibold text-stone-500 cursor-not-allowed"
+                                aria-disabled="true">
+                            证券公司专区（稍后连接）
+                        </button>
+                    </div>
+                </div>
+            </details>
+
+        </div>
+
+    </section>
+
+</main>
+</body>
+</html>
