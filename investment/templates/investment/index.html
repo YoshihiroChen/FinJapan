@@ -1,142 +1,138 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>风险金字塔投资指南</title>
-
-<style>
-
-body{
-    font-family: Arial, sans-serif;
-    background:#fafafa;
-    margin:0;
-    padding:40px;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:10px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#666;
-    margin-bottom:50px;
-}
-
-.pyramid{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-}
-
-.card{
-    text-decoration:none;
-    color:black;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    height:70px;
-    border-radius:12px;
-
-    font-weight:bold;
-
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-
-    transition:0.2s;
-}
-
-.card:hover{
-    transform:translateY(-3px);
-}
-
-.crypto{
-    width:180px;
-    background:#ffd6d6;
-}
-
-.stocks{
-    width:280px;
-    background:#ffe7c2;
-}
-
-.reit{
-    width:380px;
-    background:#fff2b2;
-}
-
-.etf{
-    width:480px;
-    background:#d8f5d8;
-}
-
-.cash{
-    width:580px;
-    background:#d9ecff;
-}
-
-.footer{
-    margin-top:50px;
-    text-align:center;
-    color:#777;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="在日华人投资品类总览与常见疑问。">
+    <title>投资标的大盘点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .pyramid-level { width: var(--level-width); }
+        @media (max-width: 640px) {
+            .pyramid-level { width: 100%; }
+        }
+    </style>
 </head>
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+    <header class="bg-stone-50 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <span class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">📊</span>
+                <span class="ml-3 text-lg font-semibold text-stone-800">在日华人理财指南</span>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm">
+                <a href="/">首页</a>
+                <span class="text-stone-400">开户</span>
+                <span class="text-stone-400">NISA</span>
+                <a class="font-semibold text-stone-900" href="{% url 'investment:index' %}">投资</a>
+                <span class="text-stone-400">税务</span>
+            </nav>
+        </div>
+    </header>
 
-<body>
+    <main class="max-w-7xl mx-auto px-5 sm:px-6 py-10">
+        <section class="max-w-3xl mx-auto text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-stone-800">投资标的大盘点</h1>
+            <p class="mt-4 text-sm sm:text-base leading-7 text-stone-600">
+                在日华人资产配置从0到1，按风险分层了解适合不同用途的投资产品。
+            </p>
+        </section>
 
-<div class="container">
+        <section class="mt-10 max-w-4xl mx-auto" aria-labelledby="asset-pyramid">
+            <div class="mb-4 flex items-center justify-between text-xs font-medium text-stone-500">
+                <span id="asset-pyramid">高波动 / 高风险</span>
+                <span>点击资产类别查看目录</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                {% for category in categories %}
+                    <a
+                        href="{% url 'investment:category' category.slug %}"
+                        class="pyramid-level group rounded-2xl border border-white/80 p-4 sm:p-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition"
+                        style="--level-width: calc(48% + {{ forloop.counter0 }} * 12%); background-color: {{ category.accent }};"
+                    >
+                        <span class="flex items-center justify-between gap-4">
+                            <span class="flex items-center min-w-0">
+                                <span class="w-11 h-11 rounded-xl bg-white/70 flex items-center justify-center font-semibold">{{ category.icon }}</span>
+                                <span class="ml-3">
+                                    <span class="block font-semibold text-stone-800">{{ category.title }}</span>
+                                    <span class="mt-1 block text-xs text-stone-500">{{ category.name }} · {{ category.risk_level }} · 第{{ category.level }}层</span>
+                                </span>
+                            </span>
+                            <span class="text-stone-400 group-hover:translate-x-1 transition">→</span>
+                        </span>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="mt-4 flex justify-between text-xs text-stone-500">
+                <span>流动性与稳定性通常较高</span>
+                <span>风险层级不代表收益排序</span>
+            </div>
+        </section>
 
-    <h1 class="title">
-        风险金字塔投资指南
-    </h1>
+        <section class="mt-14">
+            <h2 class="text-2xl font-bold text-stone-800">常见疑问</h2>
+            <div class="mt-5 flex flex-wrap gap-2">
+                <button type="button" class="faq-filter rounded-full bg-stone-800 px-4 py-2 text-sm text-white" data-filter="全部">全部</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="投资基础">01 投资基础</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="日本房地产投资">02 日本房地产投资</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="股票、ETF 与基金">03 股票、ETF 与基金</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="REITs（房地产投资信托）">04 REITs（房地产投资信托）</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="黄金投资">05 黄金投资</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="加密货币">06 加密货币</button>
+                <button type="button" class="faq-filter rounded-full bg-stone-200 px-4 py-2 text-sm" data-filter="创业与项目投资">07 创业与项目投资</button>
+            </div>
+            <div class="mt-5 divide-y divide-stone-200 rounded-2xl border border-stone-200 bg-stone-50">
+                {% for item in questions %}
+                    <details class="faq-item group p-5 sm:p-6" data-category="{{ item.category }}">
+                        <summary class="flex cursor-pointer list-none justify-between gap-4">
+                            <span><span class="mr-2 text-xs text-stone-400">{{ item.category }}</span><span class="font-semibold text-stone-800">{{ item.question }}</span></span>
+                            <span class="text-stone-400 group-open:rotate-45">＋</span>
+                        </summary>
+                        <div class="pt-4">
+                            <p class="text-sm leading-7 text-stone-600">{{ item.answer }}</p>
+                            {% if item.url_name == 'investment:category' %}
+                                <a href="{% url item.url_name item.url_arg %}" class="mt-3 inline-flex text-sm font-semibold text-stone-700">{{ item.link_label }} →</a>
+                            {% elif item.url_name == 'investment:asset_detail' %}
+                                <a href="{% url item.url_name item.url_args.0 item.url_args.1 %}" class="mt-3 inline-flex text-sm font-semibold text-stone-700">{{ item.link_label }} →</a>
+                            {% elif item.url %}
+                                <a href="{{ item.url }}" class="mt-3 inline-flex text-sm font-semibold text-stone-700">{{ item.link_label }} →</a>
+                            {% endif %}
+                        </div>
+                    </details>
+                {% endfor %}
+            </div>
+        </section>
 
-    <p class="subtitle">
-        本页面仅供学习与参考，不构成任何投资建议。
-        投资有风险，决策需结合个人情况谨慎判断。
-    </p>
+    </main>
 
-    <div class="pyramid">
+    <footer class="mt-8 border-t border-stone-200 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6 py-7">
+            <p class="text-center text-sm leading-6 text-stone-500">本内容仅作投资知识科普，不构成投资邀约或产品推荐。市场价格、费用、税制和开户规则可能变化，请以官方资料为准。</p>
+            <nav class="mt-5 flex flex-wrap justify-center gap-6 text-sm text-stone-600">
+                <a href="/">首页</a><span class="text-stone-400">开户指南</span><span class="text-stone-400">NISA专区</span>
+                <a href="{% url 'investment:index' %}" class="font-semibold text-stone-800">投资品类</a><span class="text-stone-400">税务指南</span>
+            </nav>
+        </div>
+    </footer>
 
-        <a href="{% url 'investment:crypto' %}" class="card crypto">
-            Crypto 加密货币
-        </a>
-
-        <a href="{% url 'investment:stocks' %}" class="card stocks">
-            Stocks 个股投资
-        </a>
-
-        <a href="{% url 'investment:reit' %}" class="card reit">
-            REIT & Gold 房地产与黄金
-        </a>
-
-        <a href="{% url 'investment:etf' %}" class="card etf">
-            ETF & Fund ETF与投资信托
-        </a>
-
-        <a href="{% url 'investment:cash' %}" class="card cash">
-            Cash & Deposit 现金与定期存款
-        </a>
-
-    </div>
-
-    <div class="footer">
-
-        风险越高不代表收益一定越高。<br>
-        请根据自身风险承受能力进行投资。
-
-    </div>
-
-</div>
-
+    <script>
+        (() => {
+            const filters = document.querySelectorAll(".faq-filter");
+            const faqItems = document.querySelectorAll(".faq-item");
+            filters.forEach((button) => button.addEventListener("click", () => {
+                const selected = button.dataset.filter;
+                filters.forEach((item) => {
+                    const active = item === button;
+                    item.classList.toggle("bg-stone-800", active);
+                    item.classList.toggle("text-white", active);
+                    item.classList.toggle("bg-stone-200", !active);
+                });
+                faqItems.forEach((item) => item.classList.toggle("hidden", selected !== "全部" && item.dataset.category !== selected));
+            }));
+        })();
+    </script>
 </body>
 </html>
