@@ -1,0 +1,991 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>银行专区</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">
+                 📊
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                在日华人理财指南
+            </span>
+
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-sm">
+
+            <a href="{% url 'index' %}"
+               class="hover:text-stone-900">
+                首页
+            </a>
+
+            <a href="{% url 'guide' %}"
+               class="hover:text-stone-900">
+                开户攻略
+            </a>
+
+            <a href="{% url 'bank' %}"
+               class="font-semibold text-stone-800">
+                银行专区
+            </a>
+
+            <a href="{% url 'securities' %}"
+               class="hover:text-stone-900">
+                证券专区
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- Main -->
+
+<main class="max-w-7xl mx-auto px-6 pt-28 pb-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            日本银行与银行卡指南
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            了解日本银行体系、银行卡种类以及外国人开户注意事项。
+        </p>
+
+    </div>
+
+    <!-- 常见问题 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-2xl font-bold text-stone-800 mb-6">
+            常见问题
+        </h2>
+
+        <div class="space-y-4">
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>刚来日本为什么要开户？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+                    对于刚到日本的留学生来说，
+                    开设银行账户是融入日本生活的重要一步。
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>日本银行系统和中国有什么区别？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+                    日本长期将存折（口座）和银行卡分开管理，
+                    与国内银行卡直接绑定账户的模式有所不同。
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>什么是口座（账户）？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    日本银行账户一般有两种形式：
+
+                    <br><br>
+
+                    ・通帳（存折）
+
+                    <br>
+
+                    ・银行卡形式
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>什么是现金卡（Cash Card）？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    现金卡主要用于：
+
+                    <br><br>
+
+                    ・ATM取现
+
+                    <br>
+
+                    ・银行转账
+
+                    <br>
+
+                    ・账户管理
+
+                    <br><br>
+
+                    不具备刷卡消费功能。
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>留学生刚到日本一般会拿到什么？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    通常会先开设：
+
+                    <br><br>
+
+                    日本邮政银行（ゆうちょ銀行）
+
+                    <br><br>
+
+                    并获得：
+
+                    <br>
+
+                    ・一本存折
+
+                    <br>
+
+                    ・一张现金卡
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>现金卡可以做什么？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    收生活费
+
+                    <br>
+
+                    收学费
+
+                    <br>
+
+                    房租自动扣款
+
+                    <br>
+
+                    水电煤自动扣款
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>现金卡不能做什么？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    刷卡消费
+
+                    <br>
+
+                    网上购物
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>如果想刷卡消费怎么办？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    需要申请：
+
+                    <br><br>
+
+                    ・Debit Card（借记卡）
+
+                    <br>
+
+                    ・Credit Card（信用卡）
+
+                </div>
+
+            </details>
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold">
+
+                    <span>什么时候比较容易申请借记卡和信用卡？</span>
+
+                    <span class="text-2xl group-open:hidden">+</span>
+                    <span class="text-2xl hidden group-open:block">−</span>
+
+                </summary>
+
+                <div class="px-6 pb-6 border-t pt-4 text-stone-600 leading-8">
+
+                    一般建议：
+
+                    <br><br>
+
+                    入境日本满6个月后，
+
+                    <br>
+
+                    再申请商业银行的借记卡、信用卡，
+
+                    <br>
+
+                    成功率通常会更高。
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+    <!-- 日本银行卡发展趋势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-6">
+            日本银行卡发展趋势
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="relative">
+
+                <div class="absolute top-4 left-0 right-0 h-[2px] bg-stone-200"></div>
+
+                <div class="grid grid-cols-3 gap-8 relative">
+
+                    <div>
+
+                        <div class="w-8 h-8 rounded-full bg-stone-400 mx-auto relative z-10"></div>
+
+                        <div class="text-center mt-4">
+
+                            <div class="font-semibold text-stone-800">
+                                过去
+                            </div>
+
+                            <div class="text-sm text-stone-600 mt-3 leading-7">
+
+                                口座
+
+                                <br>
+
+                                现金卡
+
+                                <br>
+
+                                借记卡
+
+                                <br>
+
+                                信用卡
+
+                                <br><br>
+
+                                需要分别办理
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="w-8 h-8 rounded-full bg-stone-500 mx-auto relative z-10"></div>
+
+                        <div class="text-center mt-4">
+
+                            <div class="font-semibold text-stone-800">
+                                现在
+                            </div>
+
+                            <div class="text-sm text-stone-600 mt-3 leading-7">
+
+                                现金卡
+
+                                +
+
+                                借记卡
+
+                                <br><br>
+
+                                <span class="text-stone-400">例如：</span>
+
+                                <br><br>
+
+                                MUFG Debit
+
+                                <br>
+
+                                Mizuho J-Debit
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="w-8 h-8 rounded-full bg-stone-700 mx-auto relative z-10"></div>
+
+                        <div class="text-center mt-4">
+
+                            <div class="font-semibold text-stone-800">
+                                未来趋势
+                            </div>
+
+                            <div class="text-sm text-stone-600 mt-3 leading-7">
+
+                                现金卡
+
+                                +
+
+                                借记卡
+
+                                +
+
+                                信用卡
+
+                                <br><br>
+
+                                <span class="text-stone-400">例如：</span>
+
+                                <br><br>
+
+                                SMBC Olive
+
+                                <br><br>
+
+                                一张卡完成全部功能
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-10 text-center text-stone-600 leading-8">
+
+                日本银行卡正从「多张卡分开管理」逐渐发展为
+                「一张卡完成 ATM 取现、借记消费、信用消费及积分返现」。
+
+                <br>
+
+                使用体验越来越接近国内银行卡。
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 银行卡类型 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            银行卡类型
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <a href="{% url 'cash_card' %}"
+                class="block bg-[#EEF0F6] rounded-2xl p-7 shadow-sm hover:shadow-md transition cursor-pointer">
+
+                <div class="mt-4 text-lg font-semibold">
+                    现金卡
+                </div>
+
+                <div class="text-sm text-stone-500">
+                    Cash Card
+                </div>
+
+                <div class="mt-5 text-sm leading-7">
+
+                    ATM取现<br>
+                    银行转账<br>
+                    不可消费
+
+                </div>
+
+            </a>
+
+            <a href="{% url 'debit_card' %}"
+                class="block bg-[#EEF3EE] rounded-2xl p-7 shadow-sm hover:shadow-md transition cursor-pointer">
+
+               <div class="mt-4 text-lg font-semibold">
+                    借记卡
+                </div>
+
+                <div class="text-sm text-stone-500">
+                    Debit Card
+                </div>
+
+                <div class="mt-5 text-sm leading-7">
+
+                    即时扣款<br>
+                    网络消费<br>
+                    PayPay绑定
+
+                </div>
+
+            </a>
+
+            <a href="{% url 'credit_card' %}"
+                class="block bg-[#F5EFEC] rounded-2xl p-7 shadow-sm hover:shadow-md transition cursor-pointer">
+
+                <div class="mt-4 text-lg font-semibold">
+                    信用卡
+                </div>
+
+                <div class="text-sm text-stone-500">
+                    Credit Card
+                </div>
+
+                <div class="mt-5 text-sm leading-7">
+
+                    后付费<br>
+                    信用积累<br>
+                    积分返现
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+      <!-- 主流银行 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            主流银行
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <a href="{% url 'mufg_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    三菱UFJ银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    银行金融服务全面
+                </div>
+            </a>
+
+            <a href="{% url 'smbc_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    三井住友银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    Olive综合卡片三合一
+                </div>
+            </a>
+
+            <a href="{% url 'mizuho_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    瑞穗银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    亚洲跨境业务优势明显
+                </div>
+            </a>
+
+            <a href="{% url 'resona_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    りそな银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    生活账户使用便利
+                </div>
+            </a>
+
+            <a href="{% url 'jp_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    ゆうちょ银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    留学生首选，开户最容易
+                </div>
+            </a>
+
+            <a href="{% url 'rakuten_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    楽天银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    楽天生态用户推荐
+                </div>
+            </a>
+
+            <a href="{% url 'paypay_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    PayPay银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    PayPay联动方便
+                </div>
+            </a>
+
+            <a href="{% url 'sbi_bank' %}"
+            class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer">
+                <div class="font-semibold text-stone-800">
+                    住信SBI银行
+                </div>
+                <div class="mt-2 text-sm text-stone-500">
+                    投资用户最推荐
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- 银行快速对比 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            银行快速对比
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <div class="overflow-x-auto">
+
+                <table class="w-full text-sm">
+
+                    <thead class="bg-stone-100 text-stone-800">
+
+                        <tr>
+
+                            <th class="p-4 text-left whitespace-nowrap">银行</th>
+                            <th class="p-4 text-left whitespace-nowrap">最适合谁</th>
+                            <th class="p-4 text-left whitespace-nowrap">开户难度</th>
+                            <th class="p-4 text-left whitespace-nowrap">核心优势</th>
+                            <th class="p-4 text-left whitespace-nowrap">注意点</th>
+                            <th class="p-4 text-left whitespace-nowrap">推荐度</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                ゆうちょ银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                刚来日本的留学生
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                最容易 ★★★★★
+                            </td>
+
+                            <td class="p-4">
+                                网点多，开户门槛低，适合作为第一张日本银行账户
+                            </td>
+
+                            <td class="p-4">
+                                国际汇款和金融联动能力一般
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                三井住友银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                留学生和年轻上班族
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                容易 ★★★★☆
+                            </td>
+
+                            <td class="p-4">
+                                Olive综合账户人气高，APP和网银体验好，信用卡联动强
+                            </td>
+
+                            <td class="p-4">
+                                仍属于大型传统银行，部分业务会看在留状态
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                三菱UFJ银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                长期工作和重视稳定的人
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                普通 ★★★☆☆
+                            </td>
+
+                            <td class="p-4">
+                                日本最大级别银行，国际汇款强，综合金融服务全面
+                            </td>
+
+                            <td class="p-4">
+                                审核相对严格，手续比网络银行繁琐
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                推荐 ★★★★☆
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                瑞穗银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                日企员工和跨境业务用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                较难 ★★☆☆☆
+                            </td>
+
+                            <td class="p-4">
+                                企业客户多，亚洲跨境业务优势明显，安全性高
+                            </td>
+
+                            <td class="p-4">
+                                流程偏传统，审核周期较长，APP体验一般
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                一般推荐 ★★★☆☆
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                りそな银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                日常生活账户用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                容易 ★★★★☆
+                            </td>
+
+                            <td class="p-4">
+                                生活账户便利，Visa Debit实用，25岁以下优惠多
+                            </td>
+
+                            <td class="p-4">
+                                国际汇款能力不如三大都市银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                推荐 ★★★★☆
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                楽天银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                乐天生态用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                容易 ★★★★☆
+                            </td>
+
+                            <td class="p-4">
+                                楽天证券、楽天卡、楽天Pay联动方便，积分体系强
+                            </td>
+
+                            <td class="p-4">
+                                纯线上银行，部分人会不适应没有实体网点
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                PayPay银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                手机支付用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                最容易 ★★★★★
+                            </td>
+
+                            <td class="p-4">
+                                PayPay联动方便，线上开户快，适合日常小额支付
+                            </td>
+
+                            <td class="p-4">
+                                综合金融服务能力不如大型银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                        <tr class="border-t">
+
+                            <td class="p-4 font-semibold text-stone-800 whitespace-nowrap">
+                                住信SBI银行
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                投资用户
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                容易 ★★★★☆
+                            </td>
+
+                            <td class="p-4">
+                                SBI证券联动最强，手续费优势明显，适合投资和NISA用户
+                            </td>
+
+                            <td class="p-4">
+                                对完全新手来说，功能较多，需要慢慢熟悉
+                            </td>
+
+                            <td class="p-4 whitespace-nowrap">
+                                非常推荐 ★★★★★
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 一句话选银行 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            一句话选银行
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">刚来日本</div>
+                <div class="mt-2 text-sm text-stone-600">优先看ゆうちょ银行</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">想用手机支付</div>
+                <div class="mt-2 text-sm text-stone-600">优先看PayPay银行</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">想长期投资</div>
+                <div class="mt-2 text-sm text-stone-600">优先看住信SBI银行</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">想要综合能力</div>
+                <div class="mt-2 text-sm text-stone-600">优先看三井住友或三菱UFJ</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">乐天用户</div>
+                <div class="mt-2 text-sm text-stone-600">优先看楽天银行</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">日常生活账户</div>
+                <div class="mt-2 text-sm text-stone-600">优先看りそな银行</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">跨境汇款</div>
+                <div class="mt-2 text-sm text-stone-600">优先看三菱UFJ或瑞穗</div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="font-semibold text-stone-800">大型日企员工</div>
+                <div class="mt-2 text-sm text-stone-600">三井住友、三菱UFJ、瑞穗都可考虑</div>
+            </div>
+
+        </div>
+
+    </div>
+
+  
+</main>
+
+</body>
+
+</html>

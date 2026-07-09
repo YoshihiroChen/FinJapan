@@ -1,0 +1,1278 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>瑞穗银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center overflow-hidden">
+
+                <img src="{% static 'securities_bank/img/bank/mizuho/mizuho.jpeg' %}"
+                     alt="Mizuho Logo"
+                     class="w-8 h-8 object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                瑞穗银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+<!-- 标题 -->
+
+<div class="mb-8">
+
+    <h1 class="text-3xl font-bold text-stone-800">
+        瑞穗银行（Mizuho Bank）
+    </h1>
+
+    <p class="mt-2 text-stone-500">
+        日本三大都市银行之一，国际业务实力强，企业客户资源丰富
+    </p>
+
+</div>
+
+<!-- 基本特点 -->
+
+<div class="bg-[#EEF3EE] rounded-2xl p-8 mb-8">
+
+    <h2 class="text-xl font-semibold mb-4">
+        基本特点
+    </h2>
+
+    <div class="leading-8">
+
+        瑞穗银行（Mizuho Bank）是日本三大都市银行之一，也是日本历史最悠久的大型银行之一
+
+        <br><br>
+
+        其特点是：
+
+        <br><br>
+
+        日本大型银行稳定性高
+
+        <br>
+
+        企业客户资源丰富
+
+        <br>
+
+        国际业务和海外汇款经验成熟
+
+        <br>
+
+        亚洲地区跨境业务优势明显
+
+        <br>
+
+        全国网点和ATM覆盖广
+
+        <br>
+
+        品牌认可度较高
+
+        <br><br>
+
+        相比互联网银行，开户和业务办理流程相对传统
+
+        <br>
+
+        但安全性和综合金融服务能力较强
+
+        <br><br>
+
+        如果未来计划长期在日本工作生活
+
+        <br>
+
+        或有跨境汇款、海外业务需求
+
+        <br>
+
+        瑞穗银行是比较值得考虑的大型银行之一
+
+    </div>
+
+</div>
+
+<!-- 详细信息 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        详细信息
+    </h2>
+
+    <div class="space-y-4">
+
+        <!-- 外国人开户资格和材料 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>外国人开户资格和材料</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">开户方式：</span>
+
+                <br>
+
+                外国人持长期在留资格可以线下开户
+
+                <br>
+
+                线上通常只是极短期预审，最终仍然必须到店办理
+
+                <br><br>
+
+                <span class="font-semibold">强制必备材料：</span>
+
+                <br>
+
+                在留卡
+
+                <br>
+
+                在留卡背面需要印有日本现住址
+
+                <br>
+
+                在留卡剩余有效期建议不少于 3 个月
+
+                <br>
+
+                备案印章，也就是届出印
+
+                <br>
+
+                签名替代只有少数网点支持
+
+                <br>
+
+                My Number 卡或通知票
+
+                <br>
+
+                办理理财和跨境汇款时，My Number 基本属于强制登记项目
+
+                <br><br>
+
+                <span class="font-semibold">银行可能追加确认的辅助证件：</span>
+
+                <br>
+
+                护照原件
+
+                <br>
+
+                健康保险证
+
+                <br>
+
+                学生证
+
+                <br>
+
+                在职证明
+
+                <br>
+
+                这些材料主要用于核验居住、工作或就学目的
+
+                <br><br>
+
+                <span class="font-semibold">开户前提：</span>
+
+                <br>
+
+                已完成市区役所住民登记
+
+                <br>
+
+                在留卡已经登记有效日本住址
+
+                <br>
+
+                在留资格剩余时长建议不少于 6 个月
+
+                <br>
+
+                短期旅游签证和短期商务签证无法开户
+
+                <br>
+
+                刚来日本未满 6 个月，基本容易被直接拒件
+
+                <br><br>
+
+                <span class="font-semibold">常见被拒理由：</span>
+
+                <br>
+
+                在留期限不足 6 个月
+
+                <br>
+
+                没有稳定工作证明或在校证明
+
+                <br>
+
+                收入来源不稳定
+
+                <br>
+
+                住址刚登记
+
+                <br>
+
+                没有水电费或话费缴费记录
+
+                <br>
+
+                无法提供 My Number 相关文件
+
+                <br>
+
+                办理跨境业务时，如果无法提供 My Number，基本会被拒绝
+
+            </div>
+
+        </details>
+
+        <!-- 主要产品 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>主要产品：J-Debit</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <div class="mb-6 flex justify-center">
+
+                    <img src="{% static 'securities_bank/img/bank/mizuho/j-debit.jpeg' %}"
+                         alt="Mizuho J-Debit"
+                         class="w-[280px] rounded-xl shadow-sm border border-stone-200">
+
+                </div>
+
+                <span class="font-semibold">产品类型：</span>
+
+                <br>
+
+                J-Debit 是二合一卡一体借记卡
+
+                <br>
+
+                组合方式是 Cash Card + Debit Card
+
+                <br><br>
+
+                <span class="font-semibold">专属专区：</span>
+
+                <br>
+
+                <a href="https://www.mizuhobank.co.jp/retail/products/payment/j-debit/index.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.mizuhobank.co.jp/retail/products/payment/j-debit/index.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">主要功能：</span>
+
+                <br>
+
+                ATM 存取款
+
+                <br>
+
+                直接刷卡消费
+
+                <br>
+
+                网上购物
+
+                <br>
+
+                海外线下消费
+
+                <br>
+
+                海外 ATM 取现
+
+                <br><br>
+
+                <span class="font-semibold">基础核心规则：</span>
+
+                <br>
+
+                年费永久免费
+
+                <br>
+
+                消费实时从账户余额扣款
+
+                <br>
+
+                不可透支
+
+                <br>
+
+                消费返现 0.15%
+
+                <br>
+
+                返现自动入账，无需积分兑换
+
+                <br>
+
+                支持日本线下门店、海淘、海外线下消费、海外 ATM 取现
+
+                <br>
+
+                兼容 Apple Pay 和 Google Pay 手机支付
+
+            </div>
+
+        </details>
+
+
+        <!-- 日本国内转账 + 取款手续费 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>日本国内转账 + 取款手续费</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">转账手续费汇总：</span>
+
+                <br>
+
+                <a href="https://www.mizuhobank.co.jp/rate_fee/fee_furikomi.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.mizuhobank.co.jp/rate_fee/fee_furikomi.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">ATM 取款手续费：</span>
+
+                <br>
+
+                <a href="https://www.mizuhobank.co.jp/rate_fee/fee_atm_cd.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.mizuhobank.co.jp/rate_fee/fee_atm_cd.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">网银转账收费：</span>
+
+                <br>
+
+                みずほダイレクト内手续费专区
+
+                <br><br>
+
+                <span class="font-semibold">手机网银 / みずほダイレクト：</span>
+
+                <br>
+
+                转给瑞穗本行账户为 0 日元免费
+
+                <br>
+
+                转给其他银行，3 万日元以下为 165 日元
+
+                <br>
+
+                转给其他银行，3 万日元及以上为 242 日元
+
+                <br><br>
+
+                <span class="font-semibold">ATM 机器转账：</span>
+
+                <br>
+
+                本行转账，平日 8:45 至 18:00 为 110 日元
+
+                <br>
+
+                本行转账，其余时段为 220 日元
+
+                <br>
+
+                他行转账从 275 日元起
+
+                <br>
+
+                节假日可能上浮
+
+                <br><br>
+
+                <span class="font-semibold">柜台窗口办理：</span>
+
+                <br>
+
+                本行转账为 990 日元
+
+                <br>
+
+                他行转账为 1100 日元
+
+                <br>
+
+                柜台窗口通常是最贵的办理方式
+
+                <br><br>
+
+                <span class="font-semibold">瑞穗自有 ATM 取款：</span>
+
+                <br>
+
+                平日 8:45 至 18:00 存取款免费
+
+                <br>
+
+                8:00 至 8:45 或 18:00 后为 110 日元一次
+
+                <br>
+
+                周六、周日、节假日为 110 日元一次
+
+                <br>
+
+                凌晨 0:00 至 8:00 为 220 日元一次
+
+                <br><br>
+
+                <span class="font-semibold">便利店 / 其他银行 ATM：</span>
+
+                <br>
+
+                711、罗森、e-net 等便利店 ATM 通常取款为 110 日元至 220 日元一次
+
+                <br>
+
+                多数便利店 ATM 不支持存款
+
+                <br><br>
+
+                <span class="font-semibold">会员优惠：</span>
+
+                <br>
+
+                みずほマイレージクラブ无年费
+
+                <br>
+
+                按月度资产和交易情况分为 S、A、B 三档
+
+                <br>
+
+                达标后每月可以减免数次时间外 ATM 和便利店 ATM 手续费
+
+                <br>
+
+                学生通常自动享受基础档位优惠
+
+            </div>
+
+        </details>
+
+        <!-- 跨境汇款 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                <span>跨境汇款</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">专属页面：</span>
+
+                <br>
+
+                <a href="https://www.mizuhobank.co.jp/tetsuduki/gaikoku_soukin/index.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.mizuhobank.co.jp/tetsuduki/gaikoku_soukin/index.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">特点：</span>
+
+                <br>
+
+                亚洲区域跨境结算优势明显
+
+                <br>
+
+                企业贸易汇款渠道完善
+
+                <br>
+
+                个人汇款手续费高于三菱 UFJ
+
+                <br>
+
+                资金审核严格
+
+                <br><br>
+
+                <span class="font-semibold">汇出手续费：</span>
+
+                <br>
+
+                手机网银汇海外其他银行为 3300 日元
+
+                <br>
+
+                手机网银汇瑞穗海外网点为 2800 日元
+
+                <br>
+
+                柜台统一为 7700 日元
+
+                <br>
+
+                纸质单据额外加收 500 日元
+
+                <br><br>
+
+                <span class="font-semibold">换汇手续费：</span>
+
+                <br>
+
+                汇款金额 0.05%
+
+                <br>
+
+                最低 2500 日元
+
+                <br>
+
+                持有外币存款直接汇出可免该费用
+
+                <br><br>
+
+                <span class="font-semibold">中间行扣费：</span>
+
+                <br>
+
+                默认 SHA 模式由收款人承担
+
+                <br>
+
+                中间行扣费约 2000 日元至 8000 日元浮动，无法提前准确预估
+
+                <br>
+
+                选择 OUR 模式时，需要额外支付 3000 日元手续费
+
+                <br>
+
+                OUR 模式下收款人可以全额收款，无中间行扣费
+
+                <br><br>
+
+                <span class="font-semibold">汇入手续费：</span>
+
+                <br>
+
+                境外汇至瑞穗时，通常收取 1600 日元至 3200 日元
+
+                <br>
+
+                费用会直接从到账金额中扣除
+
+                <br><br>
+
+                <span class="font-semibold">汇出与汇入限额：</span>
+
+                <br>
+
+                网银线上单笔上限为 300 万日元等值
+
+                <br>
+
+                网银线上单日上限为 300 万日元等值
+
+                <br>
+
+                月度累计上限为 500 万日元
+
+                <br>
+
+                线下柜台无硬性金额上限
+
+                <br>
+
+                大额汇款需要提交资金用途证明审核
+
+                <br>
+
+                境外汇入没有总额限制
+
+                <br>
+
+                大额入账时银行可能会电话核实资金来源
+
+                <br><br>
+
+                <span class="font-semibold">证件材料：</span>
+
+                <br>
+
+                未登记 My Number 无法开通跨境汇款功能
+
+                <br>
+
+                线下办理需要携带有效期内在留卡原件
+
+                <br>
+
+                线下办理需要携带银行届出印
+
+                <br>
+
+                银行可能额外要求护照、保险证、在职证明或学生证
+
+                <br>
+
+                网银跨境汇款需要提前上传在留卡和 My Number 完成线上登记
+
+                <br>
+
+                完成登记后，不需要每次都去柜台提交证件
+
+                <br><br>
+
+                <span class="font-semibold">海外汇入瑞穗时的收款信息：</span>
+
+                <br>
+
+                银行名：MIZUHO BANK, LTD.
+
+                <br>
+
+                SWIFT：MHCBJPJT
+
+                <br>
+
+                完整 11 位代码：MHCBJPJTXXX
+
+                <br>
+
+                姓名和地址需要使用开户时的英文拼音
+
+                <br>
+
+                完整支行 3 位代码和 7 位账号不可缺失
+
+                <br><br>
+
+                <span class="font-semibold">瑞穗汇往海外时需要的信息：</span>
+
+                <br>
+
+                收款人完整英文姓名
+
+                <br>
+
+                收款人完整英文地址
+
+                <br>
+
+                对方银行英文名
+
+                <br>
+
+                对方银行 SWIFT 码
+
+                <br>
+
+                欧洲地区必须填写 IBAN 号码
+
+                <br>
+
+                其他国家需要提供完整账号
+
+                <br>
+
+                姓名拼写错误可能导致汇款直接退回
+
+                <br><br>
+
+                <span class="font-semibold">到账速度：</span>
+
+                <br>
+
+                网银工作日提交，东南亚约 1 至 2 个工作日到账
+
+                <br>
+
+                网银工作日提交，欧美约 1 至 3 个工作日到账
+
+                <br>
+
+                柜台办理通常需要银行内部审核 3 个工作日后发出
+
+                <br>
+
+                柜台办理后，还需要再加 1 至 3 天境外到账时间
+
+                <br>
+
+                节假日和系统维护可能导致顺延延迟
+
+                <br><br>
+
+                <span class="font-semibold">退款规则：</span>
+
+                <br>
+
+                信息填写错误或账户异常会原路退回
+
+                <br>
+
+                全部手续费通常不予返还
+
+                <br>
+
+                还可能额外收取退款处理费
+
+                <br>
+
+                退款处理全程可能需要 3 至 10 个工作日
+
+                <br><br>
+
+                <span class="font-semibold">大额汇款申报：</span>
+
+                <br>
+
+                单笔汇款超过 1000 万日元时，银行强制要求资金证明
+
+                <br>
+
+                生活费汇款可能需要亲属关系证明
+
+                <br>
+
+                学费汇款可能需要在校证明
+
+                <br>
+
+                材料不完整时，银行可能不予办理
+
+                <br>
+
+                年度累计向海外汇款超过 200 万日元时，可能需要年末确定申告主动申报
+
+                <br>
+
+                接收海外赠与超过 110 万日元时，也可能涉及申报
+
+                <br><br>
+
+                <span class="font-semibold">换汇汇率与兑换手续费：</span>
+
+                <br>
+
+                购汇使用银行卖出价 TTS
+
+                <br>
+
+                银行卖出价通常低于实时市场汇率
+
+                <br>
+
+                汇率每日实时变动
+
+                <br>
+
+                换汇加收 0.05% 手续费
+
+                <br>
+
+                最低 2500 日元
+
+                <br>
+
+                持有外币存款直接汇出时，可以免除该笔费用
+
+                <br><br>
+
+                <span class="font-semibold">网银开通海外汇款条件：</span>
+
+                <br>
+
+                持有瑞穗储蓄账户
+
+                <br>
+
+                已开通みずほダイレクト网上银行
+
+                <br>
+
+                已提前完成 My Number 和在留卡线上登记
+
+                <br>
+
+                已绑定手机动态密码验证
+
+                <br>
+
+                线上提交开通申请后，纸质确认单会邮寄至日本住址
+
+                <br>
+
+                回寄后通常需要 1 至 2 周审核开通
+
+                <br>
+
+                短期签证或没有固定日本住址时，无法线上开通海外汇款功能
+
+                <br>
+
+                这种情况下通常只能到柜台办理
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+<!-- APP 和网上银行 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        APP 和网上银行
+    </h2>
+
+    <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+        <p>
+            瑞穗银行的网上银行服务为
+            <span class="font-semibold">みずほダイレクト</span>
+            整体界面偏传统，流畅度弱于三菱 UFJ，
+            但基础功能比较完整
+        </p>
+
+        <br>
+
+        <span class="font-semibold">
+            主要支持：
+        </span>
+
+        <br>
+
+        账户明细查询
+
+        <br>
+
+        借记卡管理
+
+        <br>
+
+        信用卡管理
+
+        <br>
+
+        水电自动扣费
+
+        <br><br>
+
+        <span class="font-semibold">
+            语言与维护：
+        </span>
+
+        <br>
+
+        仅支持日文和英文界面，没有中文界面
+
+        <br>
+
+        每周六 22:00 至周日 8:00 系统维护，
+        维护期间网银无法操作
+
+    </div>
+
+</div>
+
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+
+                        <th class="p-4 text-left">
+                            服务
+                        </th>
+
+                        <th class="p-4 text-left">
+                            支持情况
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            PayPay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            楽天Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Apple Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-t">
+
+                        <td class="p-4">
+                            Google Pay
+                        </td>
+
+                        <td class="p-4">
+                            支持
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 主要优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            主要优势
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                日本三大Mega Bank
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                亚洲业务实力强
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                企业认可度高
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                ATM覆盖广
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                国际汇款成熟
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                银行稳定性高
+            </div>
+
+        </div>
+
+    </div>
+
+     <!-- 推荐指数 -->
+        <div class="mb-10">
+
+            <h2 class="text-xl font-semibold mb-5">
+                推荐指数
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        开户难度
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        较难 ★★☆☆☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        国际汇款
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        优秀 ★★★★☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        银行规模
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        顶级 ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        外国人推荐
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        一般推荐 ★★★☆☆
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            适合什么人？
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                长期留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                企业员工
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                外资公司职员
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                国际汇款用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                理财投资用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                重视稳定性的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-blue-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            开户后容易忽略的风险
+        </h2>
+
+        <p class="leading-8">
+
+            <span class="font-semibold">
+                信息更新：
+            </span>
+
+            <br>
+
+            更换住址、手机号、在留卡后需要及时更新银行资料。
+
+            <br><br>
+
+            <span class="font-semibold">
+                跨境汇款审核：
+            </span>
+
+            <br>
+
+            大额或频繁国际汇款可能触发额外审核。
+
+            <br><br>
+
+            <span class="font-semibold">
+                手续费问题：
+            </span>
+
+            <br>
+
+            夜间ATM和跨行转账长期使用会产生额外成本。
+
+            <br><br>
+
+            <span class="font-semibold">
+                系统维护：
+            </span>
+
+            <br>
+
+            部分时段网上银行暂停服务，需要提前规划转账时间。
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>
