@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ category.title }} {{ category.name }}资产目录。">
+    <title>{{ category.title }}｜投资标的大盘点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+    <header class="bg-stone-50 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <span class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center" aria-hidden="true">📊</span>
+                <span class="ml-3 text-lg font-semibold text-stone-800">在日华人理财指南</span>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm">
+                <a class="hover:text-stone-900" href="/">NISA</a>
+                <a class="hover:text-stone-900" href="/">开户</a>
+                <a class="font-semibold text-stone-900" href="{% url 'investment:index' %}">投资</a>
+                <a class="hover:text-stone-900" href="/">税务</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-5 sm:px-6 py-10">
+        <a href="{% url 'investment:index' %}" class="inline-flex items-center text-sm text-stone-500 hover:text-stone-900 transition">
+            ← 返回投资标的大盘点
+        </a>
+
+        <section class="mt-5 rounded-3xl p-7 sm:p-10 border border-white shadow-sm" style="background-color: {{ category.accent }};">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-white/70 flex items-center justify-center text-2xl font-semibold text-stone-700">
+                        {{ category.icon }}
+                    </div>
+                    <h1 class="mt-5 text-3xl font-bold text-stone-800">{{ category.title }} {{ category.name }}</h1>
+                    <p class="mt-3 text-stone-600">{{ category.risk_level }}｜第{{ category.level }}层｜{{ category.positioning }}</p>
+                </div>
+            </div>
+            <div class="mt-7 max-w-4xl space-y-4 text-sm sm:text-base leading-8 text-stone-700">
+                <p>{{ category.summary }}</p>
+                <p>{{ category.overview }}</p>
+            </div>
+        </section>
+
+        <section class="mt-10 rounded-3xl bg-stone-50 border border-stone-200 p-6 sm:p-8">
+            <h2 class="text-2xl font-bold text-stone-800">
+                {% if category.slug == 'cash-deposit' %}开户与存钱流程{% else %}实际操作步骤{% endif %}
+            </h2>
+            <ol class="mt-6 space-y-4">
+                {% for step in purchase_steps %}
+                    <li class="grid grid-cols-[2.25rem_1fr] gap-3 text-sm leading-7 text-stone-600">
+                        <span class="font-semibold text-stone-400">0{{ forloop.counter }}</span>
+                        <span>{{ step|urlize }}</span>
+                    </li>
+                {% endfor %}
+            </ol>
+            {% if category.slug == 'cash-deposit' %}
+                <div class="mt-6 rounded-2xl bg-[#EEF0F6] p-5 text-sm leading-7 text-stone-600">
+                    银行和证券账户的申请条件会因金融机构、在留资格和本人确认方式而不同。提交申请前，请以各机构官网的最新说明为准，并提前确认手续费、入金方式和本人确认资料。
+                </div>
+            {% endif %}
+        </section>
+
+        <section class="mt-10" aria-labelledby="subcategory-title">
+            <h2 id="subcategory-title" class="text-2xl font-bold text-stone-800">子分类目录</h2>
+            <div class="mt-5 overflow-hidden rounded-2xl border border-stone-200 bg-stone-50">
+                {% for asset in category.subcategories %}
+                    <a href="{% url 'investment:asset_detail' category.slug asset.slug %}" class="grid grid-cols-1 md:grid-cols-12 gap-3 border-b border-stone-200 p-5 last:border-b-0 hover:bg-white transition">
+                        <div class="md:col-span-3">
+                            <h3 class="font-semibold text-stone-800">{{ asset.name }}</h3>
+                        </div>
+                        <p class="md:col-span-5 text-sm leading-6 text-stone-600">{{ asset.description }}</p>
+                        <p class="md:col-span-3 text-sm leading-6 text-stone-500">
+                            {% for representative in asset.representatives|slice:":2" %}
+                                {{ representative }}{% if not forloop.last %} / {% endif %}
+                            {% endfor %}
+                        </p>
+                        <span class="md:col-span-1 text-right text-stone-400">→</span>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div class="mt-10 text-center">
+            <a href="{% url 'investment:index' %}" class="inline-flex rounded-xl bg-stone-200 px-5 py-3 text-sm font-semibold text-stone-700 hover:bg-stone-300 transition">
+                返回投资标的大盘点
+            </a>
+        </div>
+    </main>
+
+    <footer class="mt-8 border-t border-stone-200 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6 py-7">
+            <p class="text-center text-sm leading-6 text-stone-500">本内容仅作投资知识科普，不构成投资邀约或产品推荐。完整风险说明及最新规则请以官方资料为准。</p>
+            <nav class="mt-5 flex flex-wrap justify-center gap-6 text-sm text-stone-600">
+                <a href="/">首页</a><span class="text-stone-400">开户指南</span><span class="text-stone-400">NISA专区</span>
+                <a href="{% url 'investment:index' %}" class="font-semibold text-stone-800">投资品类</a><span class="text-stone-400">税务指南</span>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
