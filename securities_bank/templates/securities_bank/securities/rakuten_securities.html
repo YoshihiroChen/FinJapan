@@ -1,0 +1,1167 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>楽天证券指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-[#EEF0F6] overflow-hidden flex items-center justify-center">
+
+                <img src="{% static 'securities_bank/img/securities/rakuten_s_logo.png' %}"
+                     alt="Rakuten Securities Logo"
+                     class="w-full h-full object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                楽天证券指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'securities' %}"
+           class="text-sm hover:text-stone-900">
+            返回证券专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            楽天证券（楽天証券）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本最大网络券商之一，适合乐天生态用户、NISA定投用户和长期资产配置用户
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            官方网站
+        </h2>
+
+        <a href="https://www.rakuten-sec.co.jp/"
+           target="_blank"
+           class="text-blue-600 hover:underline break-all">
+
+            https://www.rakuten-sec.co.jp/
+
+        </a>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-[#EEF3EE] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
+        </h2>
+
+        <div class="leading-8">
+
+            乐天证券是日本代表性的网络券商之一
+
+            <br><br>
+
+            它最适合已经在使用乐天银行、乐天信用卡、乐天Pay的人
+
+            <br><br>
+
+            最大优势是消费、储蓄、积分、投资可以放在同一个乐天生态里管理
+
+            <br><br>
+
+            对留学生和长期在日华人来说，楽天证券比较适合做NISA定投、低费率指数基金、美股ETF和长期资产配置
+
+        </div>
+
+    </div>
+
+    <!-- 核心优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            核心优势
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天积分投资
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天信用卡定投
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天Pay余额定投
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                NISA标的丰富
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                美股ETF覆盖全面
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                中文客服支持
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                100日元即可定投
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天银行联动方便
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 开户定位与适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            开户定位与适合人群
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    开户难度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    普通难度
+                    <br>
+                    支持外国人线上开户
+                    <br>
+                    材料齐全时比较顺
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    适合人群
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    留学生
+                    <br>
+                    乐天生态用户
+                    <br>
+                    长期在日华人
+                    <br>
+                    NISA定投用户
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    投资方向
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    日本股票
+                    <br>
+                    美股
+                    <br>
+                    ETF
+                    <br>
+                    投资信托
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    生态优势
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    乐天银行
+                    <br>
+                    乐天信用卡
+                    <br>
+                    乐天Pay
+                    <br>
+                    乐天积分
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    注意点
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    官网和APP无中文界面
+                    <br>
+                    开户材料不能省
+                    <br>
+                    美国籍客户限制较多
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold text-lg mb-3">
+                    推荐程度
+                </div>
+
+                <div class="text-sm text-stone-600 leading-7">
+                    如果你用乐天银行或乐天卡
+                    <br>
+                    乐天证券非常值得优先考虑
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 详细信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            详细信息
+        </h2>
+
+        <div class="space-y-4">
+
+            <!-- 外国人开户条件 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>外国人开户条件和准备材料</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">开户政策：</span>
+
+                    <br>
+
+                    支持外国人全程线上开户
+
+                    <br>
+
+                    不强制邮寄纸质材料
+
+                    <br>
+
+                    手机拍照上传证件即可完成身份核验
+
+                    <br><br>
+
+                    <span class="font-semibold">在留资格：</span>
+
+                    <br>
+
+                    留学
+
+                    <br>
+
+                    技术・人文知识・国际业务
+
+                    <br>
+
+                    永住
+
+                    <br>
+
+                    特别永住
+
+                    <br>
+
+                    其他长期在留资格
+
+                    <br><br>
+
+                    <span class="font-semibold">不能开户的情况：</span>
+
+                    <br>
+
+                    短期观光签证
+
+                    <br>
+
+                    短期商务签证
+
+                    <br>
+
+                    不属于日本居住者的人
+
+                    <br><br>
+
+                    <span class="font-semibold">硬性要求：</span>
+
+                    <br>
+
+                    在留卡剩余有效期必须 2 个月以上
+
+                    <br>
+
+                    必须是日本税务居住者
+
+                    <br>
+
+                    已完成住民票登记
+
+                    <br>
+
+                    长期在日本居住
+
+                    <br>
+
+                    通常在日居住满 1 年更稳
+
+                    <br><br>
+
+                    <span class="font-semibold">必备材料：</span>
+
+                    <br>
+
+                    在留卡正反面
+
+                    <br>
+
+                    3 个月内开具的住民票
+
+                    <br>
+
+                    My Number 个人编号证明
+
+                    <br>
+
+                    个人编号卡或通知卡二选一
+
+                    <br>
+
+                    本人名下日本银行账户
+
+                    <br><br>
+
+                    <span class="font-semibold">美国籍客户：</span>
+
+                    <br>
+
+                    美国籍客户受 FATCA 规则限制
+
+                    <br>
+
+                    开户和交易品类都会受到更严格限制
+
+                    <br><br>
+
+                    <span class="font-semibold">开户时效：</span>
+
+                    <br>
+
+                    普通证券账户材料无误时，一般 3 至 7 个工作日
+
+                    <br>
+
+                    材料缺失时，补件可能再花 1 周左右
+
+                    <br>
+
+                    同步申请 NISA 时，税务局审核通常还需要 1 至 2 周
+
+                </div>
+
+            </details>
+
+            <!-- 开户流程 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+                    <span>开户流程怎么走</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">第一步：</span>
+
+                    <br>
+
+                    进入楽天证券官网或官方App
+
+                    <br><br>
+
+                    <span class="font-semibold">第二步：</span>
+
+                    <br>
+
+                    准备在留卡、住民票、My Number、日本银行账户
+
+                    <br><br>
+
+                    <span class="font-semibold">第三步：</span>
+
+                    <br>
+
+                    线上填写开户申请表
+
+                    <br>
+
+                    姓名、地址、在留卡信息要和证件保持一致
+
+                    <br><br>
+
+                    <span class="font-semibold">第四步：</span>
+
+                    <br>
+
+                    上传本人确认文件
+
+                    <br>
+
+                    等待身份核验
+
+                    <br><br>
+
+                    <span class="font-semibold">第五步：</span>
+
+                    <br>
+
+                    审核通过后开通普通综合账户
+
+                    <br>
+
+                    如果同步申请NISA，需要继续等待税务局确认
+
+                    <br><br>
+
+                    <span class="font-semibold">新手提醒：</span>
+
+                    <br>
+
+                    不要急着提交不完整材料
+
+                    <br>
+
+                    在留卡、住民票、My Number、日本银行账户先准备好再申请
+
+                </div>
+
+            </details>
+            <!-- 中文支持 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                <span>中文资料与客服支持</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+
+            </summary>
+
+            <div class="p-6 border-t leading-8">
+
+                <span class="font-semibold">中文支持：</span>
+
+                <br>
+
+                暂无官方中文网站、中文APP和中文客服
+
+                <br>
+
+                支持日语和英语服务
+
+                <br><br>
+
+                <span class="font-semibold">华人用户情况：</span>
+
+                <br>
+
+                华人用户数量较多
+
+                <br>
+
+                网上中文教程和开户攻略丰富
+
+                <br>
+
+                遇到常见问题通常都能找到中文参考资料
+
+                <br><br>
+
+                <span class="font-semibold">适合人群：</span>
+
+                <br>
+
+                具备基础日语阅读能力的投资者
+
+                <br>
+
+                已经在使用乐天银行、乐天信用卡或乐天Pay的用户
+
+            </div>
+
+        </details>
+
+            <!-- NISA -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>NISA制度支持</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">支持等级：</span>
+
+                    <br>
+
+                    五星推荐
+
+                    <br><br>
+
+                    <span class="font-semibold">支持内容：</span>
+
+                    <br>
+
+                    成长投资枠
+
+                    <br>
+
+                    つみたて投资枠
+
+                    <br>
+
+                    日本股票
+
+                    <br>
+
+                    美股
+
+                    <br>
+
+                    ETF
+
+                    <br>
+
+                    投资信托
+
+                    <br><br>
+
+                    <span class="font-semibold">适合新手：</span>
+
+                    <br>
+
+                    100日元即可开始定投
+
+                    <br>
+
+                    自动积立功能成熟
+
+                    <br>
+
+                    长期投资体验优秀
+
+                    <br><br>
+
+                    <span class="font-semibold">乐天特色：</span>
+
+                    <br>
+
+                    可以使用乐天积分购买基金
+
+                    <br>
+
+                    可以使用乐天信用卡定投
+
+                    <br>
+
+                    消费和投资形成积分循环
+
+                </div>
+
+            </details>
+
+            <!-- 美股 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>美股交易支持</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">支持程度：</span>
+
+                    <br>
+
+                    非常优秀
+
+                    <br><br>
+
+                    <span class="font-semibold">热门股票：</span>
+
+                    <br>
+
+                    Apple
+
+                    <br>
+
+                    NVIDIA
+
+                    <br>
+
+                    Amazon
+
+                    <br>
+
+                    Tesla
+
+                    <br>
+
+                    Microsoft
+
+                    <br>
+
+                    Meta
+
+                    <br><br>
+
+                    <span class="font-semibold">ETF：</span>
+
+                    <br>
+
+                    VOO
+
+                    <br>
+
+                    VTI
+
+                    <br>
+
+                    QQQ
+
+                    <br>
+
+                    SPY
+
+                    <br>
+
+                    SCHD
+
+                    <br><br>
+
+                    <span class="font-semibold">对比SBI：</span>
+
+                    <br>
+
+                    品种数量略少于SBI证券
+
+                    <br>
+
+                    但已经足够满足绝大多数个人投资者需求
+
+                </div>
+
+            </details>
+
+            <!-- 手续费 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>手续费体系</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t overflow-x-auto">
+
+                    <table class="w-full text-sm">
+
+                        <thead class="bg-stone-100">
+
+                            <tr>
+
+                                <th class="p-4 text-left">
+                                    项目
+                                </th>
+
+                                <th class="p-4 text-left">
+                                    费用
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr class="border-t">
+
+                                <td class="p-4">
+                                    日本股票
+                                </td>
+
+                                <td class="p-4">
+                                    免费
+                                </td>
+
+                            </tr>
+
+                            <tr class="border-t">
+
+                                <td class="p-4">
+                                    美股
+                                </td>
+
+                                <td class="p-4">
+                                    免费
+                                </td>
+
+                            </tr>
+
+                            <tr class="border-t">
+
+                                <td class="p-4">
+                                    ETF
+                                </td>
+
+                                <td class="p-4">
+                                    免费
+                                </td>
+
+                            </tr>
+
+                            <tr class="border-t">
+
+                                <td class="p-4">
+                                    投资信托
+                                </td>
+
+                                <td class="p-4">
+                                    大部分免费
+                                </td>
+
+                            </tr>
+
+                            <tr class="border-t">
+
+                                <td class="p-4">
+                                    信用卡定投
+                                </td>
+
+                                <td class="p-4">
+                                    可获得积分返还
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </details>
+            <!-- 乐天生态圈联动 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>乐天生态圈联动</span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <span class="font-semibold">推荐组合：</span>
+
+                    <br>
+
+                    乐天银行
+
+                    <br>
+
+                    ↓
+
+                    <br>
+
+                    乐天信用卡
+
+                    <br>
+
+                    ↓
+
+                    <br>
+
+                    乐天证券
+
+                    <br>
+
+                    ↓
+
+                    <br>
+
+                    NISA定投
+
+                    <br>
+
+                    ↓
+
+                    <br>
+
+                    乐天积分
+
+                    <br>
+
+                    ↓
+
+                    <br>
+
+                    再次用于投资
+
+                    <br><br>
+
+                    <span class="font-semibold">最大优势：</span>
+
+                    <br>
+
+                    消费和投资可以形成积分循环
+
+                    <br>
+
+                    日常消费也能帮助积累投资资金
+
+                    <br>
+
+                    对长期投资用户非常友好
+
+                    <br><br>
+
+                    <span class="font-semibold">适合人群：</span>
+
+                    <br>
+
+                    乐天银行用户
+
+                    <br>
+
+                    乐天信用卡用户
+
+                    <br>
+
+                    乐天Pay用户
+
+                    <br>
+
+                    经常网购的人
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+    <!-- 推荐指数 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            推荐指数
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    开户难度
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    普通 ★★★☆☆
+                </div>
+
+                <div class="mt-2 text-sm text-stone-500">
+                    外国人可线上申请开户
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    NISA支持
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    非常推荐 ★★★★★
+                </div>
+
+                <div class="mt-2 text-sm text-stone-500">
+                    新NISA功能完善
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    美股投资
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    推荐 ★★★★☆
+                </div>
+
+                <div class="mt-2 text-sm text-stone-500">
+                    主流美股和ETF覆盖完整
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <div class="font-semibold">
+                    乐天生态
+                </div>
+
+                <div class="mt-2 text-stone-600">
+                    顶级 ★★★★★
+                </div>
+
+                <div class="mt-2 text-sm text-stone-500">
+                    银行信用卡积分无缝联动
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 最适合什么人 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            最适合什么人
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天银行用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天信用卡用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                乐天Pay用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                NISA定投用户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                ETF长期投资者
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                希望积累积分的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 新手建议 -->
+
+    <div class="bg-[#EEF0F6] rounded-2xl p-8 shadow-sm">
+
+        <h2 class="text-xl font-semibold mb-4">
+            新手建议
+        </h2>
+
+        <div class="leading-8">
+
+            如果你已经在使用乐天银行或者乐天信用卡
+
+            <br><br>
+
+            那么楽天证券通常是最省心的选择
+
+            <br><br>
+
+            开户后建议优先开通NISA账户
+
+            <br>
+
+            再利用乐天信用卡定投指数基金
+
+            <br>
+
+            这样既能获得长期投资收益
+
+            <br>
+
+            也能获得乐天积分回馈
+
+            <br><br>
+
+            对大部分留学生和上班族来说
+
+            <br>
+
+            乐天证券和SBI证券都是第一梯队券商
+
+            <br>
+
+            如果已经深度使用乐天生态
+
+            <br>
+
+            乐天证券往往会更方便
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

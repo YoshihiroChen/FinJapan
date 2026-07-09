@@ -1,0 +1,984 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>三菱UFJ银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+<style>
+    summary {
+        list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+</style>
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+    <div class="w-11 h-11 rounded-xl bg-green-100 flex items-center justify-center overflow-hidden">
+
+        <img src="{% static 'securities_bank/img/bank/mufg/mufg_logo.jpeg' %}"
+            alt="MUFG Logo"
+            class="w-8 h-8 object-contain">
+
+    </div>
+
+    <span class="ml-3 text-lg font-semibold text-stone-800">
+        三菱UFJ银行指南
+    </span>
+
+</div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 标题 -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            三菱UFJ銀行（MUFG）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本三大Mega Bank之一，国际业务能力最强的银行之一
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+<div class="bg-green-50 rounded-2xl p-8 mb-8">
+
+    <h2 class="text-xl font-semibold mb-4">
+        基本特点
+    </h2>
+
+    <p class="leading-8">
+
+        三菱UFJ银行是日本最大的银行之一，
+        也是全球最大的金融集团之一
+
+        <br><br>
+
+        其特点是：
+
+        <br>
+
+        • 日本最大级别的银行规模
+
+        <br>
+
+        • 全球业务网络广泛
+
+        <br>
+
+        • 国际金融服务能力强
+
+        <br>
+
+        • ATM 网络和网点覆盖范围广
+
+        <br><br>
+
+        对于长期在日本生活、工作，
+        或者重视银行稳定性的人来说，
+        MUFG 是非常有代表性的传统大型银行选择
+
+    </p>
+
+</div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            官方网站
+        </h2>
+
+        <a href="https://www.bk.mufg.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                三菱UFJ银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.bk.mufg.jp
+            </div>
+
+        </a>
+
+    </div>
+
+<!-- 开户特点 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        开户特点
+    </h2>
+
+    <div class="bg-white rounded-2xl p-8 shadow-sm leading-8 text-stone-600">
+
+        MUFG 的开户审核机制相对比较严格，
+        很多外国人反馈不同网点的审核标准可能不完全一样
+
+        <br><br>
+
+        常见特点包括：
+
+        <br>
+
+        • 日语口语要求较高
+
+        <br>
+
+        • 柜员裁量空间较大
+
+        <br>
+
+        • 不同网点审核标准不同
+
+        <br><br>
+
+        因此，去柜台开户前建议提前准备好在留卡、
+        印章、My Number、学生证或在职证明等材料，
+        并能够清楚说明开户目的
+
+    </div>
+
+</div>
+
+<!-- 详细信息折叠区 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        详细信息
+    </h2>
+
+    <div class="space-y-4">
+
+        <!-- 外国人开户资格和材料 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold text-stone-800 hover:bg-stone-50 rounded-2xl">
+                <span>外国人开户资格和材料</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>     
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="px-6 pb-6 pt-4 border-t border-stone-100 text-stone-600 leading-8">
+
+                外国人持有效在留资格可以线下开户，但无法通过线上 APP 完成开户
+
+                <br><br>
+
+                <span class="font-semibold">强制必备材料：</span>
+
+                <br>
+
+                • 在留卡 / 特别永住者证明书
+
+                <br>
+
+                • 在留卡背面必须印有日本现住址
+
+                <br>
+
+                • 备案印章（届出印）
+
+                <br>
+
+                • My Number 相关文件
+
+                <br><br>
+
+                <span class="font-semibold">银行可能追加确认：</span>
+
+                <br>
+
+                • 护照
+
+                <br>
+
+                • 健康保险证
+
+                <br>
+
+                • 学生证
+
+                <br>
+
+                • 在职证明
+
+                <br><br>
+
+                <span class="font-semibold">开户前提：</span>
+
+                <br>
+
+                • 已完成市区役所住民登记
+
+                <br>
+
+                • 在留卡登记有效日本住址
+
+                <br>
+
+                • 短期旅游签证无法开户
+
+                <br><br>
+
+                <span class="font-semibold">常见被拒原因：</span>
+
+                <br>
+
+                • 刚来日本
+
+                <br>
+
+                • 在留期限短
+
+                <br>
+
+                • 职业不稳定
+
+                <br>
+
+                • 日语口语沟通困难
+
+                <br>
+
+                • 不同网点审核标准不同
+
+            </div>
+
+        </details>
+
+      <details class="bg-white rounded-2xl shadow-sm mb-6 group">
+
+    <summary
+        class="list-none p-6 font-semibold text-xl cursor-pointer flex justify-between items-center">
+
+        <span>
+            主要产品：MUFG Debit
+        </span>
+
+        <span class="text-stone-400 text-2xl font-light group-open:hidden">
+            +
+        </span>
+
+        <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+            −
+        </span>
+
+    </summary>
+
+    <div class="p-6 border-t">
+
+        <!-- MUFG Debit 图片 -->
+
+        <div class="mb-6 flex justify-center">
+
+            <img src="{% static 'securities_bank/img/bank/mufg/MUFG debit.jpeg' %}"
+                 alt="MUFG Debit"
+                 class="w-[320px] rounded-xl shadow-sm border border-stone-200">
+
+        </div>
+
+        <p class="leading-8">
+
+            <span class="font-semibold">
+                MUFG Debit 是二合一卡：
+            </span>
+
+            <br>
+
+            Cash Card + Debit Card
+
+            <br><br>
+
+            <span class="font-semibold">
+                官方专区：
+            </span>
+
+            <br>
+
+            <a href="https://www.bk.mufg.jp/tsukau/debit/index.html"
+               target="_blank"
+               class="text-blue-600 hover:underline">
+
+                https://www.bk.mufg.jp/tsukau/debit/index.html
+
+            </a>
+
+            <br><br>
+
+            <span class="font-semibold">
+                卡片类型：
+            </span>
+
+            <br>
+
+            • VISA 借记卡
+
+            <br>
+
+            • JCB 借记卡
+
+            <br><br>
+
+            <span class="font-semibold">
+                基础规则：
+            </span>
+
+            <br>
+
+            • 年费永久免费
+
+            <br>
+
+            • 消费当场从账户扣款
+
+            <br>
+
+            • 不能透支
+
+            <br>
+
+            • 每笔消费返 0.2% 现金
+
+            <br>
+
+            • 支持日本国内店铺、海淘、海外线下店、海外 ATM 取现
+
+            <br>
+
+            • 兼容 Apple Pay / Google Pay
+
+        </p>
+
+    </div>
+
+</details>
+
+        <!-- 国内转账和取款手续费 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold text-stone-800 hover:bg-stone-50 rounded-2xl">
+                <span>日本国内转账 + 取款手续费</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="px-6 pb-6 pt-4 border-t border-stone-100 text-stone-600 leading-8">
+
+                <span class="font-semibold">参考页面：</span>
+
+                <br>
+
+                • 转账手续费：
+                <a href="https://www.bk.mufg.jp/tesuuryou/furikomi/ichiranhyo.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    bk.mufg.jp/tesuuryou/furikomi/ichiranhyo.html
+                </a>
+
+                <br>
+
+                • ATM 取款手续费：
+                <a href="https://www.bk.mufg.jp/tesuuryou/atm/new.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    bk.mufg.jp/tesuuryou/atm/new.html
+                </a>
+
+                <br>
+
+                • 网银转账收费：
+                <a href="https://direct.bk.mufg.jp/tesuuryo/"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    direct.bk.mufg.jp/tesuuryo/
+                </a>
+
+                <br><br>
+
+               <span class="font-semibold">手机网银 / 三菱 Direct：</span> 
+
+                <br>
+
+                • 转给三菱 UFJ 自家账户：0 日元
+
+                <br>
+
+                • 转去其他银行，3 万日元以下：154 日元
+
+                <br>
+
+                • 转去其他银行，3 万日元及以上：220 日元
+
+                <br><br>
+
+                <span class="font-semibold">ATM 转账：</span>
+
+                <br>
+
+                • 转本行：110 日元
+
+                <br>
+
+                • 转其他银行：275 日元
+
+                <br><br>
+
+                <span class="font-semibold">柜台窗口：</span>
+
+                <br>
+
+                • 本行：880 日元
+
+                <br>
+
+                • 他行：990 日元
+
+                <br><br>
+
+                <span class="font-semibold">三菱自家 ATM 取款：</span>
+
+                <br>
+
+                • 平日 8:45～21:00：免费
+
+                <br>
+
+                • 早于 8:45、晚于 21:00、周末及节假日：110 日元 / 次
+
+                <br><br>
+
+                <span class="font-semibold">便利店 / 其他银行 ATM：</span>
+
+                <br>
+
+                • 取款统一 330 日元 / 次
+
+                <br>
+
+                • 存钱大多不可用
+
+            </div>
+
+        </details>
+
+        <!-- 跨境汇款 -->
+
+        <details class="bg-white rounded-2xl shadow-sm group">
+
+            <summary class="cursor-pointer list-none flex justify-between items-center p-6 text-lg font-semibold text-stone-800 hover:bg-stone-50 rounded-2xl">
+                <span>跨境汇款</span>
+
+                <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                    +
+                </span>
+
+                <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                    −
+                </span>
+            </summary>
+
+            <div class="px-6 pb-6 pt-4 border-t border-stone-100 text-stone-600 leading-8">
+
+                <span class="font-semibold">官方页面：</span>
+
+                <br>
+
+                <a href="https://www.bk.mufg.jp/tsukau/kaigai/soukin/index.html"
+                   target="_blank"
+                   class="text-blue-600 hover:underline break-all">
+                    https://www.bk.mufg.jp/tsukau/kaigai/soukin/index.html
+                </a>
+
+                <br><br>
+
+                <span class="font-semibold">特点：</span>
+
+                <br>
+
+                • 跨境汇款能力强
+
+                <br>
+
+                • 全球网络完善
+
+                <br>
+
+                • 但手续费偏高
+
+                <br>
+
+                • 审核较严格
+
+                <br><br>
+
+                <span class="font-semibold">汇出手续费：</span>
+
+                <br>
+
+                • 手机网银汇到海外其他银行：3000 日元
+
+                <br>
+
+                • 手机网银汇到三菱自家海外网点：2500 日元
+
+                <br>
+
+                • 柜台办理：7000 日元
+
+                <br>
+
+                • 手写单据追加：500 日元
+
+                <br><br>
+
+                <span class="font-semibold">换汇手续费：</span>
+
+                <br>
+
+                • 汇款金额 0.05%
+
+                <br>
+
+                • 最低 2500 日元
+
+                <br>
+
+                • 使用外币存款直接汇款时，可免这笔费用
+
+                <br><br>
+
+                <span class="font-semibold">中间行扣费：</span>
+
+                <br>
+
+                • SHA：收款人承担，约 2000～8000 日元
+
+                <br>
+
+                • OUR：汇款人多付 3000 日元，收款人全额到账
+
+                <br><br>
+
+                <span class="font-semibold">汇款限额：</span>
+
+                <br>
+
+                • 网银线上：单笔 / 单日最多 300 万日元等值
+
+                <br>
+
+                • 每月上限：500 万日元
+
+                <br>
+
+                • 柜台：无固定金额上限，但大额需要材料审核
+
+                <br><br>
+
+                <span class="font-semibold">收款信息：</span>
+
+                <br>
+
+                • 银行名：MUFG BANK, LTD.
+
+                <br>
+
+                • SWIFT：BOTKJPJT
+
+                <br>
+
+                • 姓名、地址需使用开户时英文拼音
+
+                <br>
+
+                • 账号数字必须完整
+
+                <br><br>
+
+                <span class="font-semibold">到账时间：</span>
+
+                <br>
+
+                • 网银：东南亚约 1～2 天，欧美约 1～3 天
+
+                <br>
+
+                • 柜台：银行处理约 3 天，再加海外到账 1～3 天
+
+                <br><br>
+
+                <span class="font-semibold">注意：</span>
+
+                <br>
+
+                • 填错信息可能退款
+
+                <br>
+
+                • 手续费通常不退
+
+                <br>
+
+                • 单笔超 1000 万日元需要证明材料
+
+                <br>
+
+                • 一年往国外累计汇超 200 万日元，可能涉及税务申报
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+
+<!-- APP 和网上银行 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        APP 和网上银行
+    </h2>
+
+    <div class="bg-white rounded-2xl p-8 shadow-sm leading-8 text-stone-600">
+
+        MUFG 的 APP 和网上银行体验相对优秀，
+        页面简洁，功能比较完整。
+
+        <br><br>
+
+        <span class="font-semibold">主要支持：</span>
+
+        <br>
+
+        • 账户查询
+
+        <br>
+
+        • Debit 管理
+
+        <br>
+
+        • 信用卡管理
+
+        <br>
+
+        • 网上转账
+
+        <br>
+
+        • 部分海外汇款相关手续
+
+    </div>
+
+</div>
+
+  <!-- 手机支付兼容性 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        手机支付兼容性
+    </h2>
+
+    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+        <table class="w-full text-sm">
+
+            <thead class="bg-stone-100">
+
+                <tr>
+                    <th class="p-4 text-left">服务</th>
+                    <th class="p-4 text-left">支持情况</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr class="border-t">
+                    <td class="p-4">PayPay</td>
+                    <td class="p-4">支持</td>
+                </tr>
+
+                <tr class="border-t">
+                    <td class="p-4">乐天 Pay</td>
+                    <td class="p-4">支持</td>
+                </tr>
+
+                <tr class="border-t">
+                    <td class="p-4">Apple Pay</td>
+                    <td class="p-4">支持</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+   <!-- 主要优势 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        主要优势
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            日本最大级别银行
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            ATM 网络庞大
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            网点覆盖广
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            全球业务网络广泛
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            APP 和网银体验较好
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            稳定性强
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- 推荐指数 -->
+        <div class="mb-10">
+
+            <h2 class="text-xl font-semibold mb-5">
+                推荐指数
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        开户难度
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        普通 ★★★☆☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        银行汇款
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        最强 ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        银行规模
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        顶级 ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        外国人推荐
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        推荐 ★★★★☆
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    <!-- 适合人群 -->
+
+<div class="mb-10">
+
+    <h2 class="text-xl font-semibold mb-5">
+        适合什么人？
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            喜欢传统大银行的人
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            经常使用 ATM 的人
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            希望全国都方便使用的人
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            追求银行稳定性的人
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            经常需要国际汇款的人
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            长期在日本生活工作的人
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- 风险提醒 -->
+
+<div class="bg-green-50 rounded-2xl p-8">
+
+    <h2 class="text-xl font-semibold mb-4">
+        开户后容易忽略的风险
+    </h2>
+
+    <p class="leading-8">
+
+        MUFG 属于传统大型银行，
+        服务稳定，但部分手续费可能高于网络银行
+
+        <br><br>
+
+        <span class="font-semibold">尤其需要注意：</span>
+
+        <br>
+
+        • ATM 手续费
+
+        <br>
+
+        • 国内转账手续费
+
+        <br>
+
+        • 跨境汇款手续费
+
+        <br>
+
+        • 外币兑换手续费
+
+        <br><br>
+
+        如果没有满足免费条件，
+        日常取款和转账都可能产生费用
+
+        <br><br>
+
+        <span class="font-semibold">外国人还需要特别注意资料更新：</span>
+
+        <br>
+
+        • 在留卡更新后要及时通知银行
+
+        <br>
+
+        • 搬家后要更新地址
+
+        <br>
+
+        • 更换手机号后要更新联系方式
+
+        <br><br>
+
+        如果资料没有及时更新，
+        可能影响网上银行、海外汇款、身份验证等功能
+
+    </p>
+
+</div>
+
+</main>
+
+</body>
+
+</html>
