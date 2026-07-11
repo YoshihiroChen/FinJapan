@@ -12,6 +12,7 @@ urlpatterns = [
     path("", include("homepage.urls")),
     path("tax/", include("tax.urls")),
     path("investment-system/", include("investment_system.urls")),
+    path("investment/", include("investment.urls")),
     path(
         "securities-bank/",
         include("securities_bank.urls")

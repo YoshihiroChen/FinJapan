@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tax',
     "investment_system",
     "securities_bank",
+    "investment",
 ]
 
 MIDDLEWARE = [

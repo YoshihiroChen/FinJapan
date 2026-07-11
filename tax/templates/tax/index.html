@@ -19,11 +19,17 @@
 
 <body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
 
+<!-- 顶部 -->
+<!-- 顶部 -->
 <header class="bg-stone-50 border-b border-stone-200">
 
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        <div class="flex items-center">
+        <!-- Logo -->
+        <a
+            href="/"
+            class="flex items-center transition hover:opacity-80"
+        >
 
             <div class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">
                 📊
@@ -33,14 +39,37 @@
                 在日华人理财指南
             </span>
 
-        </div>
+        </a>
 
         <nav class="hidden md:flex gap-6 text-sm">
 
-            <a class="hover:text-stone-900" href="#">NISA</a>
-            <a class="hover:text-stone-900" href="#">开户</a>
-            <a class="hover:text-stone-900" href="#">投资</a>
-            <a class="hover:text-stone-900" href="#">税务</a>
+            <a
+                class="hover:text-stone-900 transition"
+                href="/investment-system/"
+            >
+                NISA
+            </a>
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/securities-bank/"
+            >
+                开户
+            </a>
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/investment/"
+            >
+                投资
+            </a>
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/tax/"
+            >
+                税务
+            </a>
 
         </nav>
 
