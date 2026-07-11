@@ -1,0 +1,1046 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>三井住友银行指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        summary {
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-11 h-11 rounded-xl bg-emerald-100 flex items-center justify-center overflow-hidden">
+
+                <img src="{% static 'securities_bank/img/bank/smbc/smbc_logo.jpeg' %}"
+                    alt="SMBC Logo"
+                    class="w-8 h-8 object-contain">
+
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                三井住友银行指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            三井住友銀行（SMBC）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            日本第二大银行，数字化程度高，Olive 综合账户在人群中人气较高
+        </p>
+
+    </div>
+
+    <!-- 基本特点 -->
+
+    <div class="bg-emerald-50 rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            基本特点
+        </h2>
+
+        <p class="leading-8">
+
+            三井住友银行（SMBC）是日本第二大银行，
+            也是日本数字化程度较高的传统大型银行之一
+
+            <br><br>
+
+            其特点是：
+
+            <br>
+
+            日本大型银行稳定性高
+
+            <br>
+
+            Olive 服务人气较高
+
+            <br>
+
+            手机 APP 和线上服务比较完善
+
+            <br>
+
+            留学生和年轻上班族使用率较高
+
+            <br><br>
+
+            如果未来计划长期在日本生活、
+            使用信用卡、积累积分或联动证券账户，
+            SMBC 是比较值得考虑的银行之一
+
+        </p>
+
+    </div>
+
+    <!-- 官网 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            官方网站
+        </h2>
+
+        <a href="https://www.smbc.co.jp"
+           target="_blank"
+           class="block bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+
+            <div class="font-semibold text-stone-800">
+                三井住友银行官网
+            </div>
+
+            <div class="mt-2 text-sm text-blue-600 break-all">
+                https://www.smbc.co.jp
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 开户特点 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            开户特点
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm leading-8">
+
+            SMBC 可以接受外国人开户
+
+            <br><br>
+
+            但相比部分网络银行，SMBC 会比较看重信用情况、
+            在留状态、居住稳定性以及账户使用目的
+
+            <br><br>
+
+            如果 Olive 审核一直不过，可以尝试：
+
+            <br>
+
+            选择普通消费型产品
+
+            <br>
+
+            绑定房租
+
+            <br>
+
+            绑定水电煤
+
+            <br>
+
+            增加账户使用场景
+
+            <br><br>
+
+            这些做法有助于提高审核通过率
+
+        </div>
+
+    </div>
+
+    <!-- 详细信息 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            详细信息
+        </h2>
+
+        <div class="space-y-4">
+
+            <!-- 外国人开户资格和材料 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>
+                        外国人开户资格和材料
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <p>
+                        <span class="font-semibold">办理渠道：</span>
+                        满足条件可通过 APP 或网页线上开户；所有外国人都可以选择线下柜台开户
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <span class="font-semibold">线上开户硬性门槛：</span>
+                    </p>
+
+                    在留卡签发满 6 个月
+
+                    <br>
+
+                    在留剩余有效期不少于 3 个月
+
+                    <br>
+
+                    在留卡背面印有日本现住址
+
+                    <br>
+
+                    持有日本可收短信的手机号、邮箱和 NFC 手机
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">线上 APP 必备材料：</span>
+                    </p>
+
+                    在留卡或特别永住者证明书
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">线上网页必备材料：</span>
+                    </p>
+
+                    在留卡或特别永住者证明书
+
+                    <br>
+
+                    日本驾照、带照片 My Number 卡、健康保险证中任选其一作为辅助证件
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">线下柜台必备材料：</span>
+                    </p>
+
+                    在留卡或特别永住者证明书
+
+                    <br>
+
+                    在留卡背面印有日本现住址
+
+                    <br>
+
+                    备案印章，部分网点支持签名
+
+                    <br>
+
+                    My Number 相关文件
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">银行可能追加确认：</span>
+                    </p>
+
+                    护照
+
+                    <br>
+
+                    健康保险证
+
+                    <br>
+
+                    学生证
+
+                    <br>
+
+                    在职证明
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">开户前提：</span>
+                    </p>
+
+                    已完成市区役所住民登记
+
+                    <br>
+
+                    在留卡登记有效日本居住地址
+
+                    <br>
+
+                    短期旅游签证无法开户
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">常见被拒原因：</span>
+                    </p>
+
+                    赴日居住未满 6 个月
+
+                    <br>
+
+                    在留剩余有效期不足 3 个月
+
+                    <br>
+
+                    职业不稳定
+
+                    <br>
+
+                    日语沟通困难
+
+                    <br>
+
+                    各网点审核标准存在差异
+
+                </div>
+
+            </details>
+
+            <!-- 推荐产品 -->
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>
+                        推荐产品：Olive 综合账户
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+                    <!-- Olive 图片 -->
+
+                    <div class="mb-6 flex justify-center">
+
+                        <img src="{% static 'securities_bank/img/bank/smbc/olive.jpeg' %}"
+                            alt="Olive"
+                            class="w-[280px] rounded-xl shadow-sm border border-stone-200">
+
+                    </div>
+
+                    <p>
+                        <span class="font-semibold">Olive 综合账户：</span>
+                        Olive 配套 Flexible Pay 无卡号一体卡，是 SMBC 的三合一卡产品
+                    </p>
+
+                    <br>
+
+                    一张卡可以集成三种支付模式：
+
+                    <br>
+
+                    キャッシュカード，也就是银行储蓄卡存取款功能
+
+                    <br>
+
+                    デビット，也就是即时扣款借记卡
+
+                    <br>
+
+                    クレジット，也就是信用卡支付功能
+
+                    <br><br>
+
+                    还可以切换积分支付，
+                    并在 APP 中统一管理存款、证券、保险等资产
+
+                    <br><br>
+
+                    <span class="font-semibold">官方页面：</span>
+
+                    <br>
+
+                    <a href="https://www.smbc.co.jp/kojin/olive/special/brand/"
+                    target="_blank"
+                    class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/olive/special/brand/
+                    </a>
+
+                    <br>
+
+                    <a href="https://www.smbc.co.jp/kojin/open-account/"
+                    target="_blank"
+                    class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/open-account/
+                    </a>
+
+                    <br>
+
+                    <a href="https://www.smbc.co.jp/kojin/olive-account/"
+                    target="_blank"
+                    class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/olive-account/
+                    </a>
+
+                    <br><br>
+
+                    <span class="font-semibold">优势一：全程线上申请</span>
+
+                    <br>
+
+                    很多业务可以通过手机办理和 APP 审核完成，
+                    无需频繁跑网点
+
+                    <br><br>
+
+                    <span class="font-semibold">优势二：积分返现体系优秀</span>
+
+                    <br>
+
+                    日本大量商家都可以获得积分，
+                    例如便利店、餐厅、电商等
+
+                    <br>
+
+                    对于中国留学生来说，
+                    日常消费场景多，因此很容易积累积分
+
+                    <br><br>
+
+                    <span class="font-semibold">优势三：国际汇款便利</span>
+
+                    <br>
+
+                    适合国内汇日本，也适合日本汇国内
+
+                    <br>
+
+                    手续费和使用体验整体比较友好
+
+                </div>
+
+            </details>
+      
+
+            <!-- 日本国内转账 + 取款手续费 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>
+                        日本国内转账 + 取款手续费
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <p>
+                        <span class="font-semibold">官方依据页面：</span>
+                    </p>
+
+                    <a href="https://www.smbc.co.jp/kojin/fee/atm.html"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/fee/atm.html
+                    </a>
+
+                    <br>
+
+                    <a href="https://www.smbc.co.jp/kojin/fee/furikomi.html"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/fee/furikomi.html
+                    </a>
+
+                    <br>
+
+                    <a href="https://www.smbc.co.jp/kojin/olive/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/olive/
+                    </a>
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">ATM 取款手续费：</span>
+                    </p>
+
+                    Olive 账户使用三井住友本行 ATM，24 小时取款永久免费
+
+                    <br>
+
+                    便利店或其他银行 ATM，选择可选特典后，每月最多 2 次免手续费
+
+                    <br>
+
+                    超出后单次收费约 110 日元至 220 日元
+
+                    <br>
+
+                    普通非 Olive 账户，本行平日 8:45 至 18:00 免费，夜间、周末、节假日收取 110 日元
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">国内转账手续费：</span>
+                    </p>
+
+                    SMBC 手机或网银转给 SMBC 同行账户免费
+
+                    <br>
+
+                    转给他行账户，单次约 165 日元至 275 日元
+
+                    <br>
+
+                    ATM 转账，同行约 110 日元，他行约 220 日元至 440 日元
+
+                    <br>
+
+                    线下窗口转账最贵，同行约 330 日元，他行约 550 日元至 880 日元
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">Olive 补充说明：</span>
+                    </p>
+
+                    Olive Flexible Pay 三合一卡的储蓄卡取款和线上转账，
+                    适用上述手续费优待
+
+                    <br>
+
+                    外国人线上开通 Olive 账户后，
+                    手续费规则与日本人账户基本一致，
+                    没有外国人额外加价
+
+                </div>
+
+            </details>
+
+            <!-- 跨境汇款 -->
+
+            <details class="bg-white rounded-2xl shadow-sm group">
+
+                <summary class="list-none cursor-pointer p-6 font-semibold text-xl flex justify-between items-center">
+
+                    <span>
+                        跨境汇款
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light group-open:hidden">
+                        +
+                    </span>
+
+                    <span class="text-stone-400 text-2xl font-light hidden group-open:block">
+                        −
+                    </span>
+
+                </summary>
+
+                <div class="p-6 border-t leading-8">
+
+                    <p>
+                        <span class="font-semibold">官方页面：</span>
+                    </p>
+
+                    <a href="https://www.smbc.co.jp/kojin/kaigaiservice/gaikokusoukin/"
+                       target="_blank"
+                       class="text-blue-600 hover:underline break-all">
+                        https://www.smbc.co.jp/kojin/kaigaiservice/gaikokusoukin/
+                    </a>
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">特点：</span>
+                    </p>
+
+                    亚洲合作行汇款有专属优惠
+
+                    <br>
+
+                    线上 24 小时可操作，但周日夜间有系统维护
+
+                    <br>
+
+                    整体手续费中等，线上比柜台便宜很多
+
+                    <br>
+
+                    外汇和税务审查标准较严格
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">汇出手续费：</span>
+                    </p>
+
+                    手机网银汇海外普通银行约 3500 日元
+
+                    <br>
+
+                    手机网银汇亚洲合作银行约 3000 日元
+
+                    <br>
+
+                    线下柜台办理约 7000 日元至 7500 日元
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">换汇手续费：</span>
+                    </p>
+
+                    日元账户换外币汇款，手续费为汇款金额 0.05%，最低 2500 日元
+
+                    <br>
+
+                    直接用外币存款原币种汇款，可免收兑换手续费
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">中间行扣费：</span>
+                    </p>
+
+                    SHA 模式默认由收款人承担，约 2000 日元至 3000 日元等值外币
+
+                    <br>
+
+                    OUR 模式由汇款人全额承担，额外加收 2500 日元
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">汇款限额：</span>
+                    </p>
+
+                    网银线上单笔或单日最高 300 万日元等值
+
+                    <br>
+
+                    每月线上累计上限为 500 万日元
+
+                    <br>
+
+                    柜台无固定额度上限，但大额汇款需提交资金来源证明
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">收款信息：</span>
+                    </p>
+
+                    银行全称：SUMITOMO MITSUI BANKING CORPORATION
+
+                    <br>
+
+                    SWIFT 代码：SMBCJPJTXXX
+
+                    <br>
+
+                    姓名和地址必须与开户登记英文拼音一致
+
+                    <br>
+
+                    账号数字必须完整无误
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">到账时间：</span>
+                    </p>
+
+                    网银 15 点前提交，当日发报
+
+                    <br>
+
+                    东南亚约 2 至 3 个工作日，欧美约 3 至 5 个工作日
+
+                    <br>
+
+                    柜台办理整体约 4 至 7 天到账
+
+                    <br><br>
+
+                    <p>
+                        <span class="font-semibold">注意事项：</span>
+                    </p>
+
+                    收款人信息错误或账户失效会原路退回
+
+                    <br>
+
+                    基础汇出手续费通常不退
+
+                    <br>
+
+                    单次汇款达到 100 万日元以上，银行会自动向国税提交海外送金报告
+
+                    <br>
+
+                    全年无偿向海外亲属汇款超过 110 万日元，可能涉及赠与税申报
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+    <!-- Olive 生态圈 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            Olive 生态圈
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-center text-lg leading-10">
+
+                三井住友银行
+
+                <br>
+
+                ↓
+
+                <br>
+
+                Olive 综合账户
+
+                <br>
+
+                ↓
+
+                <br>
+
+                Flexible Pay 三合一卡
+
+                <br>
+
+                ↓
+
+                <br>
+
+                V Point 积分
+
+                <br>
+
+                ↓
+
+                <br>
+
+                SBI证券联动
+
+                <br>
+
+                ↓
+
+                <br>
+
+                消费、积分、投资统一管理
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 手机支付兼容性 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            手机支付兼容性
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+                        <th class="p-4 text-left">服务</th>
+                        <th class="p-4 text-left">支持情况</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4">PayPay</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">乐天 Pay</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Apple Pay</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- 最大优势 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            最大优势
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                Olive 综合账户
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                三合一卡设计
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                V Point 积分体系
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                SBI证券联动
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                APP 和线上体验较好
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                传统大型银行稳定性
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 推荐指数 -->
+
+        <div class="mb-10">
+
+            <h2 class="text-xl font-semibold mb-5">
+                推荐指数
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        开户难度
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        容易 ★★★★☆
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        数字化体验
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        最强 ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        Olive联动
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        最强 ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                    <div class="font-semibold text-stone-800">
+                        外国人推荐
+                    </div>
+
+                    <div class="mt-3 text-stone-600">
+                        非常推荐 ★★★★★
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    <!-- 适合人群 -->
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            适合什么人？
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                经常刷卡消费的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                喜欢返现积分的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                想一张卡解决全部问题的人
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                中国留学生
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                日本上班族
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                计划长期在日本生活的人
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 风险提醒 -->
+
+    <div class="bg-emerald-50 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            开户后可能忽略的风险
+        </h2>
+
+        <p class="leading-8">
+
+            Olive 设置相对复杂，
+            新手可能会觉得信用卡、借记卡、积分设置有点绕
+
+            <br><br>
+
+            使用前建议先确认：
+
+            <br>
+
+            信用卡模式是否已经开通
+
+            <br>
+
+            借记卡模式是否正常使用
+
+            <br>
+
+            V Point 积分是否绑定
+
+            <br>
+
+            是否理解每种支付模式的扣款方式
+
+            <br><br>
+
+            如果只是想要最基础的银行账户，
+            可以先从普通账户和基础消费型产品开始，
+            后续再逐步开通 Olive 相关功能
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

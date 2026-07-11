@@ -1,0 +1,371 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>信用卡指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-[#F5EFEC] flex items-center justify-center">
+                💎
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                信用卡指南
+            </span>
+
+        </div>
+
+        <a href="{% url 'bank' %}"
+           class="text-sm hover:text-stone-900">
+            返回银行专区
+        </a>
+
+    </div>
+
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-stone-800">
+            クレジットカード（Credit Card）
+        </h1>
+
+        <p class="mt-2 text-stone-500">
+            在日本建立信用记录最重要的金融工具之一。
+        </p>
+
+    </div>
+
+    <div class="bg-[#F5EFEC] rounded-2xl p-8 mb-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            什么是信用卡？
+        </h2>
+
+        <p class="leading-8">
+            信用卡（クレジットカード）是一种
+            「先消费，后付款」的支付工具。
+            当你刷卡消费时，实际付款由信用卡公司先垫付，
+            之后再统一从你的银行账户扣款。
+        </p>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            工作原理
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <div class="text-center text-lg leading-10">
+
+                今天消费：100,000日元
+
+                <br>
+
+                ↓
+
+                <br>
+
+                信用卡公司先付款
+
+                <br>
+
+                ↓
+
+                <br>
+
+                下个月账单日
+
+                <br>
+
+                ↓
+
+                <br>
+
+                银行账户自动扣款
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            可以做什么
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                 门店消费
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                网上购物
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                 积分返现
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                 ETC卡申请
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                 Apple Pay
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                分期付款
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+             功能一览
+        </h2>
+
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+
+            <table class="w-full text-sm">
+
+                <thead class="bg-stone-100">
+
+                    <tr>
+                        <th class="p-4 text-left">功能</th>
+                        <th class="p-4 text-left">是否支持</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-t">
+                        <td class="p-4">门店付款</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">网上购物</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">分期付款</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">积分返现</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">ETC卡</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">Apple Pay</td>
+                        <td class="p-4">支持</td>
+                    </tr>
+
+                    <tr class="border-t">
+                        <td class="p-4">信用审核</td>
+                        <td class="p-4">必须通过</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            最大优势
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <p class="leading-8">
+
+                在日本，信用卡不仅是支付工具，
+                更是建立个人信用记录（信用ヒストリー）的重要方式。
+
+                <br><br>
+
+                良好的信用记录会影响未来很多金融活动。
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            信用记录会影响什么？
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                房贷申请
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                车贷申请
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                更高级信用卡
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                部分租房审查
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+             外国人审核时主要看什么？
+        </h2>
+
+        <div class="grid md:grid-cols-5 gap-4">
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm">
+                工作稳定性
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm">
+                年收入
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm">
+                在留期限
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm">
+                居住稳定性
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm">
+                信用记录
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mb-10">
+
+        <h2 class="text-xl font-semibold mb-5">
+            容易被拒的原因
+        </h2>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+
+            <ul class="leading-9">
+
+                <li>• 刚来日本不久</li>
+
+                <li>• 工作时间太短</li>
+
+                <li>• 年收入较低</li>
+
+                <li>• 在留期限较短</li>
+
+                <li>• 没有信用记录</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="bg-[#F5EFEC] rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold mb-4">
+            适合什么人？
+        </h2>
+
+        <p class="leading-8">
+
+            ・计划长期在日本生活
+
+            <br>
+
+            ・拥有稳定收入
+
+            <br>
+
+            ・希望积累积分和返现
+
+            <br>
+
+            ・未来有贷款需求
+
+            <br>
+
+            ・希望建立日本信用记录
+
+            <br><br>
+
+            对于刚到日本的新手，
+            通常建议先拥有银行账户和借记卡，
+            等生活稳定后再申请第一张信用卡。
+
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

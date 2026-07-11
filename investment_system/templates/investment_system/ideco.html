@@ -1,0 +1,282 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDeCo｜在日华人理财指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+    <header class="bg-stone-50 border-b border-stone-200">
+
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    
+            <!-- Logo -->
+            <a
+                href="/"
+                class="flex items-center transition hover:opacity-80"
+            >
+    
+                <div class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">
+                    📊
+                </div>
+    
+                <span class="ml-3 text-lg font-semibold text-stone-800">
+                    在日华人理财指南
+                </span>
+    
+            </a>
+    
+            <nav class="hidden md:flex gap-6 text-sm">
+    
+                <a
+                    class="hover:text-stone-900 transition"
+                    href="/investment-system/"
+                >
+                    NISA
+                </a>
+    
+                <a
+                    class="hover:text-stone-900 transition"
+                    href="/securities-bank/"
+                >
+                    开户
+                </a>
+    
+                <a
+                    class="hover:text-stone-900 transition"
+                    href="/investment/"
+                >
+                    投资
+                </a>
+    
+                <a
+                    class="hover:text-stone-900 transition"
+                    href="/tax/"
+                >
+                    税务
+                </a>
+    
+            </nav>
+    
+        </div>
+    
+    </header>
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <a href="{% url 'investment_system' %}" class="text-sm text-stone-500 hover:text-stone-900">← 返回投资制度</a>
+
+    <section class="mt-5 bg-[#F1F0EC] rounded-3xl p-8 md:p-10 shadow-sm mb-8">
+        <p class="text-sm text-stone-500 mb-3">Individual-type Defined Contribution Pension Plan</p>
+
+        <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center">
+            <div class="bg-white/70 rounded-3xl p-6 flex items-center justify-center">
+                <img src="https://www.ideco-koushiki.jp/images/cover_5.png"
+                     alt="iDeCo 官方宣传图"
+                     class="w-full rounded-2xl">
+            </div>
+
+            <div>
+                <h1 class="text-3xl md:text-5xl font-bold text-stone-800 leading-tight mb-5">
+                    iDeCo：自己准备的退休金账户
+                </h1>
+
+                <p class="leading-8 text-stone-600 max-w-3xl">
+                    iDeCo 是日本的个人型确定拠出年金。你定期把钱存入账户，自己选择商品进行资产运用，
+                    将来再按规则领取。它的核心优势是节税，但资金流动性比 NISA 低很多。
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-3 text-sm">
+                    <a href="#ideco-basic" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">先看是什么</a>
+                    <a href="#ideco-vs-nisa" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">和 NISA 对比</a>
+                    <a href="#ideco-tax" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">节税效果</a>
+                    <a href="#ideco-foreign" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">外国人 / 回国</a>
+                    <a href="#ideco-china" class="rounded-xl bg-white/80 px-4 py-2 text-stone-700 hover:bg-white transition">和中国养老金区别</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-stone-200">
+
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-stone-800 mb-3">从上往下看懂 iDeCo</h2>
+            <p class="text-sm leading-7 text-stone-600">
+                先理解它是退休用账户，再看它怎么节税，最后判断自己作为外国人是否适合加入。
+            </p>
+        </div>
+
+        <div class="space-y-4">
+
+            <details id="ideco-basic" class="bg-[#F7F4EE] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    1. iDeCo 是什么？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        iDeCo 是个人型确定拠出年金。你自己决定每月缴多少，在账户里选择投信等商品进行资产运用，
+                        退休后再按规则领取。它属于私的年金制度，与国家基础养老金不是一回事。
+                    </p>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        和 NISA 最大的不同是：NISA 更灵活，iDeCo 更像“为了退休把钱锁起来运用”的账户。
+                    </div>
+                </div>
+            </details>
+
+            <details id="ideco-vs-nisa" class="bg-[#F7F4EE] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    2. iDeCo 和 NISA 怎么选？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        NISA 和 iDeCo 都可以用来做资产运用，也都能享受一定的税制优惠，但它们解决的问题不一样。
+                        NISA 更像“灵活投资账户”，适合先开始投资、以后也可能需要取用资金的人；iDeCo 更像“退休专用账户”，
+                        节税效果更明显，但原则上到 60 岁前不能随便取出。
+                    </p>
+
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">优先考虑 NISA 的情况</h3>
+                            <p>
+                                想买的商品范围更广、希望资金比较灵活、几年内可能回国，或者还不确定长期是否留在日本时，NISA 通常更容易管理。
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">可以考虑 iDeCo 的情况</h3>
+                            <p>
+                                收入稳定、计划长期在日本生活、能接受资金长期锁定，并且想利用所得控除降低税负时，iDeCo 的优势会更明显。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        简单判断：短中期灵活性优先，先看 NISA；退休准备和节税优先，再认真研究 iDeCo。
+                    </div>
+
+                    <img src="{% static 'investment_system/img/nisa_vs_ideco.png' %}"
+                         alt="NISA 和 iDeCo 对比图"
+                         class="mt-6 w-full rounded-2xl shadow-sm">
+                </div>
+            </details>
+
+            <details id="ideco-tax" class="bg-[#F7F4EE] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    3. 节税效果在哪里？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        iDeCo 的挂金全额计入所得控除，可以降低所得税和住民税的计税基础。账户内的运用收益可以免税再投资，
+                        领取时也可能适用退职所得控除或公的年金等控除。
+                    </p>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        例子：如果每月把一部分收入作为 iDeCo 挂金，这部分挂金会从所得里扣除，再计算所得税和住民税。
+                        所以收入越稳定、缴纳期间越长，节税效果通常越明显。
+                    </div>
+
+                    <img src="https://www.moneypost.jp/wp-content/uploads/2019/11/post1939_P118.jpg"
+                         alt="iDeCo 节税额示例表"
+                         class="mt-6 w-full rounded-2xl shadow-sm">
+                </div>
+            </details>
+
+            <details id="ideco-foreign" class="bg-[#F7F4EE] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    4. 外国人适合加入吗？永久回国怎么办？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        如果计划长期在日本生活、有稳定收入，并且能接受资金长期锁定，iDeCo 的节税效果值得考虑。
+                        如果几年内可能永久回国、收入不稳定，或者更重视资金随时可用，先使用更灵活的 NISA 往往更容易管理。
+                    </p>
+
+                    <p class="mt-4">
+                        iDeCo 原则上不能随意中途解约。外国籍人士移居海外后，只有满足官方条件时才可能申请脱退一时金。
+                        所以加入前要先想清楚：自己会不会长期留在日本，以及这笔钱是否可以长期不用。
+                    </p>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        判断顺序：先看在日计划，再看收入稳定性，最后看自己能不能接受“退休前基本不能随便取出”。
+                    </div>
+
+                    <div class="mt-4 bg-white rounded-xl p-4 text-stone-700">
+                        <h3 class="font-semibold text-stone-800 mb-2">例子：25 岁开始，40 岁回国</h3>
+                        <p>
+                            假设 25 岁开始上班并加入 iDeCo，到 40 岁不想继续在日本工作、准备永久回国，账户里已经有 400 万日元。
+                            这种情况下，虽然人已经离开日本，但因为拠出期间已经超过 5 年，而且账户资产也超过 25 万日元，
+                            通常不满足脱退一时金的条件。
+                        </p>
+                        <p class="mt-3 font-semibold text-stone-900">
+                            所以当时能直接取出来的金额：0 日元。
+                        </p>
+                        <p class="mt-3">
+                            这笔钱一般需要继续留在 iDeCo / 确定拠出年金账户里进行管理，等到 60 岁以后再按规则领取。
+                            期间仍可能受到投资涨跌和账户管理手续费影响。
+                        </p>
+                        <div class="mt-4 border-t border-stone-200 pt-4 text-xs leading-6 text-stone-500">
+                            <p class="mb-2 text-[11px] font-bold tracking-[0.18em] text-stone-400">官方参考</p>
+                            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/kyoshutsu/ideco.html"
+                               class="group block font-semibold text-[#8A6F3A] underline decoration-[#C9B06A] decoration-2 underline-offset-4 hover:text-stone-900"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                厚生労働省：iDeCo の概要
+                                <span class="inline-block transition group-hover:translate-x-1">↗</span>
+                            </a>
+                            <a href="https://www.ideco-koushiki.jp/join/benefits.html"
+                               class="group mt-1 block font-semibold text-[#8A6F3A] underline decoration-[#C9B06A] decoration-2 underline-offset-4 hover:text-stone-900"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                iDeCo 公式：手続き関連・脱退一時金
+                                <span class="inline-block transition group-hover:translate-x-1">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details id="ideco-china" class="bg-[#F7F4EE] rounded-2xl p-5 scroll-mt-24">
+                <summary class="cursor-pointer font-semibold text-stone-800">
+                    5. 和中国养老金有什么区别？
+                </summary>
+
+                <div class="mt-4 text-sm leading-7 text-stone-600">
+                    <p>
+                        中国常说的养老金更多是社会保险体系里的基本养老保险；iDeCo 则是日本的个人型私的年金账户。
+                        它不是公司或国家替你统一管理收益，而是你自己缴费、自己选择商品、自己承担运用结果。
+                    </p>
+
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">中国养老金</h3>
+                            <p>更偏社会保险，由制度统一管理，和个人缴费年限、缴费基数等有关。</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4">
+                            <h3 class="font-semibold text-stone-800 mb-2">iDeCo</h3>
+                            <p>更偏个人退休投资账户，节税是优势，但资产运用结果和流动性限制都要自己承担。</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+        </div>
+
+    </section>
+
+</main>
+</body>
+</html>

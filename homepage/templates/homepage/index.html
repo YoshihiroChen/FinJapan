@@ -1,0 +1,308 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>在日华人理财指南</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
+
+<!-- 顶部 -->
+<header class="bg-stone-50 border-b border-stone-200">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+
+            <div class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">
+                📊
+            </div>
+
+            <span class="ml-3 text-lg font-semibold text-stone-800">
+                在日华人理财指南
+            </span>
+
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-sm">
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/investment-system/"
+            >
+                NISA
+            </a>
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/securities-bank/"
+            >
+                开户
+            </a>
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/investment/"
+            >
+                投资
+            </a>
+
+            <a
+                class="hover:text-stone-900 transition"
+                href="/tax/"
+            >
+                税务
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- 主体 -->
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- 卡片1 -->
+        <div class="bg-[#EEF0F6] rounded-2xl p-7 shadow-sm hover:shadow-md transition">
+
+            <div class="flex items-center">
+
+                <div class="w-12 h-12 rounded-xl bg-stone-200 flex items-center justify-center">
+                    📈
+                </div>
+
+                <div class="ml-3">
+
+                    <div class="text-lg font-semibold text-stone-800">
+                        NISA · iDeCo · 年金
+                    </div>
+
+                    <div class="text-sm text-stone-500">
+                        日本免税与养老体系
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-5 leading-7 text-sm text-stone-600 min-h-[110px]">
+
+                外国人开户条件<br>
+                NISA新制度解读<br>
+                iDeCo领取规则<br>
+                回国资产处理
+
+            </div>
+
+            <a
+                href="/investment-system/"
+                class="
+                    mt-5
+                    inline-flex
+                    items-center
+                    justify-center
+                    w-[140px]
+                    h-10
+                    bg-stone-200
+                    text-stone-700
+                    text-sm
+                    rounded-xl
+                    hover:bg-stone-300
+                    transition
+                "
+            >
+                查看内容 →
+            </a>
+
+        </div>
+
+        <!-- 卡片2 -->
+        <div class="bg-[#EEF3EE] rounded-2xl p-7 shadow-sm hover:shadow-md transition">
+
+            <div class="flex items-center">
+
+                <div class="w-12 h-12 rounded-xl bg-stone-200 flex items-center justify-center">
+                    🏦
+                </div>
+
+                <div class="ml-3">
+
+                    <div class="text-lg font-semibold text-stone-800">
+                        在日开户全攻略
+                    </div>
+
+                    <div class="text-sm text-stone-500">
+                        券商 · 银行 · 支付工具
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-5 leading-7 text-sm text-stone-600 min-h-[110px]">
+
+                外籍开户门槛<br>
+                券商对比分析<br>
+                入金出金流程<br>
+                PayPay联动
+
+            </div>
+
+            <a
+                href="/securities-bank/"
+                class="
+                    mt-5
+                    inline-flex
+                    items-center
+                    justify-center
+                    w-[140px]
+                    h-10
+                    bg-stone-200
+                    text-stone-700
+                    text-sm
+                    rounded-xl
+                    hover:bg-stone-300
+                    transition
+                "
+            >
+                查看内容 →
+            </a>
+
+        </div>
+
+        <!-- 卡片3 -->
+        <div class="bg-[#F1F0EC] rounded-2xl p-7 shadow-sm hover:shadow-md transition">
+
+            <div class="flex items-center">
+
+                <div class="w-12 h-12 rounded-xl bg-stone-200 flex items-center justify-center">
+                    💹
+                </div>
+
+                <div class="ml-3">
+
+                    <div class="text-lg font-semibold text-stone-800">
+                        投资标的全盘点
+                    </div>
+
+                    <div class="text-sm text-stone-500">
+                        股票 · ETF · 黄金 · 加密
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-5 leading-7 text-sm text-stone-600 min-h-[110px]">
+
+                美股 & 日股投资<br>
+                ETF资产配置<br>
+                黄金避险逻辑<br>
+                Crypto风险
+
+            </div>
+
+            <a
+                href="/investment/"
+                class="
+                    mt-5
+                    inline-flex
+                    items-center
+                    justify-center
+                    w-[140px]
+                    h-10
+                    bg-stone-200
+                    text-stone-700
+                    text-sm
+                    rounded-xl
+                    hover:bg-stone-300
+                    transition
+                "
+            >
+                查看内容 →
+            </a>
+
+        </div>
+
+        <!-- 卡片4 -->
+        <div class="bg-[#F5EFEC] rounded-2xl p-7 shadow-sm hover:shadow-md transition">
+
+            <div class="flex items-center">
+
+                <div class="w-12 h-12 rounded-xl bg-stone-200 flex items-center justify-center">
+                    📋
+                </div>
+
+                <div class="ml-3">
+
+                    <div class="text-lg font-semibold text-stone-800">
+                        日本投资税务
+                    </div>
+
+                    <div class="text-sm text-stone-500">
+                        避坑指南与申报规则
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-5 leading-7 text-sm text-stone-600 min-h-[110px]">
+
+                股票计税规则<br>
+                双重课税问题<br>
+                海外资产申报<br>
+                税务规划
+
+            </div>
+
+            <a
+                href="/tax/"
+                class="
+                    mt-5
+                    inline-flex
+                    items-center
+                    justify-center
+                    w-[140px]
+                    h-10
+                    bg-stone-200
+                    text-stone-700
+                    text-sm
+                    rounded-xl
+                    hover:bg-stone-300
+                    transition
+                "
+            >
+                查看内容 →
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>
+
