@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -18,61 +18,23 @@
 </head>
 <body class="bg-stone-100 font-['Inter'] min-h-screen text-stone-700">
     <!-- 顶部 -->
-    <header class="bg-stone-50 border-b border-stone-200">
+    <header class="border-b border-[#e5e2dd] bg-[#fbfaf8]">
+    <div class="mx-auto flex h-[62px] max-w-5xl items-center justify-between px-6">
+        <a href="/" class="flex items-center gap-3">
+            <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-[#aaa6a0]">
+                <span class="h-2.5 w-2.5 rounded-full bg-white"></span>
+            </span>
+            <span class="text-base font-semibold text-[#202020]">在日华人理财指南</span>
+        </a>
 
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-
-            <!-- Logo -->
-            <a
-                href="/"
-                class="flex items-center transition hover:opacity-80"
-            >
-
-                <div class="w-9 h-9 rounded-xl bg-stone-200 flex items-center justify-center">
-                    📊
-                </div>
-
-                <span class="ml-3 text-lg font-semibold text-stone-800">
-                    在日华人理财指南
-                </span>
-
-            </a>
-
-            <nav class="hidden md:flex gap-6 text-sm">
-
-                <a
-                    class="hover:text-stone-900 transition"
-                    href="/investment-system/"
-                >
-                    NISA
-                </a>
-
-                <a
-                    class="hover:text-stone-900 transition"
-                    href="/securities-bank/"
-                >
-                    开户
-                </a>
-
-                <a
-                    class="hover:text-stone-900 transition"
-                    href="/investment/"
-                >
-                    投资
-                </a>
-
-                <a
-                    class="hover:text-stone-900 transition"
-                    href="/tax/"
-                >
-                    税务
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
+        <nav class="hidden items-center gap-9 text-sm font-medium text-[#373532] md:flex">
+            <a class="hover:text-black" href="/investment-system/">NISA</a>
+            <a class="hover:text-black" href="/securities-bank/">开户</a>
+            <a class="hover:text-black" href="/investment/">投资</a>
+            <a class="hover:text-black" href="/tax/">税务</a>
+        </nav>
+    </div>
+</header>
 
     <main class="max-w-7xl mx-auto px-5 sm:px-6 py-10">
         <section class="max-w-3xl mx-auto text-center">
